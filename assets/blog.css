@@ -1,0 +1,253 @@
+.template-blog .page-width {
+    max-width: 1343px;
+}
+
+h1.section_title {
+    margin-bottom: 8px;
+}
+
+h2.section_title {
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    line-height: 32px;
+}
+
+/* banner */
+.blog__banner {
+    margin: 40px 0;
+}
+
+.blog__banner_block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 20px  40px 20px 20px;
+    border-radius: 20px;
+}
+
+.blog__banner_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blog__banner_image_element {
+    flex-shrink: 0;
+    width: 48.3%;
+}
+
+.blog__banner_image_element img {
+    border-radius: 16px;
+}
+
+.blog__banner_text_element {
+    flex: 1;
+    color: #fff;
+}
+
+.tag_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blog__banner_title {
+    margin-bottom: 20px;
+    font-family: "Gilroy-Bold";
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: capitalize;
+}
+
+.blog__banner_text {
+    margin-bottom: 20px;
+    font-family: "Gilroy-Regular";
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.blog__banner_tags {
+    display: flex;
+    gap: 16px;
+}
+
+.blog__banner .tag_item {
+    background-color: #fff;
+}
+
+.tag_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: #EBEBEB;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+}
+
+.tag_item:hover {
+    background: #fff;
+    border-color: #f1f1f1;
+}
+
+.tag_icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.section_title .tag_icon {
+    width: 48px;
+    height: 48px;
+}
+
+/* banner */
+
+/* blog__categories */
+.blog__categories {
+    margin-bottom: 40px;
+}
+
+.blog__categories_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.blog__categories_block .tag_item {
+    justify-content: center;
+} 
+/* blog__categories */
+
+/* blog main */
+.blog__main .load_more{
+    margin: 40px auto 0 auto;
+    padding: 12px 24px;
+    text-transform: uppercase;
+}
+
+.blog__main .article__author_name {
+    color: #000;
+    opacity: 1;
+    font-family: Gilroy-Semibold;
+}
+/* blog main */
+
+.article__duration {
+    margin-left: 16px;
+    font-family: Gilroy-Regular;
+    font-size: 18px;
+    line-height: 32px;
+    color: #000000;
+    opacity: 0.4;
+}
+
+.blog__breadcrumbs {
+    margin-bottom: 20px;
+}
+
+.blog__breadcrumbs ul {
+    display: flex;
+    align-items: center;
+    font-family: Gilroy-Regular;
+}
+
+.blog__breadcrumbs ul li {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.blog__breadcrumbs ul li:last-child:before {
+    content: '•';
+    display: block;
+    margin: 0 5px;
+}
+
+.blog_with_tag .section_title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.author_page__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.author_page__title .left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: Gilroy-Bold;
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: capitalize;
+}
+
+.author_page__title .left img {
+    width: 48px;
+    height: 48px;
+}
+
+@media (max-width: 1023px) {
+    .blog__banner_block {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .blog__banner_image_element {
+        width: 100%;
+    }
+
+    .blog__categories_block {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+@media (max-width: 767px) {
+    .author_page__title .left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .author_page__title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .blog__banner_block {
+        padding: 12px;
+    }
+    .blog__categories_block {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .author_page__title .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "74e2c98f-9429-4b78-9fd1-2f7f13d39b02": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/facebook.svg",
+        "title": "Facebook Overlays",
+        "text": "Explore the best Facebook overlays, alerts, and widgets! Easy setup, tons of assets, and everything you may ever need to make your Facebook streams look incredible.",
+        "link_text": "Explore Overlays"
+      }
+    },
+    "b00532b7-1d5c-4579-a66f-b1f941643463": {
+      "type": "landing-products",
+      "blocks": {
+        "813d8d9f-0b3d-4c97-a13f-f1be51aa8619": {
+          "type": "product",
+          "settings": {
+            "product": "cute-waifu"
+          }
+        },
+        "5174f731-da14-43c4-82d8-ba5ee372dbd6": {
+          "type": "product",
+          "settings": {
+            "product": "cuteness"
+          }
+        },
+        "d72a10b4-023a-4328-b22c-cde7db7c79b3": {
+          "type": "product",
+          "settings": {
+            "product": "zodiac"
+          }
+        },
+        "f9fae83b-1071-43dd-90a9-9a533350b4df": {
+          "type": "product",
+          "settings": {
+            "product": "stickers"
+          }
+        },
+        "851c23b9-4454-409d-8495-87165844c115": {
+          "type": "product",
+          "settings": {
+            "product": "liquid"
+          }
+        },
+        "7dede4b3-4da1-41e5-b66f-bd486ebb0d50": {
+          "type": "product",
+          "settings": {
+            "product": "halloween"
+          }
+        },
+        "1c889e94-7fe4-4ea3-86e7-b02e315552db": {
+          "type": "product",
+          "settings": {
+            "product": "noir-night"
+          }
+        },
+        "3f3f6382-086e-4b60-a9ad-2f7694ca7bfd": {
+          "type": "product",
+          "settings": {
+            "product": "motion"
+          }
+        },
+        "72dceff6-1d2b-4d1d-9d97-b5d10f276380": {
+          "type": "product",
+          "settings": {
+            "product": "triangulation"
+          }
+        }
+      },
+      "block_order": [
+        "813d8d9f-0b3d-4c97-a13f-f1be51aa8619",
+        "5174f731-da14-43c4-82d8-ba5ee372dbd6",
+        "d72a10b4-023a-4328-b22c-cde7db7c79b3",
+        "f9fae83b-1071-43dd-90a9-9a533350b4df",
+        "851c23b9-4454-409d-8495-87165844c115",
+        "7dede4b3-4da1-41e5-b66f-bd486ebb0d50",
+        "1c889e94-7fe4-4ea3-86e7-b02e315552db",
+        "3f3f6382-086e-4b60-a9ad-2f7694ca7bfd",
+        "72dceff6-1d2b-4d1d-9d97-b5d10f276380"
+      ],
+      "settings": {
+        "link": "shopify://collections/full-packs",
+        "link_text": "Load More"
+      }
+    },
+    "4833229e-9d21-4a48-8b66-9ea5f1def518": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "73cf4acb-4a69-459d-8562-93c83edfc598": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Screens",
+            "column_text": "Give your viewers a preview of what's coming up in your stream or interact with them while you're away.\n<br>\n<br>\nGo beyond the premade screens and create your own – each pack includes an animated background, font files, and color codes to help you unleash the creativity!",
+            "h2_title": false
+          }
+        },
+        "773ac15b-d041-4321-a278-9917e4a9e59d": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Get the essential design assets for your Facebook Gaming streams:\n<br>\n<br>\n<ul>\n<li>Webcam Overlays\n</li>\n<li>Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Chat Overlays</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "f1bbcc61-bae0-405b-b738-f16fab23709c": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Alerts",
+            "column_text": "Take the interactivity of your streams to new heights with alert widgets.\n<br>\n<br>\nShow appreciation for donations, congratulate your latest subscriber, and surprise your supporters - it's never been easier to engage with your audience while you’re live!",
+            "h2_title": false
+          }
+        },
+        "3331d34b-fae0-4ebb-8c41-3204c8fae9d6": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stinger Transitions",
+            "column_text": "Add a professional touch to your Facebook live streams with stinger transitions!\n<br>\n<br>\nSwitch between your scenes like a pro and create a seamless viewing experience for your audience with dozens of stingers from our library.",
+            "h2_title": false
+          }
+        },
+        "fdcbdcbe-510d-45c0-b661-b6ad4afa5759": {
+          "type": "column",
+          "settings": {
+            "column_title": "Social Media Graphics",
+            "column_text": "Want to take your new brand identity outside of your stream?\n<br>\n<br>\nEach stream package comes with a customizable .PSD template. Use it to create channel banners, avatars or social media posts – the possibilities are endless!",
+            "h2_title": false
+          }
+        }
+      },
+      "block_order": [
+        "73cf4acb-4a69-459d-8562-93c83edfc598",
+        "773ac15b-d041-4321-a278-9917e4a9e59d",
+        "f1bbcc61-bae0-405b-b738-f16fab23709c",
+        "3331d34b-fae0-4ebb-8c41-3204c8fae9d6",
+        "fdcbdcbe-510d-45c0-b661-b6ad4afa5759"
+      ],
+      "settings": {
+        "title": "What is included in our Facebook Overlay Packages?",
+        "subtitle": ""
+      }
+    },
+    "a16a0412-9f5e-4e1d-91e3-ce24eb65939d": {
+      "type": "landing-learn-more",
+      "blocks": {
+        "7fc68274-25c6-40d9-b12b-9523eacc360b": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/best-live-streaming-platforms"
+          }
+        },
+        "5f1d2f3c-f42c-4f11-becb-cdbf6a88f27e": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/obs-studio-vs-streamlabs"
+          }
+        },
+        "33c31543-b64b-4b4e-b9b6-f03f7e472746": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/how-to-stream-on-ps4-and-ps5"
+          }
+        }
+      },
+      "block_order": [
+        "7fc68274-25c6-40d9-b12b-9523eacc360b",
+        "5f1d2f3c-f42c-4f11-becb-cdbf6a88f27e",
+        "33c31543-b64b-4b4e-b9b6-f03f7e472746"
+      ],
+      "settings": {
+        "title": "Learn More"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "74e2c98f-9429-4b78-9fd1-2f7f13d39b02",
+    "b00532b7-1d5c-4579-a66f-b1f941643463",
+    "4833229e-9d21-4a48-8b66-9ea5f1def518",
+    "a16a0412-9f5e-4e1d-91e3-ce24eb65939d"
+  ]
+}

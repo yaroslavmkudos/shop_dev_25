@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "d9aeb6ce-146f-4d2e-8675-2db81b31de4b": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/obs.svg",
+        "title": "OBS Studio Templates",
+        "text": "Take your streams to the next level with the best templates for OBS Studio. Whether you stream on Twitch, Youtube or Facebook - we got you covered! Every asset from our packages is preconfigured and ready to use in a few clicks!",
+        "link_text": "Explore Templates"
+      }
+    },
+    "a1443c94-7f11-4c5f-a6e9-0c02f3e64368": {
+      "type": "landing-products",
+      "blocks": {
+        "0ee626f9-ec65-41d4-b8d5-066d2dfa2492": {
+          "type": "product",
+          "settings": {
+            "product": "pixel-neon"
+          }
+        },
+        "e90b131b-6eb6-4a1e-9e6a-95c6c4fec7f9": {
+          "type": "product",
+          "settings": {
+            "product": "valorant-esports"
+          }
+        },
+        "53728970-d50a-400f-8d9b-792e1b7152b2": {
+          "type": "product",
+          "settings": {
+            "product": "japan-ghost"
+          }
+        },
+        "be2ddd67-afd4-4bff-990d-a5c9cbe6a73d": {
+          "type": "product",
+          "settings": {
+            "product": "sakura"
+          }
+        },
+        "b637574e-b718-4f0e-9c70-bc43e560d2a0": {
+          "type": "product",
+          "settings": {
+            "product": "itachi"
+          }
+        },
+        "82d56e97-8c58-478c-a147-0c3d32bc38c4": {
+          "type": "product",
+          "settings": {
+            "product": "yandere"
+          }
+        },
+        "693edff4-7b82-4eef-a02e-2be47ec1422b": {
+          "type": "product",
+          "settings": {
+            "product": "phonk"
+          }
+        },
+        "a1578eb6-527a-4e5a-babb-98ce9bcf50fb": {
+          "type": "product",
+          "settings": {
+            "product": "sharp"
+          }
+        },
+        "639127df-bc73-4db9-ab57-6986c7feb5ea": {
+          "type": "product",
+          "settings": {
+            "product": "minecraft"
+          }
+        }
+      },
+      "block_order": [
+        "0ee626f9-ec65-41d4-b8d5-066d2dfa2492",
+        "e90b131b-6eb6-4a1e-9e6a-95c6c4fec7f9",
+        "53728970-d50a-400f-8d9b-792e1b7152b2",
+        "be2ddd67-afd4-4bff-990d-a5c9cbe6a73d",
+        "b637574e-b718-4f0e-9c70-bc43e560d2a0",
+        "82d56e97-8c58-478c-a147-0c3d32bc38c4",
+        "693edff4-7b82-4eef-a02e-2be47ec1422b",
+        "a1578eb6-527a-4e5a-babb-98ce9bcf50fb",
+        "639127df-bc73-4db9-ab57-6986c7feb5ea"
+      ],
+      "settings": {
+        "link": "",
+        "link_text": ""
+      }
+    },
+    "a036cd53-37a7-44a4-9f7c-dbd2f673f5df": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "4d7ad1e9-d3fd-4174-b017-81558646c18f": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Equip your stream with the most important assets:\n<br>\n<br>\n<ul>\n<li>Webcam Borders\n</li>\n<li>Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Chat Overlays</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "fba80060-7333-419f-bebc-6b6bc0e27f08": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Screens",
+            "column_text": "Engage your viewers with beautiful stream screens for any cause: Starting, Ending, BRB, Intermission and much more!",
+            "h2_title": false
+          }
+        },
+        "4924830e-f98d-4ce6-aad1-f545c10d2525": {
+          "type": "column",
+          "settings": {
+            "column_title": "Alerts",
+            "column_text": "Increase interactivity of your streams with animated alert widgets. \n<br>\n<br>\nWhether you’re a Twitch, Youtube or Facebook streamer, our alerts are preconfigured to work with all major platforms!",
+            "h2_title": false
+          }
+        },
+        "3026d5e9-e00a-437a-b9c7-071c2cf653cb": {
+          "type": "column",
+          "settings": {
+            "column_title": "Transitions",
+            "column_text": "Immerse your viewers and keep them watching while you switch the scenes of your stream.\n<br>\n<br>\nEach package from our store comes with the best stinger transitions in the game!",
+            "h2_title": false
+          }
+        },
+        "8c29a459-1e77-4d88-86dc-ae8aafb17e18": {
+          "type": "column",
+          "settings": {
+            "column_title": "Social Media Graphics",
+            "column_text": "Want to share your vibes on other platforms?\n<br>\n<br>\nUse a handy .PSD template to create custom graphics for your social media accounts!",
+            "h2_title": false
+          }
+        }
+      },
+      "block_order": [
+        "4d7ad1e9-d3fd-4174-b017-81558646c18f",
+        "fba80060-7333-419f-bebc-6b6bc0e27f08",
+        "4924830e-f98d-4ce6-aad1-f545c10d2525",
+        "3026d5e9-e00a-437a-b9c7-071c2cf653cb",
+        "8c29a459-1e77-4d88-86dc-ae8aafb17e18"
+      ],
+      "settings": {
+        "title": "What’s Inside the Template?",
+        "subtitle": ""
+      }
+    },
+    "661e96fb-c065-426a-b8f0-e2af2dd89b3c": {
+      "type": "landing-faq",
+      "blocks": {
+        "a114f239-01c7-4c1b-974d-6df10e5632c7": {
+          "type": "column",
+          "settings": {
+            "question": "How to add an overlay to OBS Studio",
+            "answer": "<div>Just press a + button under the Sources tab and choose Media Source. Then choose the overlay file you want to add, check the “Loop” mark and you’re ready to go. In case you’re using our stream packages, you can import everything in a few clicks. Extract the archive with your stream package to the C:/ drive of your computer, open OBS Studio and go to Scene Collection &gt; Import. Press “Add” and find the .json scene file by going to the folder with your extracted overlay &gt; 2. Quick Install &gt; OBS Studio</div>"
+          }
+        }
+      },
+      "block_order": [
+        "a114f239-01c7-4c1b-974d-6df10e5632c7"
+      ],
+      "settings": {
+        "title": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d9aeb6ce-146f-4d2e-8675-2db81b31de4b",
+    "a1443c94-7f11-4c5f-a6e9-0c02f3e64368",
+    "a036cd53-37a7-44a4-9f7c-dbd2f673f5df",
+    "661e96fb-c065-426a-b8f0-e2af2dd89b3c"
+  ]
+}

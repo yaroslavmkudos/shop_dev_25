@@ -1,0 +1,763 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "0286a895-6aa3-4ab3-9676-2f3bbee59ba0": {
+      "type": "landing-banner",
+      "settings": {
+        "title": "Free Discord Banners",
+        "text": "Improve your Discord Server and profile with the coolest banners out there. Completely Free!",
+        "link_text": "Get Your Banner"
+      }
+    },
+    "9387215f-2d4f-4415-8864-15ff7d5d2b27": {
+      "type": "landing-navigation",
+      "blocks": {
+        "0947d724-0a8d-44f6-94b3-38fc7b9bb716": {
+          "type": "item",
+          "settings": {
+            "text": "Gifs"
+          }
+        },
+        "a2a0843c-608f-4eee-bfec-023f0b7b53f6": {
+          "type": "item",
+          "settings": {
+            "text": "Anime"
+          }
+        },
+        "041f118b-4e1c-4197-9557-59077e8a70bb": {
+          "type": "item",
+          "settings": {
+            "text": "Aesthetic"
+          }
+        }
+      },
+      "block_order": [
+        "0947d724-0a8d-44f6-94b3-38fc7b9bb716",
+        "a2a0843c-608f-4eee-bfec-023f0b7b53f6",
+        "041f118b-4e1c-4197-9557-59077e8a70bb"
+      ],
+      "settings": {}
+    },
+    "ac48ef94-632d-44d4-b7f4-2d9bf2cfec16": {
+      "type": "landing-pfp",
+      "blocks": {
+        "008b18a4-98e7-4ff9-afe0-585cb7705dc9": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Abstract_Particles.gif",
+            "text": "Abstract Particles",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Abstract_Particles.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "008b3185-ec8f-4040-9873-c73ebaae3702": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Akatsuki_Glitch.gif",
+            "text": "Akatsuki Glitch",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Akatsuki_Glitch.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "0f4f0478-6a97-4241-b2e5-8b1dea236d63": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Anime_Road.gif",
+            "text": "Anime Road",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Anime_Road.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "a9f50796-b8db-4b4c-95e5-62d9347bc462": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Bmw_Phonk.gif",
+            "text": "BMW Phonk",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Bmw_Phonk.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "68b5ed31-27fc-4112-b1f8-d19136d3f3a2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Cowboy_Bebop.gif",
+            "text": "Cowboy Bebop",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Cowboy_Bebop.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "db1b4018-f016-46bb-a96b-26931dbd697b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Crying_Pikachu.gif",
+            "text": "Crying Pikachu",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Crying_Pikachu.gif?v=1679069496",
+            "round": false
+          }
+        },
+        "6bd4a000-c194-463e-8b70-d2de7d29dba1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Drive.gif",
+            "text": "Drive",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Drive.gif?v=1679069517",
+            "round": false
+          }
+        },
+        "450d2950-3f83-4044-b64f-0bd5c47a09d4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Earth_Space.gif",
+            "text": "Earth Space",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Earth_Space.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "98d00123-78d0-4b17-aa8d-56860d61984e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Evangelion_Shinji.gif",
+            "text": "Evangelion Shinji",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Evangelion_Shinji.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "62b7a4cc-a67c-4cbd-9e09-2a164e2cdad7": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Futuristic_City.gif",
+            "text": "Futuristic City",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Futuristic_City.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "665b2b87-5110-409d-9f33-b78be1aad529": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Glitch.gif",
+            "text": "Glitch",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Glitch.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "930bf281-b267-49fc-8e14-ad6ea5b368d3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Little_Wolfs.gif",
+            "text": "Little Wolfs",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Little_Wolfs.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "6164ba48-d7e2-4a7e-b422-98d448685bd1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Ocean.gif",
+            "text": "Ocean",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Ocean.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "8df6e823-c591-4d7f-bc56-989cd84dc182": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Patagonia.gif",
+            "text": "Patagonia",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Patagonia.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "f2fd47ea-73a4-4ad1-bd5d-9fe00ac768bc": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Ramen.gif",
+            "text": "Ramen",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Ramen.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "73bf31ec-45d5-428b-a4f4-0858074c25fe": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Retro_Car.gif",
+            "text": "Retro Car",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Retro_Car.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "e7277106-da02-45ab-a079-50ef8c92a1fe": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Retro_Speed_Panel.gif",
+            "text": "Retro Speed Panel",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Retro_Speed_Panel.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "2c7e9b7a-b9b1-4e23-bf90-17d258edcc46": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/River.gif",
+            "text": "River",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/River.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "0c502745-ecff-4805-a058-89829ff5d851": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sasuke.gif",
+            "text": "Sasuke",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sasuke.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "4d5ca5b1-6cef-4825-b73f-9eb027a25503": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Tsubasa.gif",
+            "text": "Tsubasa",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Tsubasa.gif?v=1679069497",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "008b18a4-98e7-4ff9-afe0-585cb7705dc9",
+        "008b3185-ec8f-4040-9873-c73ebaae3702",
+        "0f4f0478-6a97-4241-b2e5-8b1dea236d63",
+        "a9f50796-b8db-4b4c-95e5-62d9347bc462",
+        "68b5ed31-27fc-4112-b1f8-d19136d3f3a2",
+        "db1b4018-f016-46bb-a96b-26931dbd697b",
+        "6bd4a000-c194-463e-8b70-d2de7d29dba1",
+        "450d2950-3f83-4044-b64f-0bd5c47a09d4",
+        "98d00123-78d0-4b17-aa8d-56860d61984e",
+        "62b7a4cc-a67c-4cbd-9e09-2a164e2cdad7",
+        "665b2b87-5110-409d-9f33-b78be1aad529",
+        "930bf281-b267-49fc-8e14-ad6ea5b368d3",
+        "6164ba48-d7e2-4a7e-b422-98d448685bd1",
+        "8df6e823-c591-4d7f-bc56-989cd84dc182",
+        "f2fd47ea-73a4-4ad1-bd5d-9fe00ac768bc",
+        "73bf31ec-45d5-428b-a4f4-0858074c25fe",
+        "e7277106-da02-45ab-a079-50ef8c92a1fe",
+        "2c7e9b7a-b9b1-4e23-bf90-17d258edcc46",
+        "0c502745-ecff-4805-a058-89829ff5d851",
+        "4d5ca5b1-6cef-4825-b73f-9eb027a25503"
+      ],
+      "settings": {
+        "title": "Discord Banner GIFs",
+        "subtitle": "",
+        "aspect_ratio": "16/9",
+        "id": "gifs"
+      }
+    },
+    "897146e4-276f-4ca9-a409-ddab55abcaf4": {
+      "type": "landing-pfp",
+      "blocks": {
+        "d2561722-0bd3-405c-a39d-636a4cdf4eaf": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Yandere.gif",
+            "text": "Yandere",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Yandere.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "4ecd5e2b-06b2-49ba-b6f1-9350ef436423": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Totoro.jpg",
+            "text": "Totoro",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Totoro.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "2abfd776-d2ae-4dd1-b916-b5bec5931724": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Tokyo_Ghoul.jpg",
+            "text": "Tokyo Ghoul",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Tokyo_Ghoul.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "3824e4fc-2414-4df8-9ca4-bc8b347a588a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Soul_Eater.jpg",
+            "text": "Soul Eater",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Soul_Eater.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "76131004-3763-4b12-97e5-30ade2484bcd": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Saiki_Kusuo.gif",
+            "text": "Saiki Kusuo",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Saiki_Kusuo.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "cc45e8d7-3401-4ad9-8b91-fd0946ff8afc": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Anime_Rainy_Day.gif",
+            "text": "Anime Rainy Day",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Anime_Rainy_Day.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "f4c38768-fa91-4dbd-91eb-df1d25c382d2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Phone.gif",
+            "text": "Phone",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Phone.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "93bfbd1e-f6ec-405b-b4a2-9bae10469d8d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/One_Piece.gif",
+            "text": "One Piece",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/One_Piece.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "3100f071-f0ab-4f92-a97d-f34fa70ae7e8": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/My_Hero_Academia.gif",
+            "text": "My Hero Academia",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/My_Hero_Academia.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "9ca7cb5b-3af3-4340-bfec-c21b753524c7": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Kira.gif",
+            "text": "Kira",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Kira.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "8dd5e64c-3ce2-42a0-badd-67bae9a0b1b5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Jujutsu_Kaisen.jpg",
+            "text": "Jujutsu Kaisen",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Jujutsu_Kaisen.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "e790f699-6864-4473-91be-762e4e36e40f": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/JoJo.gif",
+            "text": "JoJo",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/JoJo.gif?v=1679069496",
+            "round": false
+          }
+        },
+        "fc9f891e-3ebb-4ecf-af49-6773080dfdba": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Itachi.gif",
+            "text": "Itachi",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Itachi.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "351fcaeb-ff91-44b4-8fea-3d761d3c2f46": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Evangelion.jpg",
+            "text": "Evangelion",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Evangelion.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "40e100cc-6c5e-46e1-b6bd-adf73dbd5403": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Cyberpunk.jpg",
+            "text": "Cyberpunk",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Cyberpunk.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "ed81485a-278e-4dd5-8714-a9dbd0ae39c4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Cowboy_Bebop.jpg",
+            "text": "Cowboy Bebop",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Cowboy_Bebop.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "9b139716-b8e5-452a-aba5-2d52c6d025ae": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Chainsaw_Man.gif",
+            "text": "Chainsaw Man",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Chainsaw_Man.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "e653e357-0754-4da2-a360-93f53a322f5e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Bleach.jpg",
+            "text": "Bleach",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Bleach.jpg?v=1679069495",
+            "round": false
+          }
+        },
+        "63afa9d1-d09a-4ebd-994e-663a8c9d2844": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Attack_On_Titan.gif",
+            "text": "Attack on Titan",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Attack_On_Titan.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "72bb3873-e1c7-4b40-b4eb-1339a1a3acb0": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Anya_Forger.jpg",
+            "text": "Anya Forger",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Anya_Forger.jpg?v=1679069495",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "d2561722-0bd3-405c-a39d-636a4cdf4eaf",
+        "4ecd5e2b-06b2-49ba-b6f1-9350ef436423",
+        "2abfd776-d2ae-4dd1-b916-b5bec5931724",
+        "3824e4fc-2414-4df8-9ca4-bc8b347a588a",
+        "76131004-3763-4b12-97e5-30ade2484bcd",
+        "cc45e8d7-3401-4ad9-8b91-fd0946ff8afc",
+        "f4c38768-fa91-4dbd-91eb-df1d25c382d2",
+        "93bfbd1e-f6ec-405b-b4a2-9bae10469d8d",
+        "3100f071-f0ab-4f92-a97d-f34fa70ae7e8",
+        "9ca7cb5b-3af3-4340-bfec-c21b753524c7",
+        "8dd5e64c-3ce2-42a0-badd-67bae9a0b1b5",
+        "e790f699-6864-4473-91be-762e4e36e40f",
+        "fc9f891e-3ebb-4ecf-af49-6773080dfdba",
+        "351fcaeb-ff91-44b4-8fea-3d761d3c2f46",
+        "40e100cc-6c5e-46e1-b6bd-adf73dbd5403",
+        "ed81485a-278e-4dd5-8714-a9dbd0ae39c4",
+        "9b139716-b8e5-452a-aba5-2d52c6d025ae",
+        "e653e357-0754-4da2-a360-93f53a322f5e",
+        "63afa9d1-d09a-4ebd-994e-663a8c9d2844",
+        "72bb3873-e1c7-4b40-b4eb-1339a1a3acb0"
+      ],
+      "settings": {
+        "title": "Anime Banners",
+        "subtitle": "",
+        "aspect_ratio": "16/9",
+        "id": "anime"
+      }
+    },
+    "9dc902c7-88db-4e41-955b-40f9c3795274": {
+      "type": "landing-pfp",
+      "blocks": {
+        "ba7766bf-e0c1-4307-b2b4-7e0ca765758d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/A_Space_Odyssey.png",
+            "text": "A Space Odyssey",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/A_Space_Odyssey.png?v=1679069496",
+            "round": false
+          }
+        },
+        "fc9fe562-a556-4347-8b3b-544503b0f19f": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Beautiful_Night.gif",
+            "text": "Beautiful Night",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Beautiful_Night.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "d6a786cb-e7a5-4092-8af5-c9ef469ab778": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Big_City.png",
+            "text": "Big City",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Big_City.png?v=1679069496",
+            "round": false
+          }
+        },
+        "738a5134-e542-46d2-8c85-8a288fdf5de7": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Blade_Runner.png",
+            "text": "Blade Runner",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Blade_Runner.png?v=1679069496",
+            "round": false
+          }
+        },
+        "d7ef5e47-c8fe-4078-9dea-b0a437bee4b3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Blossom.png",
+            "text": "Blossom",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Blossom.png?v=1679069496",
+            "round": false
+          }
+        },
+        "af33a770-887a-439e-8c2c-f8299d519303": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Butterfly.png",
+            "text": "Butterfly",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Butterfly.png?v=1679069496",
+            "round": false
+          }
+        },
+        "e954bba0-e025-4f73-a66a-b501a525bbb3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Cats.png",
+            "text": "Cats",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Cats.png?v=1679069495",
+            "round": false
+          }
+        },
+        "6dcd8fe9-a7ac-443b-bc77-974ff770a79d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Clouds.png",
+            "text": "Clouds",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Clouds.png?v=1679069495",
+            "round": false
+          }
+        },
+        "30b1645c-1970-4ddd-9d96-1269b1dcd12b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Crying.gif",
+            "text": "Crying",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Crying.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "8b1d7c4f-9aaa-483b-85a5-86d993195a9a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Fight_Club.png",
+            "text": "Fight Club",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Fight_Club.png?v=1679069496",
+            "round": false
+          }
+        },
+        "ac763dae-dcfd-4b98-a66e-23467eec4783": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Kitty.gif",
+            "text": "Kitty",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Kitty.gif?v=1679069498",
+            "round": false
+          }
+        },
+        "006bf6ca-97c8-4d2b-8425-8a075b6c727c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Megapolis.png",
+            "text": "Megapolis",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Megapolis.png?v=1679069495",
+            "round": false
+          }
+        },
+        "52687900-5d28-468d-9880-e6dc8db34d1b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Rainy_Day.gif",
+            "text": "Rainy Day",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Rainy_Day.gif?v=1679069497",
+            "round": false
+          }
+        },
+        "c3297762-79e1-446c-877b-8e9692708cb3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sadness.png",
+            "text": "Sadness",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sadness.png?v=1679069495",
+            "round": false
+          }
+        },
+        "8b0f7343-b42a-416e-b5cc-dddf4e13e6ab": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sky.png",
+            "text": "Sky",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sky.png?v=1679069495",
+            "round": false
+          }
+        },
+        "317a4dd6-6ec3-436f-882d-5310b6e8e1b6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sunset.png",
+            "text": "Sunset",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sunset.png?v=1679069496",
+            "round": false
+          }
+        },
+        "f34a3330-0e21-4716-9acf-99575a870cbd": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/The_Room.png",
+            "text": "Room",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/The_Room.png?v=1679069495",
+            "round": false
+          }
+        },
+        "d1dd9169-c1f3-4fcd-8dd8-c80ef9298b5d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Touching.png",
+            "text": "Touching",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Touching.png?v=1679069496",
+            "round": false
+          }
+        },
+        "076ca9c1-b22a-48d6-9b89-9535a70ce287": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Train.png",
+            "text": "Train",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Train.png?v=1679069495",
+            "round": false
+          }
+        },
+        "a4f26ce7-8301-44a0-8094-bb247a266dd0": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Waves.gif",
+            "text": "Waves",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Waves.gif?v=1679069497",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "ba7766bf-e0c1-4307-b2b4-7e0ca765758d",
+        "fc9fe562-a556-4347-8b3b-544503b0f19f",
+        "d6a786cb-e7a5-4092-8af5-c9ef469ab778",
+        "738a5134-e542-46d2-8c85-8a288fdf5de7",
+        "d7ef5e47-c8fe-4078-9dea-b0a437bee4b3",
+        "af33a770-887a-439e-8c2c-f8299d519303",
+        "e954bba0-e025-4f73-a66a-b501a525bbb3",
+        "6dcd8fe9-a7ac-443b-bc77-974ff770a79d",
+        "30b1645c-1970-4ddd-9d96-1269b1dcd12b",
+        "8b1d7c4f-9aaa-483b-85a5-86d993195a9a",
+        "ac763dae-dcfd-4b98-a66e-23467eec4783",
+        "006bf6ca-97c8-4d2b-8425-8a075b6c727c",
+        "52687900-5d28-468d-9880-e6dc8db34d1b",
+        "c3297762-79e1-446c-877b-8e9692708cb3",
+        "8b0f7343-b42a-416e-b5cc-dddf4e13e6ab",
+        "317a4dd6-6ec3-436f-882d-5310b6e8e1b6",
+        "f34a3330-0e21-4716-9acf-99575a870cbd",
+        "d1dd9169-c1f3-4fcd-8dd8-c80ef9298b5d",
+        "076ca9c1-b22a-48d6-9b89-9535a70ce287",
+        "a4f26ce7-8301-44a0-8094-bb247a266dd0"
+      ],
+      "settings": {
+        "title": "Aesthetic Banners",
+        "subtitle": "",
+        "aspect_ratio": "16/9",
+        "id": "aesthetic"
+      }
+    },
+    "7c58531c-f366-4004-a8b4-df5125694cf8": {
+      "type": "landing-what-is-a",
+      "settings": {
+        "title": "What is a Discord Banner?",
+        "image": "shopify://shop_images/what_is_discord_banner.png",
+        "text": "<div>Discord Banner is an image displayed at the top of your Discord server listing.<br><br>It allows you to differentiate from thousands of other servers and, most importantly, helps users easily identify what server are they visiting.<br><br> It’s a great tool to make a first impression on prospecting users that are looking to join new servers. Take note, that you are allowed to add your own discord banner only when your server has reached Boosting Level 2 of Discord Nitro Subscription.</div>",
+        "background": "#282a2e",
+        "color": "#ffffff"
+      }
+    },
+    "3990be5d-197b-4b18-9710-9508482bd818": {
+      "type": "landing-tutorial",
+      "settings": {
+        "title": "How to add a Banner to Your Discord Server",
+        "text": "<div>\n<ol>\n<li>Go to Server Settings &gt; Overview\n</li>\n<li>Scroll to the bottom and press the Upload Background button under the Server Banner Background section\n</li>\n<li>That’s it, your server banner is ready\n</li>\n</ol>\n</div>"
+      }
+    },
+    "1d2f0f21-d875-461a-bd38-59ffcbb3865f": {
+      "type": "landing-faq",
+      "blocks": {
+        "164c25f7-338d-4e5b-ac86-4ca4629dff13": {
+          "type": "column",
+          "settings": {
+            "question": "What is the size of a Discord banner?",
+            "answer": "<div>The officially recommended size of the Discord server banner is 960x540 with a 16:9 aspect ratio. The maximum allowed size of the banner image is 1920x1080, but it will be automatically resized after upload.</div>"
+          }
+        },
+        "97db438c-7207-4ec8-b176-73c1cdfcf021": {
+          "type": "column",
+          "settings": {
+            "question": "How to make a Discord banner?",
+            "answer": "<div>The most flexible way to make a Discord banner is to use professional design software such as Adobe Photoshop or Adobe Illustrator. It allows you to take complete control of every aspect of the banner you’re designing, but such software is not free and requires some knowledge and time. One of the more accessible and free ways to make it is to use free online tools like Photopea or Canva, but keep in mind that you won’t have as many editing and effects options as with professional software. And the easiest way to make a Discord banner is not to make it at all - you can just get a premade banner that suits your taste. Such banners are designed specifically for Discord requirements, and they will look good in any case.</div>"
+          }
+        },
+        "9cd2faff-1663-4fd8-b925-25206fc38359": {
+          "type": "column",
+          "settings": {
+            "question": "How to download a Discord server banner?",
+            "answer": "<div>\n<ol>\n<li>Open Discord in your web browser\n</li>\n<li>Find a profile or server you want to get the banner from\n</li>\n<li>Press Ctrl + Shift + C on Windows or Cmd + Shift + C on Mac OS\n</li>\n<li>Move your mouse on top of the banner and click it\n</li>\n<li>Copy the URL highlighted in the developer tool of your browser\n</li>\n<li>Paste it into a new tab and press Enter\n</li>\n<li>Right-Click on it and press Save Image As…\n</li>\n</ol>\n</div>"
+          }
+        },
+        "e30b614b-f7a7-4c23-a9f9-d0c922518e43": {
+          "type": "column",
+          "settings": {
+            "question": "How to get animated Discord banner?",
+            "answer": "<div>To get an animated Discord banner you need to have a Discord Nitro Subscription - it allows you to upload animated GIF files as your profile or server banners.</div>"
+          }
+        }
+      },
+      "block_order": [
+        "164c25f7-338d-4e5b-ac86-4ca4629dff13",
+        "97db438c-7207-4ec8-b176-73c1cdfcf021",
+        "9cd2faff-1663-4fd8-b925-25206fc38359",
+        "e30b614b-f7a7-4c23-a9f9-d0c922518e43"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0286a895-6aa3-4ab3-9676-2f3bbee59ba0",
+    "9387215f-2d4f-4415-8864-15ff7d5d2b27",
+    "ac48ef94-632d-44d4-b7f4-2d9bf2cfec16",
+    "897146e4-276f-4ca9-a409-ddab55abcaf4",
+    "9dc902c7-88db-4e41-955b-40f9c3795274",
+    "7c58531c-f366-4004-a8b4-df5125694cf8",
+    "3990be5d-197b-4b18-9710-9508482bd818",
+    "1d2f0f21-d875-461a-bd38-59ffcbb3865f"
+  ]
+}

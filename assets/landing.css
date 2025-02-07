@@ -1,0 +1,534 @@
+.lh1 {
+    font-family:Gilroy-Heavy;
+    font-size: 64px;
+    line-height: 80px;
+}
+.lh2 {
+    font-family:Gilroy-Heavy;
+    font-size: 40px;
+    line-height: 48px;
+}
+.lh3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+.lbtn {
+    font-size: 16px;
+    line-height: 24px;
+}
+.lbody {
+    font-family:Gilroy-Regular;
+    font-size: 20px;
+    line-height: 32px;
+}
+.lbody_sm {
+    font-family:Gilroy-Regular;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.template-landing .page-width {
+    max-width: 1140px;
+}
+
+.landing__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 15px;
+    text-align: center;
+}
+
+.landing__banner_logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.landing__banner_title  {
+    margin-bottom: 20px;
+}
+
+.landing__banner_text  {
+    margin-bottom: 40px;
+}
+
+.landing__products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+.landing__products .btn {
+    margin-top: 40px;
+}
+
+.landing__what_is {
+    padding: 64px 24px 0 15px;
+}
+
+.landing__what_is_content {
+    display: flex;
+    gap: 30px;
+}
+
+.landing__what_is_title {
+    margin-bottom: 40px;
+}
+
+.landing__what_is_image {
+    display: block;
+    max-width: 349px;
+}
+
+.landing__what_is .left {
+    width: 48.64%;
+    flex-shrink: 0;
+}
+
+.landing__what_inside {
+    padding: 64px 24px;
+    background: #F9F9F9;
+}
+
+.landing__what_inside .page-width,
+.landing__what_is .page-width {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.landing__what_inside_subtitle {
+    margin-top: 16px;
+}
+
+.landing__what_inside_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px 30px;
+    padding-top: 40px;
+}
+
+.landing__what_inside_item_title {
+    margin-bottom: 16px;
+}
+
+h2.landing__what_inside_item_title {
+    margin-bottom: 40px;
+}
+
+.landing__faq  {
+    padding: 64px 24px;
+}
+
+.landing__what_inside_item ul {
+    padding-left: 30px;
+    list-style: disc;
+}
+
+.landing__what_inside_item li {
+    list-style: disc;
+}
+
+.landing__faq {
+    display: flex;
+    align-items: center;
+    gap: 125px;
+}
+
+.landing__faq .left {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.landing__faq .right {
+    flex: 1;
+}
+
+.landing__faq .faq {
+    margin-bottom: 0;
+}
+
+.landing__learn_more  {
+    padding: 64px 24px;
+}
+
+.landing__learn_more_title {
+    margin-bottom: 40px;
+}
+
+.landing__learn_more_posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.landing__learn_more_post {
+    position: relative;
+}
+
+.landing__learn_more_post a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.landing__learn_more_post img {
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.landing__learn_more_post h3 {
+    margin-bottom: 0;
+}
+
+.landing__tutorial {
+    display: flex;
+    align-items: center;
+    gap:30px;
+    padding: 64px 24px;
+}
+
+.landing__tutorial .left {
+    width: 48.6%;
+}
+
+.landing__tutorial .right {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.landing__tutorial li {
+    list-style: decimal;
+}
+
+.landing__bundle {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 64px 24px;
+}
+
+.landing__bundle .left {
+    width: 48.6%;
+}
+
+.landing__bundle .right {
+    flex: 1;
+}
+
+.landing__bundle img {
+    border-radius: 8px;
+}
+
+.landing__bundle_title {
+    margin-bottom: 30px;
+}
+
+.landing__bundle_text {
+    margin-bottom: 30px;
+}
+
+.template-landing .main-content {
+    padding-top: 0;
+}
+
+.landing__pfp {
+    padding-bottom: 40px;
+}
+
+.landing__pfp.use_paddings {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.landing__pfp_images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px 30px;
+}
+
+.landing__pfp_image:hover .landing__pfp_download {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.landing__pfp_image .img_wr {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.landing__pfp_image img {
+    display: block;
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.image_16_9 .landing__pfp_image img {
+    aspect-ratio: 16 / 9;
+}
+
+.landing__pfp_image img.round{
+    border-radius: 50%;
+}
+
+.image_16_9 .landing__pfp_image img.round {
+    border-radius: 4px;
+}
+
+.landing__pfp_image_text {
+    text-align: center;
+}
+
+.landing__pfp_title {
+    margin-bottom: 40px;
+}
+
+.landing__pfp_title--with_subtitle {
+    margin-bottom: 16px;
+}
+
+.landing__pfp_subtitle {
+    margin-bottom: 24px;
+}
+
+.landing__navigation {
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;    
+    padding: 16px 24px;
+}
+
+.landing__navigation .left {
+    width: 100%;
+    max-width: calc(100% - 70px);
+}
+
+.navigation__item--faq {
+    margin-left: auto;
+}
+
+.navigation {
+    display: flex;
+    overflow: auto;
+    gap: 8px;
+    width: 100%;
+}
+
+.navigation__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    background: #F2F2F2;
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 0.2s ease-in-out;
+} 
+
+.navigation__item:hover {
+    color: #fff;
+    background: #0080FF;
+}  
+
+.landing__pfp_download {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.landing__guide {
+    padding: 64px 24px;
+}
+
+.landing__guide_title {
+    margin-bottom: 16px;
+}
+
+.landing__guide_item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.landing__guide_item .right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.landing__guide_item h3 {
+    margin-bottom: 16px;
+}
+
+.table {
+    border: 1px solid #E8E8E8;
+}
+
+.table .row {
+    display: flex;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.table .row:last-child {
+    border-bottom: none;
+}
+
+.table .row div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 16px 20px;
+    font-family: "Gilroy-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.table .row div:first-child {
+    border-right: 1px solid #E8E8E8;
+}
+
+.table ul,
+.table ul li {
+    list-style: disc;
+}
+.table ol,
+.table ol li {
+    list-style: decimal;
+}
+
+.table ul,
+.table ol {
+    padding-left: 14px;
+}
+
+@media (min-width:768px) {
+    
+
+    .image_16_9 .landing__pfp_images {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px 30px;
+    }
+}
+
+@media (max-width: 860px) {
+    .table .row div {
+        padding: 14px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .lh1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .landing__banner,
+    .landing__products,
+    .landing__faq,
+    .landing__learn_more,
+    .landing__tutorial,
+    .landing__guide,
+    .landing__bundle {
+        padding: 40px 24px;
+    }
+
+    .landing__what_is,
+    .landing__what_inside {
+        padding: 40px 0;
+    }
+
+    .landing .collection__main .grid--view-items {
+        margin-bottom: 40px;
+    }
+
+    .landing__what_is_content,
+    .landing__faq,
+    .landing__tutorial,
+    .landing__bundle  {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .landing__what_is .left,
+    .landing__bundle .left {
+        order: 1;
+        width: 100%;
+    }
+
+    .landing__faq .left,
+    .landing__faq .right,
+    .landing__tutorial .left {
+        width: 100%;
+    }
+
+    .landing__what_is_image {
+        max-width: 100%;
+    }
+    
+    .landing__what_inside_block {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-top: 24px;
+    }
+
+    .landing__learn_more_posts {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .landing__learn_more_title {
+        margin-bottom: 24px;
+    }
+
+    .landing__tutorial_title {
+        margin-bottom: 0;
+    }
+
+    .landing__pfp_images {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 16px;
+    }
+
+    .landing__navigation {
+        margin-bottom: 40px;
+    }
+
+    .landing__pfp_download  {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 10px;
+    }
+
+    .landing__guide_item {
+        grid-template-columns: 1fr;   
+    }
+
+    .landing__pfp.use_paddings {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}

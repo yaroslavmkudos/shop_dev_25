@@ -1,0 +1,178 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "a540ce04-2a7f-4666-9417-c39bca45b90a": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/twitch.svg",
+        "title": "Twitch Layouts",
+        "text": "Whether you’re a seasoned streamer or just starting out, our Twitch layouts are designed to take your stream to the next league! Explore our collection of overlays, widgets and designs to find the one that fits your style!",
+        "link_text": "Get Your Layout"
+      }
+    },
+    "6e1c5293-c003-41de-9aab-a98ecabc6f88": {
+      "type": "landing-products",
+      "blocks": {
+        "719d0680-dd6b-417b-b89c-ac3a100a1c61": {
+          "type": "product",
+          "settings": {
+            "product": "neon-japan"
+          }
+        },
+        "50b4c165-8d4e-4264-b10e-6978acd58aab": {
+          "type": "product",
+          "settings": {
+            "product": "japan-soul"
+          }
+        },
+        "c9564ea8-6e5a-4986-b551-322fb9db50ae": {
+          "type": "product",
+          "settings": {
+            "product": "itachi"
+          }
+        },
+        "7863ca98-065b-47b5-b799-a9bb0877b6da": {
+          "type": "product",
+          "settings": {
+            "product": "acid"
+          }
+        },
+        "28ccca70-4678-44de-a6a0-efaf2b3dfb47": {
+          "type": "product",
+          "settings": {
+            "product": "league"
+          }
+        },
+        "52572de7-cffb-4655-9965-77df601c05d5": {
+          "type": "product",
+          "settings": {
+            "product": "yandere"
+          }
+        },
+        "a09bc0f3-ceef-4d28-93b2-7cb5d79907ae": {
+          "type": "product",
+          "settings": {
+            "product": "autumn-landscape"
+          }
+        },
+        "d205954f-4c30-4408-8a52-15a7dda491a1": {
+          "type": "product",
+          "settings": {
+            "product": "phonk"
+          }
+        },
+        "58f2554d-dd14-4696-a677-1f12e3e0731c": {
+          "type": "product",
+          "settings": {
+            "product": "vikings"
+          }
+        }
+      },
+      "block_order": [
+        "719d0680-dd6b-417b-b89c-ac3a100a1c61",
+        "50b4c165-8d4e-4264-b10e-6978acd58aab",
+        "c9564ea8-6e5a-4986-b551-322fb9db50ae",
+        "7863ca98-065b-47b5-b799-a9bb0877b6da",
+        "28ccca70-4678-44de-a6a0-efaf2b3dfb47",
+        "52572de7-cffb-4655-9965-77df601c05d5",
+        "a09bc0f3-ceef-4d28-93b2-7cb5d79907ae",
+        "d205954f-4c30-4408-8a52-15a7dda491a1",
+        "58f2554d-dd14-4696-a677-1f12e3e0731c"
+      ],
+      "settings": {
+        "link": "shopify://collections/full-packs",
+        "link_text": "Load More"
+      }
+    },
+    "cc03278b-43c1-4b40-84ca-1eb5e4cd9cc7": {
+      "type": "landing-what-is-a",
+      "settings": {
+        "title": "What is a  Twitch Layout?",
+        "image": "shopify://shop_images/twitch-layout2.png",
+        "text": "Twitch Layout is, essentially, another name for an overlay. It’s a design element that streamers use to improve the look of their streams and add interactivity to the viewing experience. \n<br> <br>\nMost of the time streamers combine different static images and animated overlays to create unique Twitch layouts that represent their personal brand identity. They can include stream screens, webcam frames, banners, labels and much more.\n<br>\n<br>",
+        "background": "#18181b",
+        "color": "#ffffff"
+      }
+    },
+    "3441533d-f188-40cc-b2f2-b8212871c0b5": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "82c2e6c1-c80b-483d-baf7-da11cb6a8354": {
+          "type": "column",
+          "settings": {
+            "column_title": "What’s Inside?",
+            "column_text": "Our Twitch layouts are packed with every asset you may ever need as a streamer.\n<br>\n<br>\nFrom facecam borders and stream screens to alert widgets and customizable social media graphics. Get a full package or choose specific assets tailored to your needs.",
+            "h2_title": true
+          }
+        },
+        "efdfb9cd-fa35-4244-b1e2-239a916df78d": {
+          "type": "column",
+          "settings": {
+            "column_title": "Set Up in Minutes",
+            "column_text": "We prepared handy quick install files that allow you to setup and customize your layout in just a few clicks.\n<br>\n<br>\nWhether you’re a Streamlabs, StreamElements or OBS user - we got you covered!",
+            "h2_title": true
+          }
+        }
+      },
+      "block_order": [
+        "82c2e6c1-c80b-483d-baf7-da11cb6a8354",
+        "efdfb9cd-fa35-4244-b1e2-239a916df78d"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": ""
+      }
+    },
+    "56c29739-e1f8-47bd-b4d4-0c8e3d874d83": {
+      "type": "landing-learn-more",
+      "blocks": {
+        "f03304bc-bacf-4653-9728-7dea60646799": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/twitch-graphics-size-the-ultimate-guide-2022"
+          }
+        },
+        "06c26e60-08ed-4729-ba3a-333a494eadfd": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/what-is-a-twitch-overlay"
+          }
+        },
+        "1c10b5ec-eb9c-48a8-8a0e-ae482fb546ae": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/how-to-stream-on-twitch"
+          }
+        }
+      },
+      "block_order": [
+        "f03304bc-bacf-4653-9728-7dea60646799",
+        "06c26e60-08ed-4729-ba3a-333a494eadfd",
+        "1c10b5ec-eb9c-48a8-8a0e-ae482fb546ae"
+      ],
+      "settings": {
+        "title": "Learn More"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a540ce04-2a7f-4666-9417-c39bca45b90a",
+    "6e1c5293-c003-41de-9aab-a98ecabc6f88",
+    "cc03278b-43c1-4b40-84ca-1eb5e4cd9cc7",
+    "3441533d-f188-40cc-b2f2-b8212871c0b5",
+    "56c29739-e1f8-47bd-b4d4-0c8e3d874d83"
+  ]
+}

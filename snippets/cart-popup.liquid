@@ -1,0 +1,128 @@
+{%- style -%}
+  {% assign cart_popup_box_shadow = settings.color_borders | color_modify: 'alpha', 0.5 %}
+
+  .cart-popup {
+    box-shadow: 1px 1px 10px 2px {{ cart_popup_box_shadow }};
+  }
+{%- endstyle -%}
+
+<div class="cart-popup-wrapper  critical-hidden" role="dialog" aria-modal="true" aria-labelledby="CartPopupHeading" >
+
+  <div class="cart-popup__header">
+    <h2 id="CartPopupHeading" class="cart-popup__heading">My cart (<span class="cart_count">{{cart.item_count}}</span>)</h2>
+    <div class="cart-popup__close" aria-label="{{ 'general.accessibility.close_modal' | t }}"></div>
+  </div>
+    <div class="cart-popup-wrapper_content {% if cart.item_count == 0 %} hidden{% endif %}">
+      
+      
+      <div class="cart_popup__inner">
+        <div class="cart_popup__inner_content">
+          {% for item in cart.items %}
+            <div class="cart_popup__item" data-variant="{{item.variant_id}}">
+              <div class="cart_popup__item_img_wr">
+                <img src="{{item.product.featured_image | img_url: '400x'}}" alt="" loading='lazy'>
+                
+                <div class="cart_popup__remove">
+                  <div class="cart_popup__remove_icon"></div>
+                  <div class="cart_popup__remove_text">Remove From Cart</div>
+                </div>
+              </div>
+  
+              <div class="cart_popup__info">
+                <div class="left">
+                  <a href="{{item.product.url}}?{{item.variant_id}}" class="cart_popup__title">{{item.product.title}}</a>
+                  <div class="cart_popup__type">
+                    
+                    {%- assign variant_options = item.options_with_values -%}
+                    {{collections[item.product.metafields.my_fields.custom_breadcrumb].title}} - {% for option in variant_options %}
+                      {{ option.value }}
+                    {% endfor %}
+                  </div>
+                </div>
+  
+                <div class="right">
+                  
+                    
+                    <div class="cart_popup__price cart_popup__price--compare" data-compare="{{item.variant.compare_at_price}}">{% if item.variant.price < item.variant.compare_at_price %}{{item.variant.compare_at_price | money}}{% endif %}</div>
+                  
+                  <div class="cart_popup__price">{{item.original_line_price | money}}</div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+  
+        <div class="medium-up--hide">
+          <div class="divider"></div>
+          <div class="cart_popup__bottom_item">
+            <div class="cart_popup__bottom_name">Subtotal</div>
+            <div class="cart_popup__bottom_value cart_popup__bottom_value--subtotal"></div>
+          </div>
+          <div class="cart_popup__bottom_item">
+            <div class="cart_popup__bottom_name">Discounts</div>
+            <div class="cart_popup__bottom_value cart_popup__bottom_value--discount"></div>
+          </div>
+          <div class="cart_popup__bottom_item">
+            <div class="cart_popup__bottom_name">Taxes</div>
+            <div class="cart_popup__bottom_value cart_popup__bottom_value--tax">Calculated At Checkout</div>
+          </div>
+      
+          <div class="divider"></div>
+        </div>
+      </div>
+  
+      <div class="cart_popup__bottom">
+        <div class="small--hide">
+          <div class="cart_popup__bottom_item">
+            <div class="cart_popup__bottom_name">Subtotal</div>
+            <div class="cart_popup__bottom_value cart_popup__bottom_value--subtotal"></div>
+          </div>
+          <div class="cart_popup__bottom_item">
+            <div class="cart_popup__bottom_name">Discounts</div>
+            <div class="cart_popup__bottom_value cart_popup__bottom_value--discount"></div>
+          </div>
+          <div class="cart_popup__bottom_item">
+            <div class="cart_popup__bottom_name">Taxes</div>
+            <div class="cart_popup__bottom_value cart_popup__bottom_value--tax">Calculated At Checkout</div>
+          </div>
+      
+          <div class="divider"></div>
+        </div>
+        
+  
+        <div class="cart_popup__bottom_total">
+          <div class="cart_popup__bottom_name">Total</div>
+          <div class="cart_popup__bottom_value cart_popup__bottom_value--total">{{ cart.total_price | money }}</div>
+        </div>
+  
+        <a href="/checkout" class="btn">Checkout
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.57996 16.59L13.17 12L8.57996 7.41L9.99996 6L16 12L9.99996 18L8.57996 16.59Z" fill="#fff"/>
+          </svg>      
+        </a>
+        {% unless template contains 'product' %}
+          {{content_for_additional_checkout_buttons }}           
+        {% endunless %}
+        {% comment %} {{ form | payment_button }} {% endcomment %}
+  
+        <div class="cart_popup__hint">Got a discount code or coupon? <br>
+        Apply it at the next step :)</div>
+      </div>
+    </div>
+    <div class="cart-popup-wrapper_empty {% if cart.item_count > 0 %} hidden{% endif %}">
+      <div class="cart-popup__close" aria-label="{{ 'general.accessibility.close_modal' | t }}"></div>
+      <div class="cart-popup-wrapper_empty_text">
+        <div class="cart-popup-wrapper_empty_icon"></div>
+        There’s nothing here yet.
+      </div>
+
+      <a href="/collections" class="btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.57996 16.59L13.17 12L8.57996 7.41L9.99996 6L16 12L9.99996 18L8.57996 16.59Z" fill="#fff"/>
+        </svg> 
+          
+        CONTINUE SHOPPING</a>
+    </div>
+  
+</div>
+

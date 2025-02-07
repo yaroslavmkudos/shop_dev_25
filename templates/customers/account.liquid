@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="{{'account.css' | asset_url }}">
+
+<div class="page-width">
+
+  <div class="myaccount__content">
+
+    {% for attachment in attachments %}
+      {{ attachment.product_name }}
+      {{ attachment.name }}
+      Download Link: {{ attachment.url }}
+    {% endfor %}
+
+
+  
+    <div class="myaccount">
+      <div class="myaccount-sidebar">
+        <div class="myaccount__name_container">
+          <span class="regular">Welcome back,</span>
+          <div class="myaccount__name ">
+            {{customer.first_name}} {{customer.last_name}}
+          </div>
+        </div>
+        <ul>
+          {% comment %} <li class="selected"><a href="/account">Orders</a></li> {% endcomment %}
+          <li><a href="/account/addresses">Account Info</a></li>
+          <li><a href="/account/login?reset_password">CHANGE PASSWORD</a></li>
+          <li class="logout">{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+        </ul>
+      </div>
+
+      <div class="myaccount__info_container">
+        <div class="myaccount__info">
+          <div class="myaccount__order-history">
+            <div class="myaccount__order-history_top">
+              <div class="myaccount__order-history_counter">{{customer.orders_count}} Orders</div>
+              <div class="myaccount__order-history_text regular">Open order to see details and download your files</div>
+            </div>
+            {% paginate customer.orders by 20 %}
+              {% if customer.orders.size != 0 %}
+                {% for order in customer.orders %}
+                  <div class="myaccount__order_item">
+                    <a href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"></a>
+                    <div class="myaccount__order_item_name">{{ order.name }}</div>
+
+                    <div class="myaccount__order_item_name_right">
+                      {{ order.created_at | time_tag: format: 'date' }}
+                      <div class="btn_arrow">
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+
+              {% else %}
+              <div class="myaccount__order_item">
+                <p>{{ 'customer.orders.none' | t }}</p>
+              </div>  
+              {% endif %}
+              {%- if paginate.pages > 1 -%}
+                {% include 'pagination', paginate: paginate %}
+              {%- endif -%}
+            {% endpaginate %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var perfEntries = performance.getEntriesByType("navigation");
+
+if (perfEntries[0].type === "back_forward") {
+    location.reload(true);
+}
+</script>

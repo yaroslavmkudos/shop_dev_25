@@ -1,0 +1,131 @@
+<div class="team">
+    <div class="page-width">
+        <div class="team__content">
+          {% for block in section.blocks %}
+              <div class="team__item">
+                <div class="team__item_inner">
+                  <div class="img_wr">
+                    <img src="{{block.settings.image | img_url: '80x'}}" alt="" loading='lazy'>
+                  </div>
+                    
+                  <div class="team__name">{{block.settings.name}}</div>
+                  <div class="team__character">{{block.settings.character}}</div>
+                </div>                  
+              </div>
+          {% endfor %}
+
+             
+
+            {% if section.settings.extra_image_1 %}
+              <div class="team__item team__item--extra_1">
+                <div class="img_wr">
+                  <img src="{{ section.settings.extra_image_1 | img_url: '80x' }}" alt="" loading='lazy'>
+                </div>                
+              </div>
+            {% endif %}
+
+            {% if section.settings.extra_image_2 %}
+              <div class="team__item team__item--extra_2">
+                <div class="img_wr">
+                  <img src="{{ section.settings.extra_image_2 | img_url: '80x' }}" alt="" loading='lazy'>
+                </div>                
+              </div>
+            {% endif %}
+
+            {% if section.settings.extra_image_3 %}
+              <div class="team__item team__item--extra_3">
+                <div class="img_wr">
+                  <img src="{{ section.settings.extra_image_3 | img_url: '80x' }}" alt="" loading='lazy'>
+                </div>                
+              </div>
+            {% endif %}
+
+            {% if section.settings.extra_image_4 %}
+              <div class="team__item team__item--extra_4">
+                <div class="img_wr">
+                  <img src="{{ section.settings.extra_image_4 | img_url: '80x' }}" alt="" loading='lazy'>
+                </div>                
+              </div>
+            {% endif %}
+
+            {% if section.settings.extra_image_5 %}
+              <div class="team__item team__item--extra_5">
+                <div class="img_wr">
+                  <img src="{{ section.settings.extra_image_5 | img_url: '80x' }}" alt="" loading='lazy'>
+                </div>                
+              </div>
+            {% endif %}
+
+            {% if section.settings.extra_image_6 %}
+              <div class="team__item team__item--extra_6">
+                <div class="img_wr">
+                  <img src="{{ section.settings.extra_image_6 | img_url: '80x' }}" alt="" loading='lazy'>
+                </div>                
+              </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "The team",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "extra_image_1",
+        "label": "Extra image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "extra_image_2",
+        "label": "Extra image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "extra_image_3",
+        "label": "Extra image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "extra_image_4",
+        "label": "Extra image 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "extra_image_5",
+        "label": "Extra image 5"
+      },
+      {
+        "type": "image_picker",
+        "id": "extra_image_6",
+        "label": "Extra image 6"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "team_member",
+        "name": "Team member",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name",
+            "default": "Dude"
+          },
+          {
+            "type": "text",
+            "id": "character",
+            "label": "Character",
+            "default": "Wizard"
+          }
+        ]
+      }
+    ]    
+  }
+{% endschema %}

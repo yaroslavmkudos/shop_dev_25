@@ -1,0 +1,311 @@
+{%- comment -%}
+  Comments may not appear right after they are submitted, either to be checked by Shopify's spam filter
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/2022072-my-post?comment=3721372
+{%- endcomment -%}
+<link rel="stylesheet" href="{{'article.css' | asset_url}}">
+{%- if comment.status == 'pending' -%}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{%- else -%}
+  {%- assign number_of_comments = article.comments_count -%}
+{%- endif -%}
+<div class="article__banner" {% if article.metafields.custom.banner_background != blank %}style="background-color:{{article.metafields.custom.banner_background}}{% else %}style="background-color:#9047FF{% endif %}">
+  <div class="page-width">
+    <div class="article__banner_content">
+      <div class="article__banner_breadcrumbs">
+        <ul>
+          
+          <li><a href="{{ blog.url }}">{{ blog.title }}</a></li>
+          <li>
+            {% for tag in article.tags %}
+              <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+            {% endfor %}</li>
+        </ul>
+      </div>
+
+      <h1 class='article__banner_title'>{{ article.title }}</h1>
+
+      <div class="article__author">
+        {% assign authorPage = article.author | handleize %}
+        {% assign authorPhoto = pages[authorPage].metafields.custom.author_photo %}
+
+        {% if authorPhoto != blank %}
+          <img src="{{authorPhoto | img_url: '100x'}}" alt="" loading='lazy'>
+        {% endif %}
+       
+        <a href="/pages/{{authorPage}}" class="article__author_name">{{article.author}}</a> 
+
+        <div class="divider">in</div>
+        
+        {% for tag in article.tags %}
+          <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__author_tag">{{tag}}</a>
+        {% endfor %}
+      </div>
+
+      <div class="article__banner_icon">
+        {% for tag in article.tags %}
+          {% assign tagImage = tag | downcase | append: '.png' %}
+          <img src="{{tagImage | asset_url}}" alt="" loading='lazy'>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<article class="article page-width" aria-labelledby="title-0">
+  <div class="article__content">
+    <div class="article__text">
+      {% section 'article-template' %}    
+    </div>
+
+    <div class="article__list_content">
+      <ul class="article__list">
+      
+        {% if article.metafields.my_fields.suggested_article_1 != blank %}
+          {% assign article1 = articles[article.metafields.my_fields.suggested_article_1] %}
+          <li class="article__list_item">
+            <img src="{{article1.image | img_url: '400x'}}" alt="" class="article__list_item_image"  width="100%">
+            <div class="article__list_item_title">{{ article1.title }}</div>
+            <div class="article__list_item_author">By {{ article1.author }}</div>
+            <a href="{{article1.url}}"></a>
+          </li>
+        {% endif %}
+        {% if article.metafields.my_fields.suggested_article_2 != blank %}
+          {% assign article2 = articles[article.metafields.my_fields.suggested_article_2] %}
+          <li class="article__list_item">
+            <img src="{{article2.image | img_url: '400x'}}" alt="" class="article__list_item_image"  width="100%">
+            <div class="article__list_item_title">{{ article2.title }}</div>
+            <div class="article__list_item_author">By {{ article2.author }}</div>
+            <a href="{{article2.url}}"></a>
+          </li>
+        {% endif %}
+        {% if article.metafields.my_fields.suggested_article_3 != blank %}
+          {% assign article3 = articles[article.metafields.my_fields.suggested_article_3] %}
+          <li class="article__list_item">
+            <img src="{{article3.image | img_url: '400x'}}" alt="" class="article__list_item_image"  width="100%">
+            <div class="article__list_item_title">{{ article3.title }}</div>
+            <div class="article__list_item_author">By {{ article3.author }}</div>
+            <a href="{{article3.url}}"></a>
+          </li>
+        {% endif %}
+      </ul>
+
+      {% if article.metafields.my_fields.extra_block_link != blank %}
+        <div class="article__extra_block">
+          <a href="{{ article.metafields.my_fields.extra_block_link }}">
+            <img src="{{ article.metafields.my_fields.extra_block_image | img_url: '500x'}}" alt="" loading='lazy' >
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    
+  </div>
+ 
+  <div class="progress-container">
+    <div class="progress-bar" id="scrollProgress"></div>
+  </div>  
+</article>
+
+
+
+{% if blog.comments_enabled? %}
+  {% if number_of_comments > 0 %}
+    <hr aria-hidden="true">
+    <div class="page-width">
+      <div class="grid">
+        <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+          <h2 class="h3">{{ 'blogs.comments.comments_with_count' | t: count: number_of_comments }}</h2>
+
+          {% paginate article.comments by 5 %}
+
+            {% comment %}
+              #comments is required, it is used as an anchor link by Shopify.
+            {% endcomment %}
+            <div id="comments">
+              <ul class="comments">
+                {% comment %}
+                  If a comment was just submitted with no blank field, show it.
+                {% endcomment %}
+                {% if comment.status == 'pending' %}
+                  <li id="{{ comment.id }}" class="comment">
+                    {% include 'comment', comment: comment %}
+                  </li>
+                {% endif %}
+
+                {% for comment in article.comments %}
+                  <li id="{{ comment.id }}" class="comment">
+                    {% include 'comment', comment: comment %}
+                  </li>
+                {% endfor %}
+              </ul>
+
+              {%- if paginate.pages > 1 -%}
+                {% include 'pagination', paginate: paginate %}
+              {%- endif -%}
+
+            </div>
+          {% endpaginate %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <hr aria-hidden="true">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+        <div class="comment-form form-vertical">
+          {% form 'new_comment', article %}
+
+            {%- assign formId = 'CommentForm' -%}
+
+            <h2 class="h3">{{ 'blogs.comments.title' | t }}</h2>
+
+            {%- assign post_message = 'blogs.comments.success' -%}
+            {%- if blog.moderated? and comment.status == 'pending' -%}
+              {%- assign post_message = 'blogs.comments.success_moderated' -%}
+            {%- elsif comment.status == 'unapproved' or comment.status == 'spam' -%}
+              {%- assign post_message = 'blogs.comments.unapproved' -%}
+            {%- endif -%}
+
+            {% include 'form-status', form: form, form_id: formId, success_message: post_message %}
+
+            <div class="grid">
+
+              <div class="grid__item medium-up--one-half">
+                <label for="{{ formId }}-author">{{ 'blogs.comments.name' | t }}</label>
+                <input type="text" name="comment[author]" id="{{ formId }}-author" class="input-full{% if form.errors contains 'author' %} input--error{% endif %}" value="{{ form.author }}"{% if form.errors contains 'author' %} aria-invalid="true" aria-describedby="{{ formId}}-author-error"{% endif %}>
+                {% if form.errors contains 'author' %}
+                  <span id="{{ formId}}-author-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>{{ 'blogs.comments.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                  </span>
+                {% endif %}
+              </div>
+
+              <div class="grid__item medium-up--one-half">
+                <label for="{{ formId }}-email">{{ 'blogs.comments.email' | t }}</label>
+                <input type="email" name="comment[email]" id="{{ formId }}-email" class="input-full{% if form.errors contains 'email' %} input--error{% endif %}" value="{{ form.email }}" autocorrect="off" autocapitalize="off" {% if form.errors contains 'email' %} aria-invalid="true" aria-describedby="{{ formId}}-email-error"{% endif %}>
+                {% if form.errors contains 'email' %}
+                  <span id="{{ formId}}-email-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                  </span>
+                {% endif %}
+              </div>
+
+              <div class="grid__item">
+                <label for="{{ formId }}-body">{{ 'blogs.comments.message' | t }}</label>
+                <textarea name="comment[body]" id="{{ formId }}-body" class="input-full{% if form.errors contains 'body' %} input--error{% endif %}"{% if form.errors contains 'body' %} aria-invalid="true" aria-describedby="{{ formId}}-body-error"{% endif %}>{{ form.body }}</textarea>
+                {% if form.errors contains 'body' %}
+                  <span id="{{ formId}}-body-error" class="input-error-message">
+                    <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                    {% include 'icon-error' %}
+                    <span>{{ 'blogs.comments.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                  </span>
+                {% endif %}
+              </div>
+
+            </div>
+
+            {% if blog.moderated? %}
+              <p class="fine-print">{{ 'blogs.comments.moderated' | t }}</p>
+            {% endif %}
+
+            <input type="submit" class="btn" value="{{ 'blogs.comments.post' | t }}">
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="text-center return-link-wrapper page-width">
+  <a href="{{ blog.url }}" class="btn btn--has-icon-before">
+    <svg width="7" height="10" viewBox="0 0 7 10" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M6.84998 1.175L3.02498 5L6.84998 8.825L5.66664 10L0.666642 5L5.66664 0L6.84998 1.175Z"></path></svg>
+    Back to Blog
+  </a>
+</div>
+
+<script>
+  {% comment %} const extraBlock = document.querySelector('.article__extra_block')
+  if (extraBlock) {
+    const lastEl = document.querySelector('.article__list').lastElementChild
+    let lastElRightOffset = 0
+    let extraBlockWidth = extraBlock.offsetWidth
+
+    function scrollbarChange() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("scrollProgress").style.width = scrolled + "%";
+    }
+    
+    window.addEventListener('scroll', () => {
+
+      if (lastEl.getBoundingClientRect().bottom < -60) {
+        extraBlock.classList.add('fixed')
+        lastElRightOffset = window.innerWidth - lastEl.getBoundingClientRect().right - 17
+        extraBlock.style.width = `${extraBlockWidth}px`
+        extraBlock.style.right = `${lastElRightOffset}px`
+      } else {
+        extraBlock.classList.remove('fixed')
+        extraBlock.style.width = "initial"
+        extraBlockWidth = extraBlock.offsetWidth
+      }
+
+      scrollbarChange()
+    })
+  }
+
+   window.onload = () => {
+    document.querySelectorAll('.article__list img').forEach((el) => {
+      el.style.height = 'auto'
+    })
+  }  {% endcomment %}
+  
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": {{ article.content | strip_html | json }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: page.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if page_image %}
+      {% assign image_size = page_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ page_image.height | json }},
+        "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ page_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>

@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "89cbb63b-4e1f-4155-8ea7-2aa93afa3bd3": {
+      "type": "landing-banner",
+      "settings": {
+        "title": "Custom Discord Emotes",
+        "text": "Excite your community with custom emotes for your Discord server!",
+        "link_text": "Explore Emotes"
+      }
+    },
+    "45063cdc-39ad-4bb4-bdcd-295533318c4e": {
+      "type": "landing-products",
+      "blocks": {
+        "938ca044-6c3f-45c4-853e-2201c4469c8a": {
+          "type": "product",
+          "settings": {
+            "product": "bunny-emotes"
+          }
+        },
+        "2aeaa5ea-5eee-406f-a0c4-f398d96acf41": {
+          "type": "product",
+          "settings": {
+            "product": "frog-emotes"
+          }
+        },
+        "2ec72550-b51a-4680-bad8-35e111e548d0": {
+          "type": "product",
+          "settings": {
+            "product": "viking-emotes"
+          }
+        },
+        "b337b7b1-5d0d-4188-9345-a2d164669593": {
+          "type": "product",
+          "settings": {
+            "product": "chibi-girl-emotes"
+          }
+        },
+        "c0f75bed-1e29-4610-9dc5-9c9fa69d85b7": {
+          "type": "product",
+          "settings": {
+            "product": "wolf-emotes"
+          }
+        },
+        "c23da5f1-7059-4b42-be1e-1cd1058d8e9e": {
+          "type": "product",
+          "settings": {
+            "product": "chibi-boy-emotes"
+          }
+        },
+        "d2c797ec-83e4-4482-ac5e-b0ea60950fde": {
+          "type": "product",
+          "settings": {
+            "product": "cat-emotes"
+          }
+        },
+        "fae1603c-5f50-4d4d-b5e1-cf45fcf03c67": {
+          "type": "product",
+          "settings": {
+            "product": "christmas-emotes"
+          }
+        },
+        "b4d7b742-a203-4b77-a801-48cffc30b0dc": {
+          "type": "product",
+          "settings": {
+            "product": "dog-emotes"
+          }
+        }
+      },
+      "block_order": [
+        "938ca044-6c3f-45c4-853e-2201c4469c8a",
+        "2aeaa5ea-5eee-406f-a0c4-f398d96acf41",
+        "2ec72550-b51a-4680-bad8-35e111e548d0",
+        "b337b7b1-5d0d-4188-9345-a2d164669593",
+        "c0f75bed-1e29-4610-9dc5-9c9fa69d85b7",
+        "c23da5f1-7059-4b42-be1e-1cd1058d8e9e",
+        "d2c797ec-83e4-4482-ac5e-b0ea60950fde",
+        "fae1603c-5f50-4d4d-b5e1-cf45fcf03c67",
+        "b4d7b742-a203-4b77-a801-48cffc30b0dc"
+      ],
+      "settings": {
+        "link": "shopify://collections/emotes",
+        "link_text": "Load More"
+      }
+    },
+    "bdf9ca79-abbc-4f1e-b468-09b98f92369e": {
+      "type": "landing-tutorial",
+      "settings": {
+        "title": "How to add Emotes to Discord",
+        "text": "<div>\n<ol>\n<li>Open the server where you want to add custom emojis\n</li>\n<li>Go to Server Settings\n</li>\n<li>Select the Emoji tab and press on Upload Emoji</li>\n<li>Give your uploaded emoji a name (Take notice: the name should be at least 2 symbols long)</li>\n<li>That’s it, your emoji is ready to use on your server!</li>\n</ol>\n</div>"
+      }
+    },
+    "1bc6211f-596c-4f1d-8b75-e8daed9ef894": {
+      "type": "landing-faq",
+      "blocks": {
+        "38bab9bb-9276-4089-888f-8892f8b25c7c": {
+          "type": "column",
+          "settings": {
+            "question": "How to make Discord emotes?",
+            "answer": "<div>There are many ways to craft your own emotes for Discord. The most flexible way is to use professional design software such as Adobe Photoshop, Illustrator and ProCreate. The main problem with such method is that these programs are not cheap and hard to learn. You can use some kind of online emote maker but most of the time the quality and aesthetics of emotes you’ll get are gonna be a bit low. So the best method is to customize a premade package, like the ones you can see above.</div>"
+          }
+        },
+        "9c619fe2-d654-4193-a671-b6d70375ebdd": {
+          "type": "column",
+          "settings": {
+            "question": "Can I use Twitch emotes on Discord?",
+            "answer": "<div>Sure, our emote packages are preconfigured to work with most major platforms!</div>"
+          }
+        },
+        "595b3fa7-aade-478a-87bc-eb10bc69f572": {
+          "type": "column",
+          "settings": {
+            "question": "What is the size of Discord emotes?",
+            "answer": "<div>Discord emote size is 32x32 pixels, however it allows you to upload images with resolution up to 128x128 pixels which then will be resized to 32x32. We recommend using the biggest possible resolution to make sure that your emotes are gonna be uploaded in the highest quality.</div>"
+          }
+        }
+      },
+      "block_order": [
+        "38bab9bb-9276-4089-888f-8892f8b25c7c",
+        "9c619fe2-d654-4193-a671-b6d70375ebdd",
+        "595b3fa7-aade-478a-87bc-eb10bc69f572"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "89cbb63b-4e1f-4155-8ea7-2aa93afa3bd3",
+    "45063cdc-39ad-4bb4-bdcd-295533318c4e",
+    "bdf9ca79-abbc-4f1e-b468-09b98f92369e",
+    "1bc6211f-596c-4f1d-8b75-e8daed9ef894"
+  ]
+}

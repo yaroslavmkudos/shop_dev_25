@@ -1,0 +1,57 @@
+{%- if paginate.pages > 1 -%}
+  <nav role="navigation">
+    <ol class="pagination">
+      {%- if paginate.previous-%}
+        <li>
+          <a href="{{ paginate.previous.url }}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.42 7.41L10.83 12L15.42 16.59L14 18L7.99998 12L14 6L15.42 7.41Z" fill="black"/>
+            </svg>              
+          </a>
+        </li>
+      {%- else -%}
+        <li class="disabled">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.42 7.41L10.83 12L15.42 16.59L14 18L7.99998 12L14 6L15.42 7.41Z" fill="black"/>
+          </svg>            
+        </li>
+      {%- endif -%}
+
+      {%- for part in paginate.parts -%}
+        {%- if part.is_link -%}
+          <li>
+            <a href="{{ part.url }}">
+              {{ part.title }}
+            </a>
+          </li>
+        {%- else -%}
+          {%- if part.title == paginate.current_page -%}
+            <li class="active" aria-current="page">
+              {{ part.title }}
+            </li>
+          {%- else -%}
+            <li class="dots">
+              {{ part.title }}
+            </li>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if paginate.next -%}
+        <li>
+          <a href="{{ paginate.next.url }}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.57996 16.59L13.17 12L8.57996 7.41L9.99996 6L16 12L9.99996 18L8.57996 16.59Z" fill="black"/>
+            </svg>              
+          </a>
+        </li>
+      {%- else -%}
+        <li class="disabled">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.57996 16.59L13.17 12L8.57996 7.41L9.99996 6L16 12L9.99996 18L8.57996 16.59Z" fill="black"/>
+          </svg>            
+        </li>
+      {%- endif -%}
+    </ol>
+  </nav>
+{%- endif -%}

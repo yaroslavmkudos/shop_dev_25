@@ -1,0 +1,64 @@
+{% comment %}
+    Renders a product card using "Grid" style
+    Accepts:
+    - max_height: {Number} Maximum height of the product's image (required)
+    - product: {Object} Product Liquid object (required)
+    - show_vendor: {Boolean} Show the product's vendor depending on the section setting (optional)
+
+    Usage:
+    {% render 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+{% assign collectionForUrl = collection %}
+{% for collectionItem in product.collections %}
+  {% if collectionItem.handle == 'full-packs' and template contains 'collection' %}
+    {% assign collectionForUrl = collectionItem %}
+    {% break %}
+  {% else %}
+    {% assign collectionForUrl = collectionItem %}    
+  {% endif %}
+{% endfor %}
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card">
+  {% if recommendations_section %}
+    <noindex>
+  {% endif %}
+    <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ variant.url }}" {% if recommendations_section %}rel="nofollow" {% endif %}>
+      <span class="visually-hidden">{{ variant.title }}</span>
+    </a>
+  {% if recommendations_section %}
+  </noindex>
+  {% endif %}
+
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {%- assign preview_image = product.featured_media.preview_image -%}
+  {%- assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless preview_image == blank %}
+    {% render 'image-style', image: preview_image, height: max_height, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+  {%- liquid
+    if product.title
+      assign compare_at_price = product.compare_at_price
+      assign price = product.price
+      assign available = product.available
+      assign variant = product.variants.first
+    else
+      assign compare_at_price = 1999
+      assign price = 1999
+      assign available = true
+    endif
+  
+    assign money_price = price | money
+  -%}
+  
+
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ preview_image | img_url: image_size, scale: 2 }}" alt="{{ preview_image.alt }}" style="max-width: {{ max_height | times: preview_image.aspect_ratio }}px;">
+  </noscript>
+
+  <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ variant.title }}</div>
+
+  {% render 'product-price-listing', product: variant, show_vendor: show_vendor %}
+
+</div>

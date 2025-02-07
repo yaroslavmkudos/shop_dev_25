@@ -1,0 +1,2573 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "color_text": "#000000",
+    "color_body_text": "#000000",
+    "color_sale_text": "#0080ff",
+    "color_button": "#0080ff",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#000000",
+    "color_text_field_border": "rgba(0,0,0,0)",
+    "color_text_field": "#f1f1f1",
+    "color_image_overlay_text": "#000000",
+    "color_image_overlay": "rgba(0,0,0,0)",
+    "image_overlay_opacity": 0,
+    "color_borders": "rgba(0,0,0,0)",
+    "social_twitter_link": "https://twitter.com/kudos_tv",
+    "social_tiktok_link": "https://www.tiktok.com/@kudos.tv",
+    "social_facebook_link": "",
+    "social_instagram_link": "https://www.instagram.com/kudoshq/",
+    "favicon": "shopify://shop_images/kudos_favicon.png",
+    "enable_ajax": false,
+    "checkout_logo_image": "shopify://shop_images/kds-logo.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_accent_color": "#0080ff",
+    "checkout_button_color": "#0080ff",
+    "checkout_error_color": "#eb5757",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "b9c4b2e5-5468-4762-98f4-fd9511694aac": {
+            "type": "block",
+            "settings": {
+              "svg": "shopify://shop_images/knjige.svg",
+              "url": "https://kudos.tv/blogs/stream-blog/tagged/guides",
+              "text": "Guides"
+            }
+          },
+          "920d519f-ef9e-46f7-9bdf-83f097d4d333": {
+            "type": "block",
+            "settings": {
+              "svg": "shopify://shop_images/sijalica.svg",
+              "url": "https://kudos.tv/blogs/stream-blog/tagged/inspiration",
+              "text": "Inspiration"
+            }
+          },
+          "8984cfe3-a130-4d68-b849-32dbc6eb4f51": {
+            "type": "block",
+            "settings": {
+              "svg": "shopify://shop_images/robot.svg",
+              "url": "https://kudos.tv/blogs/stream-blog/tagged/software",
+              "text": "Software"
+            }
+          },
+          "becee090-4b08-4470-adc3-5d9e30b29bbb": {
+            "type": "block",
+            "settings": {
+              "svg": "shopify://shop_images/alat.svg",
+              "url": "https://kudos.tv/blogs/stream-blog/tagged/hardware",
+              "text": "Hardware"
+            }
+          }
+        },
+        "block_order": [
+          "b9c4b2e5-5468-4762-98f4-fd9511694aac",
+          "920d519f-ef9e-46f7-9bdf-83f097d4d333",
+          "8984cfe3-a130-4d68-b849-32dbc6eb4f51",
+          "becee090-4b08-4470-adc3-5d9e30b29bbb"
+        ],
+        "settings": {
+          "align_logo": "left",
+          "logo": "shopify://shop_images/kudos_logo.svg",
+          "logo_max_width": 95,
+          "main_linklist": "main-menu-2023",
+          "message": false,
+          "home_page_only": false,
+          "message_text": "Christmas Sale is Here (ෆ˙ᵕ˙ෆ)♡ Use Code XMAS2024 for 50% OFF Everything! (>⩊<)",
+          "message_link": "",
+          "color_bg": "#b20038",
+          "color_text": "#ffffff",
+          "article": "stream-blog/how-to-stream-on-twitch",
+          "article2": "stream-blog/how-to-go-live-on-tiktok",
+          "article3": "stream-blog/free-vtuber-models",
+          "image": "shopify://shop_images/1.svg",
+          "link": "https://help.kudos.tv/category/6-frequently-asked-questions",
+          "title": "FAQ",
+          "image2": "shopify://shop_images/2.svg",
+          "link2": "https://help.kudos.tv/category/18-individual-readmes",
+          "title2": "Setup Guides",
+          "image3": "shopify://shop_images/3.svg",
+          "link3": "https://help.kudos.tv/category/13-setting-up-your-stream-package",
+          "title3": "Tutorials",
+          "contact": "Have something to say?",
+          "contacturl": "mailto:hello@kudos.tv",
+          "contacturltext": "Drop us a line"
+        }
+      },
+      "hero-1": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify://shop_images/Make_Your_Stream_Look_Cool.jpg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "small",
+          "text_size": "large",
+          "title": "Image with text overlay",
+          "text": "",
+          "button_label": ""
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "button_label": ""
+        }
+      },
+      "feature-columns": {
+        "type": "feature-columns",
+        "blocks": {
+          "feature-columns-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+              "button_label": ""
+            }
+          },
+          "feature-columns-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+              "button_label": ""
+            }
+          },
+          "feature-columns-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+              "button_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "feature-columns-0",
+          "feature-columns-1",
+          "feature-columns-2"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "left"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "hero-2": {
+        "type": "hero",
+        "settings": {
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "large",
+          "title": "Image with text overlay",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>",
+          "button_label": ""
+        }
+      },
+      "quotes": {
+        "type": "quotes",
+        "blocks": {
+          "quotes-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+              "author": "Author's name"
+            }
+          },
+          "quotes-1": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+              "author": "Author's name"
+            }
+          },
+          "quotes-2": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+              "author": "Author's name"
+            }
+          }
+        },
+        "block_order": [
+          "quotes-0",
+          "quotes-1",
+          "quotes-2"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "image-bar-0": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          },
+          "image-bar-1": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          },
+          "image-bar-2": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "image-bar-0",
+          "image-bar-1",
+          "image-bar-2"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "dcfe34b1-a008-4ced-b43b-b794eed98148": {
+            "type": "link_list",
+            "settings": {
+              "title": "kudos.tv",
+              "menu": "main-menu"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "title": "Categories",
+              "menu": "collections-menu"
+            }
+          },
+          "b9cd8b86-91ac-4449-8008-f51bf845a42b": {
+            "type": "link_list",
+            "settings": {
+              "title": "Latest Releases",
+              "menu": "latest-releases"
+            }
+          },
+          "b04b7767-9675-41d3-9897-501b5989de6a": {
+            "type": "link_list",
+            "settings": {
+              "title": "Useful Resources",
+              "menu": "useful-resources"
+            }
+          },
+          "89ad4a3a-dee8-4154-8cc8-f2911ec6dd4d": {
+            "type": "link_list",
+            "disabled": true,
+            "settings": {
+              "title": "Policies",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "dcfe34b1-a008-4ced-b43b-b794eed98148",
+          "footer-0",
+          "b9cd8b86-91ac-4449-8008-f51bf845a42b",
+          "b04b7767-9675-41d3-9897-501b5989de6a",
+          "89ad4a3a-dee8-4154-8cc8-f2911ec6dd4d"
+        ],
+        "settings": {
+          "footer_bottom_menu": "footer",
+          "show_payment_icons": true,
+          "color_footer_bg": "#000000",
+          "color_footer_text": "#ffffff",
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "enable_payment_button": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": true,
+          "ask_us_link": "mailto:support@kudos.tv",
+          "knowledge_base_link": "https://help.kudos.tv/",
+          "faq_title_1": "What is the difference between static and animated overlays?",
+          "faq_text_1": "Static versions of our overlays include mostly .png images with transparent background - it's a great choice if you don't want to overload your PC. Animated overlays, on the other hand, are packed with seamlessly looping videos with gorgeous effects and animations - that's your choice if you want to take your stream to the next level. But don't worry, our static packs have some animated assets that won't affect your PC's performance - alerts and stinger transitions are animated in any pack of your choice.",
+          "faq_title_2": "When will I receive my order?",
+          "faq_text_2": "You'll receive your order instantly after successful payment.",
+          "faq_title_3": "Can I get the source files?",
+          "faq_text_3": "Although we don't usually provide the source files, there may be some exceptions, such as customizable .PSDs or After Effects project files. You can find the relevant information in the contents section of each product page.",
+          "faq_title_4": "Where is my download link?",
+          "faq_text_4": "You can access your download link in 3 places: 1) Instant access after a successful purchase 2) E-Mail letter (don't forget to check your spam folder, if you haven't received the letter) 3) Orders section in your profile (if you have an account). If none of these work, please contact us with the number of your order through the beacon located at the bottom right corner of our website.",
+          "faq_title_5": "Can I get a refund?",
+          "faq_text_5": "Since your purchase is a digital product, it is deemed “used” after download or opening, and all purchases made on KUDOS.TV are non-refundable or exchangeable. Since the products made available here are intangible, there is a strict no refund policy. The onus is on you, as a consumer, to make responsible decisions about the purchases you make online.",
+          "faq_title_6": "My overlay isn't working, what should I do?",
+          "faq_text_6": "The most common cause of this problem is that your overlay's folder wasn't extracted to C:/ drive. Just extract the archive with your files directly to the C:/ drive of your computer, import your OBS scene files from there and everything will work straight away. In case you're still having issues feel free to get in touch and we'll do our best to help you!",
+          "faq_title_7": "",
+          "faq_text_7": "",
+          "faq_title_8": "",
+          "faq_text_8": "",
+          "faq_title_9": "",
+          "faq_text_9": "",
+          "faq_title_10": "",
+          "faq_text_10": ""
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "Other Products You Might Like",
+          "show_vendor": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "19710623-449b-480c-ac97-165fdbcb2ba5": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "alerts",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "c876fe22-7897-4d2a-913d-428446a112a7": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "badges",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "0a35c7ab-8ed6-4639-9777-0ff75987f49c": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "emotes",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "daa14869-05f0-489d-98f7-f0e57d661725": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "freebies",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "e5b43279-8e4a-45e6-948c-a4be06173706": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "full-packs",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "48eb22d0-5d5b-4bf2-b4bc-2be4bd035b2b": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "overlays",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "749cf553-9c3b-4d67-ab50-6b931cc58878": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "transitions",
+              "product_1": "",
+              "product_2": "",
+              "product_3": "",
+              "product_4": ""
+            }
+          },
+          "13ca4a37-31c5-4678-9083-adeece72e7d1": {
+            "type": "tag",
+            "settings": {
+              "style": "3D,Aesthetic,Anime,Art,Christmas,Cozy,Cute,Cyberpunk,Dark,Fantasy,Galaxy,Glitch,Goth,Graffiti,Halloween,Horror,Just Chatting,Kawaii,Minimal,Music,Neon,Pastel,Pixel Art,Retro,Simple,Space,Spooky,VHS,VTuber,Vaporwave,Vintage"
+            }
+          },
+          "16c7e9a5-8682-4b7c-aeff-631a0a29eef3": {
+            "type": "tag2",
+            "settings": {
+              "style": "Animal Crossing,Apex Legends,CSGO,Call of Duty,Dark Souls,DayZ,Dead by Daylight,Destiny 2,Diablo,Dota 2,Elden Ring,F1,FIFA,Fallout,Final Fantasy,Fortnite,GTA,Genshin Impact,Halo,Hearthstone,League of Legends,Legend of Zelda,Minecraft,Monster Hunter,Overwatch,PUBG,Rocket League,Runescape,Rust,Sea of Thieves,Skyrim,Star Wars,Stardew Valley,Starfield,Teamfight Tactics,Valorant,Warframe,World of Warcraft"
+            }
+          },
+          "744a2aa2-5b1d-49e4-89c7-9a754b8dc7a4": {
+            "type": "tag3",
+            "settings": {
+              "style": "Black,Black and White,Blue,Green,Orange,Pink,Purple,Red,White,Yellow"
+            }
+          }
+        },
+        "block_order": [
+          "19710623-449b-480c-ac97-165fdbcb2ba5",
+          "c876fe22-7897-4d2a-913d-428446a112a7",
+          "0a35c7ab-8ed6-4639-9777-0ff75987f49c",
+          "daa14869-05f0-489d-98f7-f0e57d661725",
+          "e5b43279-8e4a-45e6-948c-a4be06173706",
+          "48eb22d0-5d5b-4bf2-b4bc-2be4bd035b2b",
+          "749cf553-9c3b-4d67-ab50-6b931cc58878",
+          "13ca4a37-31c5-4678-9083-adeece72e7d1",
+          "16c7e9a5-8682-4b7c-aeff-631a0a29eef3",
+          "744a2aa2-5b1d-49e4-89c7-9a754b8dc7a4"
+        ],
+        "settings": {
+          "menu_list": "collections-menu-2025",
+          "dropdown": "Tags",
+          "title": "Premium Stream Packages",
+          "description": "<p>The Best Twitch Overlays with Stream Alerts, Stinger Transitions and Stream Labels For Twitch, Youtube and Facebook Gaming</p>",
+          "banner_collection": "full-packs",
+          "layout": "grid",
+          "grid": 3,
+          "rows": 5,
+          "show_collection_image": true,
+          "show_vendor": true,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "1621370196c85ba141": {
+        "type": "collection",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "promocode": "You can apply promo code on the checkout page",
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": false,
+          "blog_show_date": false,
+          "subtitle": "Discover handy tutorials, reviews and guides that will take your stream on top of the game!",
+          "banner_background": "#9246ff",
+          "banner_image": "shopify://shop_images/Rectangle_49.png",
+          "banner_title": "How to stream on twitch in 2023?",
+          "banner_text": "Thinking to start streaming on Twitch? Doubts aside! Fasten the seatbelts and lose yourself in the greatest ultimate guide to the live-streaming world.",
+          "banner_link": "shopify://blogs/stream-blog/how-to-stream-on-twitch",
+          "tags_list": "guides, inspiration",
+          "blog_categories": "guides, inspiration, software, hardware",
+          "blog_categories_title": "Explore By Category"
+        }
+      },
+      "pagefly-home": {
+        "type": "pagefly-home",
+        "settings": {}
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": false,
+          "show_share_buttons": true
+        }
+      },
+      "product-list": {
+        "type": "product-list",
+        "blocks": {
+          "60c62305-e760-480d-bf9a-b6f5daff30e9": {
+            "type": "featured_product",
+            "settings": {
+              "product": "battlefield2042"
+            }
+          },
+          "a02318bb-03c2-46a5-841a-1a024ed74e82": {
+            "type": "featured_product",
+            "settings": {
+              "product": "cat-badges"
+            }
+          },
+          "8d5d04a7-d184-4b79-9dde-28d83721083c": {
+            "type": "featured_product",
+            "settings": {
+              "product": "christmas-transition"
+            }
+          }
+        },
+        "block_order": [
+          "60c62305-e760-480d-bf9a-b6f5daff30e9",
+          "a02318bb-03c2-46a5-841a-1a024ed74e82",
+          "8d5d04a7-d184-4b79-9dde-28d83721083c"
+        ],
+        "settings": {
+          "title": "In This Pack"
+        }
+      },
+      "faq": {
+        "type": "faq",
+        "blocks": {
+          "80a6a870-59a0-4549-ab6b-7abc4795515b": {
+            "type": "item",
+            "settings": {
+              "item_title": "When will I receive my order?",
+              "item_text": "You'll receive your order instantly after successful payment."
+            }
+          },
+          "2a3fdced-54d7-4d6a-b483-40d42ecfbfe9": {
+            "type": "item",
+            "settings": {
+              "item_title": "Can I get the source files?",
+              "item_text": "Although we don't usually provide the source files, there may be some exceptions, such as customizable .PSDs or After Effects project files.  You can find the relevant information in the contents section of each product page."
+            }
+          },
+          "65e9afb0-8b73-413f-b6a8-b7fa3f28b953": {
+            "type": "item",
+            "settings": {
+              "item_title": "Where is my download link?",
+              "item_text": "You can access your download link in 3 places:  1) Instant access after a successful purchase 2) E-Mail letter (don't forget to check your spam folder, if you haven't received the letter) 3) Orders section in your profile (if you have an account).  If none of these work, please contact us with the number of your order through the beacon located at the bottom right corner of our website."
+            }
+          },
+          "ffa0087e-6c00-4622-969e-9257e56c72a9": {
+            "type": "item",
+            "settings": {
+              "item_title": "Can I get a refund?",
+              "item_text": "Since your purchase is a digital product, it is deemed “used” after download or opening, and all purchases made on KUDOS.TV are non-refundable or exchangeable. Since the products made available here are intangible, there is a strict no refund policy. The onus is on you, as a consumer, to make responsible decisions about the purchases you make online."
+            }
+          }
+        },
+        "block_order": [
+          "80a6a870-59a0-4549-ab6b-7abc4795515b",
+          "2a3fdced-54d7-4d6a-b483-40d42ecfbfe9",
+          "65e9afb0-8b73-413f-b6a8-b7fa3f28b953",
+          "ffa0087e-6c00-4622-969e-9257e56c72a9"
+        ],
+        "settings": {
+          "title": "Frequently Asked Questions"
+        }
+      },
+      "rich-text-2": {
+        "type": "rich-text-2",
+        "settings": {
+          "section_title": "High-quality stream graphics accessible to everyone.",
+          "text": "<p>We’re <strong>kudos.tv</strong>: a small team of gamers and design professionals who believe streaming should look as good as it feels. Our goal is simple — create stream overlays, widgets, and assets that are <strong>diverse</strong>, <strong>accessible</strong>, and <strong>easy to use</strong>, no matter how you stream.</p>",
+          "background": "#ffffff"
+        }
+      },
+      "text-two-columns": {
+        "type": "text-two-columns",
+        "blocks": {
+          "eaa07820-7b3b-435d-adb0-d6f73c5532bc": {
+            "type": "text_item",
+            "settings": {
+              "title": "Diverse",
+              "text": "<p>Every streamer has their own vibe. That’s why we offer everything from complete <a href=\"/collections/full-packs\" target=\"_blank\" title=\"Stream Packages\">stream packages</a> to <a href=\"/collections/vtuber-models\" target=\"_blank\" title=\"VTuber Models\">VTuber models</a>, <a href=\"/collections/twitch-widgets\" target=\"_blank\" title=\"Twitch Widgets\">Twitch widgets</a> and everything in-between. Whether you’re on Twitch or YouTube, a casual player or an up-and-coming creator, we’ve got designs that’ll fit right in with your style.</p>"
+            }
+          },
+          "62473bd2-a3a8-44f9-a0f4-4e12fb608c35": {
+            "type": "text_item",
+            "settings": {
+              "title": "Accessible",
+              "text": "<p>A tight budget shouldn’t hold you back. We have <a href=\"/collections/freebies\" target=\"_blank\" title=\"Freebies\">free stream packages</a> that come with the same attention to detail as our premium ones, so you can stand out on stream without breaking the bank.</p>"
+            }
+          },
+          "79ba9c3f-18aa-4628-afd8-6d60edf187d6": {
+            "type": "text_item",
+            "settings": {
+              "title": "Easy to use",
+              "text": "<p>We keep setups hassle-free. Our stream packages are lightweight and straightforward to install, so you spend more time streaming and less time wrestling with tutorials.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "eaa07820-7b3b-435d-adb0-d6f73c5532bc",
+          "62473bd2-a3a8-44f9-a0f4-4e12fb608c35",
+          "79ba9c3f-18aa-4628-afd8-6d60edf187d6"
+        ],
+        "settings": {
+          "background": "#f7f7f7"
+        }
+      },
+      "image-and-text": {
+        "type": "image-and-text",
+        "settings": {
+          "text": "<p>You may have seen us. You may have heard of us... </p><p><br/>But most likely, you may know us by the name of Wight Visuals — a motion graphics studio from Ukraine. We used to produce all kinds of explainer videos, animations, and illustrations for start-ups and tech companies. </p><p><br/>Once, we were lucky to get a commission project for Streamlabs — we’ve designed and animated some stream overlays for their Theme Library that was just starting out. So sometime later, we got a chance to work with them again, and again and again... resulting in more than 500k streamers who used our overlays.</p><p><br/>We realized that we’re deeply immersed in this kind of work, and there’s no visible end to it.</p><p><br/>Why? Because everyone on our team has loved and played video games since childhood and stream overlays are the best possible combination of what we love (video games and everything in between) and what we do best (design and animation).</p>",
+          "image_svg": "",
+          "max_width": 160,
+          "collout_title": "",
+          "collout_text": ""
+        }
+      },
+      "the-team": {
+        "type": "the-team",
+        "blocks": {
+          "e86eff61-bca2-4c92-ae4d-5d03e3212665": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/image_12.png",
+              "name": "Yaro",
+              "character": "Baby Boss"
+            }
+          },
+          "39f346a4-493d-42a5-a754-adb7e8858f93": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/image_13.png",
+              "name": "Sasha",
+              "character": "Illustration Queen"
+            }
+          },
+          "c44e5d24-00bc-4182-a0e2-2977739ef9fc": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/image_15.png",
+              "name": "Max",
+              "character": "Motion Graphics Senpai"
+            }
+          },
+          "527aee1a-be65-4bd1-a983-c0410533cff1": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/image_16.png",
+              "name": "Mykola",
+              "character": "Production Master"
+            }
+          },
+          "7f964e03-27fc-4675-b701-0444922da872": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/image_17.png",
+              "name": "Misha",
+              "character": "Animation Guru"
+            }
+          },
+          "7ec1e139-f872-4b96-9be5-523fc9c511fc": {
+            "type": "team_member",
+            "settings": {
+              "image": "shopify://shop_images/image_14.png",
+              "name": "Roman",
+              "character": "Overlays Expert"
+            }
+          }
+        },
+        "block_order": [
+          "e86eff61-bca2-4c92-ae4d-5d03e3212665",
+          "39f346a4-493d-42a5-a754-adb7e8858f93",
+          "c44e5d24-00bc-4182-a0e2-2977739ef9fc",
+          "527aee1a-be65-4bd1-a983-c0410533cff1",
+          "7f964e03-27fc-4675-b701-0444922da872",
+          "7ec1e139-f872-4b96-9be5-523fc9c511fc"
+        ],
+        "settings": {}
+      },
+      "text-in-container": {
+        "type": "text-in-container",
+        "settings": {
+          "title": "Want to join our team?",
+          "text": "<p>Currently we’re not looking for new full-time team members, <strong>but </strong>if you’re a Twitch SDK Developer, Graphic Designer/Illustrator or Motion Designer, feel free to send us your portfolio at <a href=\"mailto:hello@kudos.tv\" title=\"mailto:hello@kudos.tv\">hello@kudos.tv</a> and we’ll get in touch with you as soon as new positions are open!</p>",
+          "fullwidth": false,
+          "no_padding": false
+        }
+      },
+      "text-in-container-2": {
+        "type": "text-in-container-2",
+        "settings": {
+          "title": "",
+          "text": "<p>Thanks for scrolling this far! We appreciate the time you took to meet our team and here’s a little gift for you!</p><p><strong>LOVE     </strong>👈 Use this code at the checkout to get 25% off your first purchase.</p>",
+          "fullwidth": true,
+          "no_padding": true
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "61cf8bd1-dfe6-41d6-b594-4c2656dac889": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "full-packs",
+              "protitle": "Christmas Overlays",
+              "butitle": "Explore",
+              "butlink": "shopify://collections/christmas-overlays",
+              "product_1": "christmas-lights",
+              "product_2": "christmas",
+              "product_3": "christmas-stream-decorations",
+              "product_4": "neon-christmas",
+              "product_5": "winter-landscape",
+              "product_6": "christmas-chat-widget",
+              "product_7": "",
+              "product_8": "",
+              "product_9": "",
+              "product_10": "",
+              "product_11": "",
+              "product_12": ""
+            }
+          },
+          "e49a1351-75ac-45e6-9fd7-06f7a375097e": {
+            "type": "collection",
+            "settings": {
+              "collection": "full-packs",
+              "protitle": "Bestsellers",
+              "butitle": "Explore",
+              "butlink": "https://kudos.tv/collections/full-packs?sort_by=best-selling",
+              "product_1": "itachi",
+              "product_2": "cute-cats",
+              "product_3": "lofi-desk",
+              "product_4": "japan-soul",
+              "product_5": "kawaii-os",
+              "product_6": "anime-sky",
+              "product_7": "",
+              "product_8": "",
+              "product_9": "",
+              "product_10": "",
+              "product_11": "",
+              "product_12": ""
+            }
+          },
+          "dccb3593-f488-4340-b651-05d4066200fc": {
+            "type": "collection1",
+            "settings": {
+              "titlovaca": "Browse by Style",
+              "linkovaca": "",
+              "textovaca": "",
+              "ikonovaca": "<svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon--wide icon-arrow-right\" width=\"20\" height=\"20\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M10 3.3335L8.825 4.5085L13.475 9.16683H3.33334V10.8335H13.475L8.825 15.4918L10 16.6668L16.6667 10.0002L10 3.3335Z\" fill=\"#0080FF\"></path>\n    </svg>",
+              "collection1": "halloween-overlays",
+              "collection2": "retro-overlays",
+              "collection3": "cute-overlays",
+              "collection4": "anime-overlays",
+              "collection5": "simple-overlays",
+              "collection6": "space-overlays",
+              "collection7": "neon-overlays",
+              "collection8": "vtuber-overlays",
+              "collection9": "",
+              "collection10": "",
+              "collection11": "",
+              "collection12": ""
+            }
+          },
+          "ef8b9bb6-ff00-4fb1-8b19-e458fbf979a5": {
+            "type": "collection1",
+            "settings": {
+              "titlovaca": "Browse By Game",
+              "linkovaca": "",
+              "textovaca": "",
+              "ikonovaca": "",
+              "collection1": "league-of-legends-overlays",
+              "collection2": "minecraft-overlays",
+              "collection3": "cs2-overlays",
+              "collection4": "apex-legends-overlays",
+              "collection5": "genshin-impact-overlays",
+              "collection6": "fortnite-overlays",
+              "collection7": "valorant-overlays",
+              "collection8": "call-of-duty-overlays",
+              "collection9": "",
+              "collection10": "",
+              "collection11": "",
+              "collection12": ""
+            }
+          },
+          "57a65049-122a-49fa-9457-7acc397ff513": {
+            "type": "collection",
+            "settings": {
+              "collection": "sale",
+              "protitle": "On Sale",
+              "butitle": "Browse All",
+              "butlink": "shopify://collections/sale",
+              "product_1": "pixel-neon",
+              "product_2": "pokemon",
+              "product_3": "cute-waifu",
+              "product_4": "call-of-duty",
+              "product_5": "purple-night",
+              "product_6": "data",
+              "product_7": "",
+              "product_8": "",
+              "product_9": "",
+              "product_10": "",
+              "product_11": "",
+              "product_12": ""
+            }
+          },
+          "1f4f3271-78a0-4844-a86f-bb1dce76d18a": {
+            "type": "collection1a",
+            "settings": {
+              "titlovacaa": "Stream Assets",
+              "linkovacaa": "",
+              "textovacaa": "",
+              "ikonovacaa": "",
+              "collection1a": "",
+              "ime1": "shopify://shop_images/1_0f0272ab-2b58-48e0-83b1-0b180d23fcd1.svg",
+              "collection2a": "full-packs",
+              "ime2": "shopify://shop_images/2_a9d1925c-a4ac-4cf8-9846-ead5ec23f876.svg",
+              "collection3a": "transitions",
+              "ime3": "shopify://shop_images/3_adea06fa-cb6e-4019-874d-9750aa1cfd5d.svg",
+              "collection4a": "alerts",
+              "ime4": "shopify://shop_images/4.svg",
+              "collection5a": "overlays",
+              "ime5": "shopify://shop_images/5.svg",
+              "collection6a": "emotes",
+              "ime6": "shopify://shop_images/6.svg",
+              "collection7a": "twitch-widgets",
+              "ime7": "shopify://shop_images/widgets.svg",
+              "collection8a": "freebies",
+              "ime8": "shopify://shop_images/8.svg",
+              "collection9a": "sale",
+              "ime9": "shopify://shop_images/sale_2.svg",
+              "collection10a": "",
+              "collection11a": "",
+              "collection12a": ""
+            }
+          },
+          "d4b75d4c-2013-4283-8b91-1c43454647d4": {
+            "type": "collection_load",
+            "settings": {
+              "collectionm": "full-packs",
+              "protitlem": "Latest Arrivals",
+              "butitlem": "Load More",
+              "butlink": "https://kudos.tv/collections/full-packs?sort_by=created-descending"
+            }
+          },
+          "cb7b2a70-77cc-4151-9f66-6fc46c96498b": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/3d-overlays",
+              "tagname": "3D"
+            }
+          },
+          "e06a8379-62bf-4232-af5b-78f1003b3173": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/aesthetic-overlays",
+              "tagname": "Aesthetic"
+            }
+          },
+          "c8d0b682-d1d5-4308-bf56-f909c73ef6db": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/anime-overlays",
+              "tagname": "Anime"
+            }
+          },
+          "d382a921-d308-48dd-b246-18e6b6f1b4a2": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/art-overlays",
+              "tagname": "Art"
+            }
+          },
+          "10d653fd-855a-403a-bee0-0254b8725235": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/christmas-overlays",
+              "tagname": "Christmas"
+            }
+          },
+          "49fde846-625e-414d-9208-c0d9d486426d": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/cute-overlays",
+              "tagname": "Cute"
+            }
+          },
+          "694a38d4-0004-4ffd-8ba1-ebe62eb4a211": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/cyberpunk-overlays",
+              "tagname": "Cyberpunk"
+            }
+          },
+          "2fb13691-9c97-40dc-930f-9915c25c2888": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/fantasy-overlays",
+              "tagname": "Fantasy"
+            }
+          },
+          "5d19b19e-57c6-4428-9b17-5996574a999a": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/vaporwave-overlays",
+              "tagname": "Vaporwave"
+            }
+          },
+          "61a5ac1f-73b2-4be6-8f55-48834c7e87bb": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/vintage-overlays",
+              "tagname": "Vintage"
+            }
+          },
+          "cbb0f34e-07be-4b85-a341-2ce3d508208f": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/glitch-overlays",
+              "tagname": "Glitch"
+            }
+          },
+          "0270682e-6d00-4bcc-b5f3-194d6aa60e51": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/halloween-overlays",
+              "tagname": "Halloween"
+            }
+          },
+          "215cd2c1-215b-4fdf-90ed-f816d76333ec": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/music-overlays",
+              "tagname": "Music"
+            }
+          },
+          "b7d14c8d-a7d1-4899-b90f-90fa75319143": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/horror-overlays",
+              "tagname": "Horror"
+            }
+          },
+          "34741713-99b4-496a-83fe-ea8cacb30c94": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/graffiti-overlays",
+              "tagname": "Graffiti"
+            }
+          },
+          "ed4c99dd-c034-4686-ac70-b38e0613a60c": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/just-chatting-overlays",
+              "tagname": "Just Chatting"
+            }
+          },
+          "cb52dd47-bb06-486a-adc9-c23e56d4209d": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/cozy-overlays",
+              "tagname": "Cozy"
+            }
+          },
+          "9f53afd4-6bba-48fb-962a-ad9380306cd1": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/spooky-overlays",
+              "tagname": "Spooky"
+            }
+          },
+          "5aa5f66d-3097-4caf-9528-7e16537da552": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/minimal-overlays",
+              "tagname": "Minimal"
+            }
+          },
+          "69942820-8744-4f56-bec1-e7d26bc5512a": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/galaxy-overlays",
+              "tagname": "Galaxy"
+            }
+          },
+          "9914e798-2ba4-40a3-8fca-e0dcb850ffee": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/goth-overlays",
+              "tagname": "Goth"
+            }
+          },
+          "2cd39f6b-e73e-4ce4-99b8-9402bea16320": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/pastel-overlays",
+              "tagname": "Pastel"
+            }
+          },
+          "7acb3f91-ea36-4217-a3bd-02e1e14f05d7": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/kawaii-overlays",
+              "tagname": "Kawaii"
+            }
+          },
+          "241d93cb-c7df-4bf8-aeb9-d2206072108c": {
+            "type": "tag",
+            "settings": {
+              "style": "shopify://collections/dark-overlays",
+              "tagname": "Dark"
+            }
+          },
+          "adeeb731-56a0-40f4-847b-99b7fd13925d": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/neon-overlays",
+              "tagname": "Neon"
+            }
+          },
+          "2d103c87-fff1-4b66-9ce9-9cdaf68b32f3": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/pixel-art-overlays",
+              "tagname": "Pixel Art"
+            }
+          },
+          "db452166-c689-48ee-978b-44cfbd6a3a2d": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/retro-overlays",
+              "tagname": "Retro"
+            }
+          },
+          "323a989a-cc6a-453d-a84b-a19d59ee5c80": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/simple-overlays",
+              "tagname": "Simple"
+            }
+          },
+          "5064a946-c309-4941-a155-2011a071d561": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/space-overlays",
+              "tagname": "Space"
+            }
+          },
+          "14a446be-f024-4b02-8335-0c426850e1f2": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/vhs-overlays",
+              "tagname": "VHS"
+            }
+          },
+          "d1c3dba7-2cb0-49e7-99e4-0399cc034644": {
+            "type": "tag",
+            "settings": {
+              "style": "https://kudos.tv/collections/vtuber-overlays",
+              "tagname": "VTuber"
+            }
+          },
+          "20e242db-0c35-4f24-a379-cb0f1ddc5533": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/apex-legends-overlays",
+              "tagname": "Apex Legends"
+            }
+          },
+          "4e5e7e23-d416-4f38-8468-94dfeeb9aab8": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/call-of-duty-overlays",
+              "tagname": "Call of Duty"
+            }
+          },
+          "16ce3ccf-8d75-4adc-b3be-b8022448fb20": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/csgo-overlays",
+              "tagname": "CSGO"
+            }
+          },
+          "7acc71ee-b8d5-4a58-90ee-f18aad67905c": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/dark-souls-overlays",
+              "tagname": "Dark Souls"
+            }
+          },
+          "8443d156-f9aa-471a-b502-5f1b45c9bdfe": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/dead-by-daylight-overlays",
+              "tagname": "Dead by Daylight"
+            }
+          },
+          "1bc3e219-8563-430d-abe3-8dbe1354de22": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/dota2-overlays",
+              "tagname": "Dota 2"
+            }
+          },
+          "acee5fca-6a41-4a4f-9ac9-00a6f35af9c8": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/elden-ring-overlays",
+              "tagname": "Elden Ring"
+            }
+          },
+          "351238c0-c3a2-4da2-b073-16d50d8f75dc": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/fifa-overlays",
+              "tagname": "FIFA"
+            }
+          },
+          "fdb66992-fb14-4aa4-9955-054c4c5052ba": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/fortnite-overlays",
+              "tagname": "Fortnite"
+            }
+          },
+          "a08d1dc1-8f6e-428b-8768-5f7aaeffedde": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/genshin-impact-overlays",
+              "tagname": "Genshin Impact"
+            }
+          },
+          "16bdc171-5192-433d-bccb-ce09ae27cd14": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/gta-overlays",
+              "tagname": "GTA"
+            }
+          },
+          "31ce4061-ec39-476a-bbc1-3f06584d6ada": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/hearthstone-overlays",
+              "tagname": "Hearthstone"
+            }
+          },
+          "1b932616-c49b-4f69-b4ef-86d9124fc198": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/league-of-legends-overlays",
+              "tagname": "League of Legends"
+            }
+          },
+          "4fe75faa-d8c9-4c0a-8dd1-c898be923058": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/minecraft-overlays",
+              "tagname": "Minecraft"
+            }
+          },
+          "fa8d703c-acb0-4acf-ad74-833b346f5b44": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/overwatch-overlays",
+              "tagname": "Overwatch"
+            }
+          },
+          "469d74be-1b8f-47f2-9698-7379cb15f7cb": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/pubg-overlays",
+              "tagname": "PUBG"
+            }
+          },
+          "28cf400e-a3e5-4f02-8a2b-9feb045a97cc": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/rocket-league-overlays",
+              "tagname": "Rocket League"
+            }
+          },
+          "e8816aa7-35f6-456b-b276-9f298b330a01": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/sea-of-thieves-overlays",
+              "tagname": "Sea of Thieves"
+            }
+          },
+          "653bebcb-07a0-403f-b7a6-c8fd5e44d3ee": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/valorant-overlays",
+              "tagname": "Valorant"
+            }
+          },
+          "e2254349-21ca-4e8a-934a-a2223c344ce0": {
+            "type": "tag2",
+            "settings": {
+              "style": "https://kudos.tv/collections/world-of-warcraft-overlays",
+              "tagname": "World of Warcraft"
+            }
+          },
+          "f9fe5795-c4dd-47b8-a097-d13c6d0a68b7": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/black-overlays",
+              "tagname": "Black"
+            }
+          },
+          "7331c70e-7cbc-4ede-84e1-b140a64d85e6": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/black-and-white-overlays",
+              "tagname": "Black and White"
+            }
+          },
+          "155057b6-40d9-4b49-90e1-636f0a7e280f": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/blue-overlays",
+              "tagname": "Blue"
+            }
+          },
+          "acb768f4-c5b5-4948-871a-fb6a19acde43": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/green-overlays",
+              "tagname": "Green"
+            }
+          },
+          "854704fb-6530-4c36-aa0b-8304bafd8362": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/orange-overlays",
+              "tagname": "Orange"
+            }
+          },
+          "5d01d545-4881-4254-a5a3-4b03d238c7db": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/pink-overlays",
+              "tagname": "Pink"
+            }
+          },
+          "42d7523b-18a8-4905-80a2-3a44fadcfbb4": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/purple-overlays",
+              "tagname": "Purple"
+            }
+          },
+          "9563250b-ab49-409f-9898-0aa9af91e02f": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/red-overlays",
+              "tagname": "Red"
+            }
+          },
+          "74efa571-e89b-41af-affb-bddf8354d51a": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/white-overlays",
+              "tagname": "White"
+            }
+          },
+          "85f94a1f-2698-474a-8b8e-270624234344": {
+            "type": "tag3",
+            "settings": {
+              "style": "https://kudos.tv/collections/yellow-overlays",
+              "tagname": "Yellow"
+            }
+          },
+          "5d23138c-9958-4996-a7f1-5fd3ac62deac": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/animal-crossing-overlays",
+              "tagname": "Animal Crossing"
+            }
+          },
+          "306c3e24-d3e8-4d3f-bcd1-6227c5bec81d": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/dayz-overlays",
+              "tagname": "DayZ"
+            }
+          },
+          "1ed4f07f-e292-4b39-a8cb-33e5bf4641de": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/destiny-2-overlays",
+              "tagname": "Destiny 2"
+            }
+          },
+          "fb952c92-887b-44d5-8e51-82a0a58969bf": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/diablo-overlays",
+              "tagname": "Diablo"
+            }
+          },
+          "b98db09a-13fb-4f9a-ba64-11f4b32139e2": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/f1-overlays",
+              "tagname": "F1"
+            }
+          },
+          "9eef8ed7-dea3-4d92-b41f-340a308fe82f": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/fallout-overlays",
+              "tagname": "Fallout"
+            }
+          },
+          "99512922-2e88-4e10-aec7-e3ccc02bad1f": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/final-fantasy-overlays",
+              "tagname": "Final Fantasy"
+            }
+          },
+          "bcab07b0-6ce9-4fd8-a6ad-d26d2406f08a": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/halo-overlays",
+              "tagname": "Halo"
+            }
+          },
+          "a5f0f526-957f-4062-ae6b-aa8e2a5522b6": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/legend-of-zelda-overlays",
+              "tagname": "Legend of Zelda"
+            }
+          },
+          "7312a985-2067-4675-8fe9-b197a8f563a1": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/monster-hunter-overlays",
+              "tagname": "Monster Hunter"
+            }
+          },
+          "da9077db-dbfa-487f-9f4d-a88e82b2d59c": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/runescape-overlays",
+              "tagname": "Runescape"
+            }
+          },
+          "fb6f45a1-1aa0-4281-8616-16029f1510fb": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/rust-overlays",
+              "tagname": "Rust"
+            }
+          },
+          "70ed7d81-76e3-4881-b858-36204192216e": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/skyrim-overlays",
+              "tagname": "Skyrim"
+            }
+          },
+          "e4b271fc-f353-499c-8ce5-bc6c2ab57585": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/star-wars-overlays",
+              "tagname": "Star Wars"
+            }
+          },
+          "29448325-5696-4e06-b3e7-5887a38c9b78": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/stardew-valley-overlays",
+              "tagname": "Stardew Valley"
+            }
+          },
+          "38d5395c-1e6e-41c8-8122-c9f27046f42a": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/teamfight-tactics-overlays",
+              "tagname": "Teamfight Tactics"
+            }
+          },
+          "b92553b8-6319-4d5a-8fc7-b458fc9004e9": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/warframe-overlays",
+              "tagname": "Warframe"
+            }
+          },
+          "a987bd84-0c59-4671-86b4-9774ce294a9a": {
+            "type": "tag2",
+            "settings": {
+              "style": "shopify://collections/starfield-overlays",
+              "tagname": "Starfield"
+            }
+          }
+        },
+        "block_order": [
+          "61cf8bd1-dfe6-41d6-b594-4c2656dac889",
+          "e49a1351-75ac-45e6-9fd7-06f7a375097e",
+          "dccb3593-f488-4340-b651-05d4066200fc",
+          "ef8b9bb6-ff00-4fb1-8b19-e458fbf979a5",
+          "57a65049-122a-49fa-9457-7acc397ff513",
+          "1f4f3271-78a0-4844-a86f-bb1dce76d18a",
+          "d4b75d4c-2013-4283-8b91-1c43454647d4",
+          "cb7b2a70-77cc-4151-9f66-6fc46c96498b",
+          "e06a8379-62bf-4232-af5b-78f1003b3173",
+          "c8d0b682-d1d5-4308-bf56-f909c73ef6db",
+          "d382a921-d308-48dd-b246-18e6b6f1b4a2",
+          "10d653fd-855a-403a-bee0-0254b8725235",
+          "49fde846-625e-414d-9208-c0d9d486426d",
+          "694a38d4-0004-4ffd-8ba1-ebe62eb4a211",
+          "2fb13691-9c97-40dc-930f-9915c25c2888",
+          "5d19b19e-57c6-4428-9b17-5996574a999a",
+          "61a5ac1f-73b2-4be6-8f55-48834c7e87bb",
+          "cbb0f34e-07be-4b85-a341-2ce3d508208f",
+          "0270682e-6d00-4bcc-b5f3-194d6aa60e51",
+          "215cd2c1-215b-4fdf-90ed-f816d76333ec",
+          "b7d14c8d-a7d1-4899-b90f-90fa75319143",
+          "34741713-99b4-496a-83fe-ea8cacb30c94",
+          "ed4c99dd-c034-4686-ac70-b38e0613a60c",
+          "cb52dd47-bb06-486a-adc9-c23e56d4209d",
+          "9f53afd4-6bba-48fb-962a-ad9380306cd1",
+          "5aa5f66d-3097-4caf-9528-7e16537da552",
+          "69942820-8744-4f56-bec1-e7d26bc5512a",
+          "9914e798-2ba4-40a3-8fca-e0dcb850ffee",
+          "2cd39f6b-e73e-4ce4-99b8-9402bea16320",
+          "7acb3f91-ea36-4217-a3bd-02e1e14f05d7",
+          "241d93cb-c7df-4bf8-aeb9-d2206072108c",
+          "adeeb731-56a0-40f4-847b-99b7fd13925d",
+          "2d103c87-fff1-4b66-9ce9-9cdaf68b32f3",
+          "db452166-c689-48ee-978b-44cfbd6a3a2d",
+          "323a989a-cc6a-453d-a84b-a19d59ee5c80",
+          "5064a946-c309-4941-a155-2011a071d561",
+          "14a446be-f024-4b02-8335-0c426850e1f2",
+          "d1c3dba7-2cb0-49e7-99e4-0399cc034644",
+          "20e242db-0c35-4f24-a379-cb0f1ddc5533",
+          "4e5e7e23-d416-4f38-8468-94dfeeb9aab8",
+          "16ce3ccf-8d75-4adc-b3be-b8022448fb20",
+          "7acc71ee-b8d5-4a58-90ee-f18aad67905c",
+          "8443d156-f9aa-471a-b502-5f1b45c9bdfe",
+          "1bc3e219-8563-430d-abe3-8dbe1354de22",
+          "acee5fca-6a41-4a4f-9ac9-00a6f35af9c8",
+          "351238c0-c3a2-4da2-b073-16d50d8f75dc",
+          "fdb66992-fb14-4aa4-9955-054c4c5052ba",
+          "a08d1dc1-8f6e-428b-8768-5f7aaeffedde",
+          "16bdc171-5192-433d-bccb-ce09ae27cd14",
+          "31ce4061-ec39-476a-bbc1-3f06584d6ada",
+          "1b932616-c49b-4f69-b4ef-86d9124fc198",
+          "4fe75faa-d8c9-4c0a-8dd1-c898be923058",
+          "fa8d703c-acb0-4acf-ad74-833b346f5b44",
+          "469d74be-1b8f-47f2-9698-7379cb15f7cb",
+          "28cf400e-a3e5-4f02-8a2b-9feb045a97cc",
+          "e8816aa7-35f6-456b-b276-9f298b330a01",
+          "653bebcb-07a0-403f-b7a6-c8fd5e44d3ee",
+          "e2254349-21ca-4e8a-934a-a2223c344ce0",
+          "f9fe5795-c4dd-47b8-a097-d13c6d0a68b7",
+          "7331c70e-7cbc-4ede-84e1-b140a64d85e6",
+          "155057b6-40d9-4b49-90e1-636f0a7e280f",
+          "acb768f4-c5b5-4948-871a-fb6a19acde43",
+          "854704fb-6530-4c36-aa0b-8304bafd8362",
+          "5d01d545-4881-4254-a5a3-4b03d238c7db",
+          "42d7523b-18a8-4905-80a2-3a44fadcfbb4",
+          "9563250b-ab49-409f-9898-0aa9af91e02f",
+          "74efa571-e89b-41af-affb-bddf8354d51a",
+          "85f94a1f-2698-474a-8b8e-270624234344",
+          "5d23138c-9958-4996-a7f1-5fd3ac62deac",
+          "306c3e24-d3e8-4d3f-bcd1-6227c5bec81d",
+          "1ed4f07f-e292-4b39-a8cb-33e5bf4641de",
+          "fb952c92-887b-44d5-8e51-82a0a58969bf",
+          "b98db09a-13fb-4f9a-ba64-11f4b32139e2",
+          "9eef8ed7-dea3-4d92-b41f-340a308fe82f",
+          "99512922-2e88-4e10-aec7-e3ccc02bad1f",
+          "bcab07b0-6ce9-4fd8-a6ad-d26d2406f08a",
+          "a5f0f526-957f-4062-ae6b-aa8e2a5522b6",
+          "7312a985-2067-4675-8fe9-b197a8f563a1",
+          "da9077db-dbfa-487f-9f4d-a88e82b2d59c",
+          "fb6f45a1-1aa0-4281-8616-16029f1510fb",
+          "70ed7d81-76e3-4881-b858-36204192216e",
+          "e4b271fc-f353-499c-8ce5-bc6c2ab57585",
+          "29448325-5696-4e06-b3e7-5887a38c9b78",
+          "38d5395c-1e6e-41c8-8122-c9f27046f42a",
+          "b92553b8-6319-4d5a-8fc7-b458fc9004e9",
+          "a987bd84-0c59-4671-86b4-9774ce294a9a"
+        ],
+        "settings": {
+          "dropdown": "All Styles",
+          "title": "Make Your Stream Look Cool",
+          "description": "<p>With professional overlays, alerts and transitions for Twitch, Youtube and Facebook Gaming</p>",
+          "banner_collection": "emotes",
+          "featured_collection": "transitions",
+          "menu_list": "collections-menu-2025"
+        }
+      },
+      "landing-template-youtube": {
+        "type": "landing-template-youtube",
+        "blocks": {
+          "865cdc0e-381d-4c89-8aca-f8faf19ee123": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/image_42.svg",
+              "title": "Youtube Stream Overlays",
+              "text": "Upgrade your channel with the best YouTube stream overlays, alerts and widgets. Quick and easy installs, dozens of assets and everything you need to make your YouTube streams look like a dream.",
+              "link_text": "Get Your Overlay Now"
+            }
+          },
+          "4d0706e2-9c08-4959-8c92-8209c50dd4dd": {
+            "type": "products",
+            "settings": {
+              "products": "lofi-room,pokemon,japan-spirit,phonk,call-of-duty,cuteness,space,essential,hyperspace",
+              "link": "https://kudos.tv/collections/full-packs",
+              "link_text": "Load More"
+            }
+          },
+          "be62565e-5832-4d8d-8462-9e828a5699a9": {
+            "type": "what_inside",
+            "settings": {
+              "title": "What’s Inside Our YouTube Overlay Packages?",
+              "subtitle": "",
+              "h2_titles": false,
+              "column_1_title": "Stream Starting Soon and Other Stream Screens",
+              "column_1_text": "Give your viewers a sneak peek of what’s coming up in your stream or engage with them while you’re away. Want to craft your own screen?<br>\n<br>\nEach pack comes with a background for you to get creative!",
+              "column_2_title": "Stream Overlays",
+              "column_2_text": "Get the most important assets for your YouTube streams:\n<br>\n<br>\n<ul>\n<li>Webcam Overlays\n</li>\n<li>Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Chat Overlays</li>\n</ul>",
+              "column_3_title": "Stream Alerts",
+              "column_3_text": "Interact with your viewers on a completely new level with animated stream alerts. <br>\n<br>\nAppreciate the donation, praise your latest subscriber and surprise your supporters - it’s never been easier to take your stream to the next level!",
+              "column_4_title": "Stinger Transitions",
+              "column_4_text": "A secret ingredient that takes your stream to another league. Transition between your stream screens like a pro with dozens of stingers from our library!",
+              "column_5_title": "Youtube Banner Templates and Profile Pictures",
+              "column_5_text": "Want a complete overhaul of your YouTube channel? We’ve included a handy customizable .PSD template with each stream package.\n<br>\n<br>\nCreate channel banners and profile pictures or use them as a base for your social media posts - possibilities are endless!"
+            }
+          },
+          "6f0f6bd7-55c8-4c10-aa73-d6e3d44e37a0": {
+            "type": "learn_more",
+            "settings": {
+              "title": "Learn More",
+              "posts_list": "stream-blog/how-to-live-stream-on-youtube,stream-blog/youtube-size-guide,stream-blog/best-live-streaming-platforms"
+            }
+          }
+        },
+        "block_order": [
+          "865cdc0e-381d-4c89-8aca-f8faf19ee123",
+          "4d0706e2-9c08-4959-8c92-8209c50dd4dd",
+          "be62565e-5832-4d8d-8462-9e828a5699a9",
+          "6f0f6bd7-55c8-4c10-aa73-d6e3d44e37a0"
+        ],
+        "settings": {}
+      },
+      "landing-template-twitch": {
+        "type": "landing-template-twitch",
+        "blocks": {
+          "30b517ca-c71e-43f8-92b3-4cdb685998a2": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/twitch.svg",
+              "title": "Twitch Layouts",
+              "text": "Whether you’re a seasoned streamer or just starting out, our Twitch layouts are designed to take your stream to the next league! Explore our collection of overlays, widgets and designs to find the one that fits your style!",
+              "link_text": "Get Your Layout"
+            }
+          },
+          "a406098d-e35c-4f89-9070-015fd032b958": {
+            "type": "products",
+            "settings": {
+              "products": "neon-japan,japan-soul,itachi,acid,league,yandere,autumn-landscape,phonk,vikings",
+              "link": "shopify://collections/full-packs",
+              "link_text": "Load More"
+            }
+          },
+          "3c97a3dc-3267-474e-bc57-6aa764dac25b": {
+            "type": "what_is_a",
+            "settings": {
+              "title": "What is a <br> Twitch Layout?",
+              "image": "shopify://shop_images/twitch-layout3.png",
+              "text": "Twitch Layout is, essentially, another name for an overlay. It’s a design element that streamers use to improve the look of their streams and add interactivity to the viewing experience. \n<br>\n<br>\nMost of the time streamers combine different static images and animated overlays to create unique Twitch layouts that represent their personal brand identity. They can include stream screens, webcam frames, banners, labels and much more.",
+              "background": "#18181b",
+              "color": "#ffffff"
+            }
+          },
+          "2ab8f8e6-d9b1-40f6-97a8-a43a99b8de33": {
+            "type": "what_inside",
+            "settings": {
+              "title": "",
+              "subtitle": "",
+              "h2_titles": true,
+              "column_1_title": "What’s Inside?",
+              "column_1_text": "Our Twitch layouts are packed with every asset you may ever need as a streamer.\n<br>\n<br>\nFrom facecam borders and stream screens to alert widgets and customizable social media graphics. Get a full package or choose specific assets tailored to your needs.",
+              "column_2_title": "Set Up in Minutes",
+              "column_2_text": "We’ve prepared handy quick install files that allow you to setup and customize your layout in just a few clicks. Whether you’re a Streamlabs, StreamElements or OBS user - we got you covered!",
+              "column_3_title": "",
+              "column_3_text": "",
+              "column_4_title": "",
+              "column_4_text": "",
+              "column_5_title": "",
+              "column_5_text": ""
+            }
+          },
+          "f0fbd6a4-2c3b-4dfc-8b8c-384cf7400388": {
+            "type": "faq",
+            "disabled": true,
+            "settings": {
+              "title": "Frequently Asked Questions",
+              "question_1": "Q1",
+              "answer_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "question_2": "Q2",
+              "answer_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "question_3": "Q3",
+              "answer_3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "question_4": "",
+              "answer_4": "<div></div>",
+              "question_5": "",
+              "answer_5": "<div></div>"
+            }
+          },
+          "196e36bd-b8e9-4239-b39f-8a6e19fdbef8": {
+            "type": "learn_more",
+            "settings": {
+              "title": "Learn More",
+              "posts_list": "stream-blog/how-much-do-twitch-streamers-make,stream-blog/free-vtuber-models,stream-blog/esports-overlays"
+            }
+          },
+          "53464cd3-4059-4f7b-986b-b5375c2da176": {
+            "type": "tutorial",
+            "disabled": true,
+            "settings": {
+              "title": "How to add an Offline Banner on Twitch?",
+              "text": "<ul>\n<li>Log in to Twitch</li>\n<li>Click on your profile picture and press the Settings button</li>\n<li>Go to the Channel and Videos tab</li>\n<li>Click the Brand tab, scroll to the Video Player Banner section and press the Update button</li>\n<li>Click on Upload a Photo and choose your Offline Banner</li>\n<li>Woohoo, your banner is uploaded!</li>\n</ul>"
+            }
+          },
+          "9fdb2159-001a-4d27-a7cc-a10ec2af7901": {
+            "type": "bundle",
+            "disabled": true,
+            "settings": {
+              "title": "700+ Twitch Panels Bundle",
+              "text": "Please welcome - Twitch Panels Mega Bundle. This package includes 20 different design types for any taste - from cute pixel art panels to futuristic sci-fi layouts.",
+              "link": "shopify://pages/about-us",
+              "link_text": "Download",
+              "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png"
+            }
+          },
+          "3ec8a405-dd58-44ea-a9b2-d720af9b59f4": {
+            "type": "navigation",
+            "disabled": true,
+            "settings": {
+              "items": "Cool,Anime"
+            }
+          },
+          "483a15f2-6cc1-4fef-83c2-d783f01a5fa3": {
+            "type": "pfp",
+            "disabled": true,
+            "settings": {
+              "title": "Cool Discord PFPs",
+              "subtitle": "About Me, Donation, and dozens of other panel types are included with each pack - completely free!",
+              "images": "https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round;",
+              "aspect_ratio": "1",
+              "id": "cool"
+            }
+          },
+          "17e7eea1-6ab9-4abb-b650-f1c5a7494d5f": {
+            "type": "pfp",
+            "disabled": true,
+            "settings": {
+              "title": "Anime Discord PFPs",
+              "subtitle": "",
+              "images": "https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round; https://cdn.shopify.com/s/files/1/0559/4788/6783/products/Itachi_Alerts_Thumbnail_1080x.png?v=1663938863,Name.png,round;",
+              "aspect_ratio": "1",
+              "id": "anime"
+            }
+          }
+        },
+        "block_order": [
+          "30b517ca-c71e-43f8-92b3-4cdb685998a2",
+          "a406098d-e35c-4f89-9070-015fd032b958",
+          "3c97a3dc-3267-474e-bc57-6aa764dac25b",
+          "2ab8f8e6-d9b1-40f6-97a8-a43a99b8de33",
+          "f0fbd6a4-2c3b-4dfc-8b8c-384cf7400388",
+          "196e36bd-b8e9-4239-b39f-8a6e19fdbef8",
+          "53464cd3-4059-4f7b-986b-b5375c2da176",
+          "9fdb2159-001a-4d27-a7cc-a10ec2af7901",
+          "3ec8a405-dd58-44ea-a9b2-d720af9b59f4",
+          "483a15f2-6cc1-4fef-83c2-d783f01a5fa3",
+          "17e7eea1-6ab9-4abb-b650-f1c5a7494d5f"
+        ],
+        "settings": {}
+      },
+      "landing-template-facebook": {
+        "type": "landing-template-facebook",
+        "blocks": {
+          "8097210b-7238-4516-a15b-98754f7453aa": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/facebook.svg",
+              "title": "Facebook Overlays",
+              "text": "Explore the best Facebook overlays, alerts, and widgets! Easy setup, tons of assets, and everything you may ever need to make your Facebook streams look incredible.",
+              "link_text": "Explore"
+            }
+          },
+          "c879d811-7986-4364-ba40-df1948acf176": {
+            "type": "products",
+            "settings": {
+              "products": "cute-waifu,cuteness,zodiac,stickers,liquid,halloween,noir-night,motion,triangulation",
+              "link": "https://kudos.tv/collections/full-packs",
+              "link_text": "Load More"
+            }
+          },
+          "28da192b-8b90-470c-9d98-4072d0179cf7": {
+            "type": "what_inside",
+            "settings": {
+              "title": "What is included in our Facebook Overlay Packages?",
+              "subtitle": "",
+              "h2_titles": false,
+              "column_1_title": "Stream Screens",
+              "column_1_text": "Give your viewers a preview of what's coming up in your stream or interact with them while you're away.\n<br>\n<br>\nGo beyond the premade screens and create your own – each pack includes an animated background, font files, and color codes to help you unleash the creativity!",
+              "column_2_title": "Overlays",
+              "column_2_text": "Get the essential design assets for your Facebook Gaming streams:\n<br>\n<br>\n<ul>\n<li>Webcam Overlays\n</li>\n<li>Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Chat Overlays</li>\n</ul>",
+              "column_3_title": "Stream Alerts",
+              "column_3_text": "Take the interactivity of your streams to new heights with alert widgets.\n<br>\n<br>\nShow appreciation for donations, congratulate your latest subscriber, and surprise your supporters - it's never been easier to engage with your audience while you’re live!",
+              "column_4_title": "Stinger Transitions",
+              "column_4_text": "Add a professional touch to your Facebook live streams with stinger transitions!\n<br>\n<br>\nSwitch between your scenes like a pro and create a seamless viewing experience for your audience with dozens of stingers from our library.",
+              "column_5_title": "Social Media Graphics",
+              "column_5_text": "Want to take your new brand identity outside of your stream?\n<br>\n<br>\nEach stream package comes with a customizable .PSD template. Use it to create channel banners, avatars or social media posts – the possibilities are endless!"
+            }
+          }
+        },
+        "block_order": [
+          "8097210b-7238-4516-a15b-98754f7453aa",
+          "c879d811-7986-4364-ba40-df1948acf176",
+          "28da192b-8b90-470c-9d98-4072d0179cf7"
+        ],
+        "settings": {}
+      },
+      "landing-template-streamlabs": {
+        "type": "landing-template-streamlabs",
+        "blocks": {
+          "1783d8c2-bd88-4cd8-97d9-1e7bfab5e05b": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/streamlabs.svg",
+              "title": "Streamlabs Overlays",
+              "text": "Equip your stream with the most stylish overlays for Streamlabs Desktop! Each package from our library is preconfigured to work with all streaming platforms and includes a quick install file to get you up and running in a matter of clicks.",
+              "link_text": "Explore Overlays"
+            }
+          },
+          "8d3af273-950c-41aa-beeb-a43e29c3dabc": {
+            "type": "products",
+            "settings": {
+              "products": "japan-spirit,realm,cute-waifu,autumn-landscape,minecraft,data,metal,interface,retro-halloween",
+              "link": "https://kudos.tv/collections/full-packs",
+              "link_text": "Load More"
+            }
+          },
+          "1b94b2fc-01aa-4d50-9595-22f3bba210b4": {
+            "type": "what_inside",
+            "settings": {
+              "title": "What You’ll Get",
+              "subtitle": "",
+              "h2_titles": false,
+              "column_1_title": "Overlays",
+              "column_1_text": "<ul> \n<li>Webcam Overlays\n</li>\n<li>Chatbox Overlays\n</li>\n<li>Stream Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Stream Backgrounds</li>\n</ul>",
+              "column_2_title": "Stream Screens",
+              "column_2_text": "<ul>\n<li>Stream Starting Soon\n</li>\n<li>Be Right Back\n</li>\n<li>Intermission\n</li>\n<li>Stream Ending Soon\n</li>\n<li>Offline Banner</li>\n</ul>",
+              "column_3_title": "Alerts",
+              "column_3_text": "<ul>\n<li>Donation Alerts\n</li>\n<li>Follower Alerts\n</li>\n<li>Subscriber Alerts\n</li>\n<li>Cheer Alerts\n</li>\n<li>+7 More Alert Types</li>\n</ul>",
+              "column_4_title": "Bonus Content",
+              "column_4_text": "<ul>\n<li>Stinger Transitions\n</li>\n<li>Customizable Icons\n</li>\n<li>Customizable Twitch Panels\n</li>\n<li>Customizable Profile Graphics\n</li>\n<li>Sound FX</li>\n</ul>",
+              "column_5_title": "",
+              "column_5_text": ""
+            }
+          },
+          "e1d2da6e-c25c-4567-b4b8-503f59423b6b": {
+            "type": "faq",
+            "settings": {
+              "title": "Frequently Asked Questions",
+              "question_1": "How to add overlays to Streamlabs?",
+              "answer_1": "<div>Streamlabs supports two types of overlays: premade scene packages and separate overlays. To import a scene package go to Settings &gt; Scene Collections &gt; Import Overlay File. To import a separate overlay press a “+” button near the Sources tab and choose “Media File”</div>",
+              "question_2": "Can I use Streamlabs overlays in OBS Studio?",
+              "answer_2": "<div>Yes, open OBS Studio and go to Scene Collection &gt; Import. It should show all of the overlays installed on your computer. In case you’re using one of the overlays from our store you can import the overlays directly into OBS Studio with a separate quick install file.</div>",
+              "question_3": "Are there any free Streamlabs overlays?",
+              "answer_3": "<div>Definitely! Streamlabs Theme Gallery has tons of free overlays and you can check the Freebies section of our store to get free Streamlabs overlays for your stream.</div>",
+              "question_4": "",
+              "answer_4": "<div></div>",
+              "question_5": "",
+              "answer_5": "<div></div>"
+            }
+          }
+        },
+        "block_order": [
+          "1783d8c2-bd88-4cd8-97d9-1e7bfab5e05b",
+          "8d3af273-950c-41aa-beeb-a43e29c3dabc",
+          "1b94b2fc-01aa-4d50-9595-22f3bba210b4",
+          "e1d2da6e-c25c-4567-b4b8-503f59423b6b"
+        ],
+        "settings": {}
+      },
+      "landing-template-streamelements": {
+        "type": "landing-template-streamelements",
+        "blocks": {
+          "cf6a69f8-cab5-4fe2-a5af-896bbce08a53": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/streamelements.svg",
+              "title": "StreamElements Overlays",
+              "text": "Are you looking for a StreamElements overlay to spice up your stream? Look no more! Explore our library of the best StreamElements overlays, choose the one that fits your personality and take your streaming channel to the next level! All streaming platforms supported, tons of assets for any cause included and quick install files are ready to get you started in a few minutes!",
+              "link_text": "Explore Overlays"
+            }
+          },
+          "ecf1dca0-0e8d-4e1a-9fba-87c79b9a3e31": {
+            "type": "products",
+            "settings": {
+              "products": "overwatch,blaze,pixel-city,constant,modern,samurai,sports,shadow-mask,summer",
+              "link": "https://kudos.tv/collections/full-packs",
+              "link_text": "Load More"
+            }
+          },
+          "bad62838-8668-4358-9533-f6def28e05b8": {
+            "type": "what_inside",
+            "settings": {
+              "title": "What You’ll Get with our StreamElements Overlays",
+              "subtitle": "",
+              "h2_titles": false,
+              "column_1_title": "Overlays",
+              "column_1_text": "<ul>\n<li>Webcam Overlays\n</li>\n<li>Chatbox Overlays\n</li>\n<li>Stream Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Stream Backgrounds</li>\n</ul>",
+              "column_2_title": "Stream Screens",
+              "column_2_text": "<ul>\n<li>Stream Starting Soon\n</li>\n<li>Be Right Back\n</li>\n<li>Intermission\n</li>\n<li>Stream Ending Soon\n</li>\n<li>Offline Screen</li>\n</ul>",
+              "column_3_title": "StremElements Alerts",
+              "column_3_text": "<ul>\n<li>Donation Alerts\n</li>\n<li>Follower Alerts\n</li>\n<li>Subscriber Alerts\n</li>\n<li>Cheer Alerts\n</li>\n<li>+7 More Alert Types</li>\n</ul>",
+              "column_4_title": "Additional Content",
+              "column_4_text": "<ul>\n<li>Stream Transitions\n</li>\n<li>Icons\n</li>\n<li>Twitch Panels\n</li>\n<li>Profile Graphics\n</li>\n<li>Sound Effects</li>\n</ul>",
+              "column_5_title": "",
+              "column_5_text": ""
+            }
+          },
+          "490e16b8-11b0-4fc2-9798-ccffcd89a2f3": {
+            "type": "faq",
+            "settings": {
+              "title": "FAQ",
+              "question_1": "How to add StreamElements overlay to OBS?",
+              "answer_1": "<div>Copy the URL of your overlay from StreamElements dashboard. Open OBS Studio, press a + button under the Sources tab and choose “Browser”. Give it a name, paste your StreamElements overlay’s URL and define the resolution that you’ve set in the StreamElements overlay editor. Press OK and your overlay is ready!</div>",
+              "question_2": "Can I use StreamElements overlays in Streamlabs?",
+              "answer_2": "<div>Yes, you can use any StreamElements overlay in Streamlabs. Press a + button near the Sources tab and choose Browser Source. Paste the URL of your StreamElements overlay, enter the resolution you’ve set in the editor before and press “Close”.</div>",
+              "question_3": "Are there any free StreamElements overlays?",
+              "answer_3": "<div>StreamElements offers a small library of free overlays on their website and you can find free overlay packages in the Freebies section of our store.</div>",
+              "question_4": "",
+              "answer_4": "<div></div>",
+              "question_5": "",
+              "answer_5": "<div></div>"
+            }
+          }
+        },
+        "block_order": [
+          "cf6a69f8-cab5-4fe2-a5af-896bbce08a53",
+          "ecf1dca0-0e8d-4e1a-9fba-87c79b9a3e31",
+          "bad62838-8668-4358-9533-f6def28e05b8",
+          "490e16b8-11b0-4fc2-9798-ccffcd89a2f3"
+        ],
+        "settings": {}
+      },
+      "landing-template-discord-banners": {
+        "type": "landing-template-discord-banners",
+        "settings": {}
+      },
+      "landing-template-discord-emotes": {
+        "type": "landing-template-discord-emotes",
+        "blocks": {
+          "28b192c0-01d2-4a9c-8d1f-5a50a74a14f1": {
+            "type": "banner",
+            "settings": {
+              "title": "Custom Discord Emotes",
+              "text": "Excite your community with custom emotes for your Discord server!",
+              "link_text": "Explore Emotes"
+            }
+          },
+          "000dc644-d06e-4d78-926f-064d2ca374eb": {
+            "type": "products",
+            "settings": {
+              "products": "",
+              "link": "shopify://collections/emotes",
+              "link_text": "Explore Library"
+            }
+          },
+          "5cccd253-fad4-4d7e-bbe5-43d7f2005747": {
+            "type": "tutorial",
+            "settings": {
+              "title": "How to Add Emotes to Discord?",
+              "text": "<div>\n<ol>\n<li>Open the server where you want to add custom emojis</li>\n<li>Go to Server Settings</li>\n<li>Select the Emoji tab and press on Upload Emoji\n</li>\n<li>Give your uploaded emoji a name (Take notice: the name should be at least 2 symbols long)</li>\n<li>That’s it, your emoji is ready to use on your server!</li>\n</ol>\n</div>"
+            }
+          },
+          "b25e06a3-6bda-4292-a642-c4c0404e7e54": {
+            "type": "faq",
+            "settings": {
+              "title": "Frequently Asked Questions",
+              "question_1": "How to make Discord emotes?",
+              "answer_1": "<div>There are many ways to craft your own emotes for Discord. The most flexible way is to use professional design software such as Adobe Photoshop, Illustrator and ProCreate. The main problem with such method is that these programs are not cheap and hard to learn. You can use some kind of online emote maker but most of the time the quality and aesthetics of emotes you’ll get are gonna be a bit low. So the best method is to customize a premade package, like the ones you can see above.</div>",
+              "question_2": "Can I use Twitch emotes on Discord?",
+              "answer_2": "<div>Sure, our emote packages are preconfigured to work with most major platforms!</div>",
+              "question_3": "What is the size of Discord emotes?",
+              "answer_3": "<div>Discord emote size is 32x32 pixels, however it allows you to upload images with resolution up to 128x128 pixels which then will be resized to 32x32. We recommend using the biggest possible resolution to make sure that your emotes are gonna be uploaded in the highest quality.</div>",
+              "question_4": "",
+              "answer_4": "<div></div>",
+              "question_5": "",
+              "answer_5": "<div></div>"
+            }
+          }
+        },
+        "block_order": [
+          "28b192c0-01d2-4a9c-8d1f-5a50a74a14f1",
+          "000dc644-d06e-4d78-926f-064d2ca374eb",
+          "5cccd253-fad4-4d7e-bbe5-43d7f2005747",
+          "b25e06a3-6bda-4292-a642-c4c0404e7e54"
+        ],
+        "settings": {}
+      },
+      "landing-template-twitchoffline": {
+        "type": "landing-template-twitchoffline",
+        "settings": {}
+      },
+      "landing-template-twitchpanels": {
+        "type": "landing-template-twitchpanels",
+        "settings": {}
+      },
+      "landing-template-obs": {
+        "type": "landing-template-obs",
+        "blocks": {
+          "558d7231-df32-4fd5-b201-a156248a3885": {
+            "type": "banner",
+            "settings": {
+              "image": "shopify://shop_images/obs.svg",
+              "title": "OBS Studio Templates",
+              "text": "Take your streams to the next level with the best templates for OBS Studio. Whether you stream on Twitch, Youtube or Facebook - we got you covered! Every asset from our packages is preconfigured and ready to use in a few clicks!",
+              "link_text": "Explore Templates"
+            }
+          },
+          "946573a8-e60b-4dcf-bf73-3a24cc5b4f2c": {
+            "type": "products",
+            "settings": {
+              "products": "pixel-neon,valorant-esports,japan-ghost,sakura,itachi,yandere,phonk,sharp,minecraft",
+              "link": "https://kudos.tv/collections/full-packs",
+              "link_text": "Load More"
+            }
+          },
+          "5b04a9f4-1d8b-4641-91fc-e36c25b1fc0b": {
+            "type": "what_inside",
+            "settings": {
+              "title": "What’s Inside the Template?",
+              "subtitle": "",
+              "h2_titles": false,
+              "column_1_title": "Overlays",
+              "column_1_text": "Equip your stream with the most important assets:\n<br>\n<br>\n<ul>\n<li>Webcam Borders\n</li>\n<li>Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Chat Overlays</li>\n</ul>",
+              "column_2_title": "Stream Screens",
+              "column_2_text": "Engage your viewers with beautiful stream screens for any cause: Starting, Ending, BRB, Intermission and much more!",
+              "column_3_title": "Alerts",
+              "column_3_text": "Increase interactivity of your streams with animated alert widgets. \n<br>\n<br>\nWhether you’re a Twitch, Youtube or Facebook streamer, our alerts are preconfigured to work with all major platforms!",
+              "column_4_title": "Transitions",
+              "column_4_text": "Immerse your viewers and keep them watching while you switch the scenes of your stream.\n<br>\n<br>\nEach package from our store comes with the best stinger transitions in the game!",
+              "column_5_title": "Social Media Graphics",
+              "column_5_text": "Want to share your vibes on other platforms?\n<br>\n<br>\nUse a handy .PSD template to create custom graphics for your social media accounts!"
+            }
+          },
+          "ca12ce3e-dc48-41f0-9dde-c5d41d9a533f": {
+            "type": "faq",
+            "settings": {
+              "title": "Frequently Asked Questions",
+              "question_1": "How to add an overlay to OBS Studio",
+              "answer_1": "<div>Just press a + button under the Sources tab and choose Media Source. Then choose the overlay file you want to add, check the “Loop” mark and you’re ready to go. In case you’re using our stream packages, you can import everything in a few clicks. Extract the archive with your stream package to the C:/ drive of your computer, open OBS Studio and go to Scene Collection &gt; Import. Press “Add” and find the .json scene file by going to the folder with your extracted overlay &gt; 2. Quick Install &gt; OBS Studio</div>",
+              "question_2": "",
+              "answer_2": "<div></div>",
+              "question_3": "",
+              "answer_3": "<div></div>",
+              "question_4": "",
+              "answer_4": "<div></div>",
+              "question_5": "",
+              "answer_5": "<div></div>"
+            }
+          }
+        },
+        "block_order": [
+          "558d7231-df32-4fd5-b201-a156248a3885",
+          "946573a8-e60b-4dcf-bf73-3a24cc5b4f2c",
+          "5b04a9f4-1d8b-4641-91fc-e36c25b1fc0b",
+          "ca12ce3e-dc48-41f0-9dde-c5d41d9a533f"
+        ],
+        "settings": {}
+      },
+      "new-slider": {
+        "type": "new-slider",
+        "blocks": {
+          "5c68b8b9-4c14-462c-9c46-c0857b5d4666": {
+            "type": "slide",
+            "settings": {
+              "color": "#1f1f1f",
+              "title": "AI Stream Companion",
+              "text": "Unleash the future of streaming with the AI Stream Companion! It allows you to create a custom AI companion with a unique personality to engage your chat through TTS and chat commands. Write a prompt to define its personality, and watch it come to life in your stream.",
+              "image": "shopify://shop_images/AI_Companion_Thumbnail_0031b4d5-c0bc-46b9-ae4e-97250b7d9341.png",
+              "link": "shopify://products/ai-tts-stream-companion",
+              "linktext": "HOT"
+            }
+          },
+          "9264f47b-71a9-4171-b03a-d8f80364d9ab": {
+            "type": "slide",
+            "settings": {
+              "color": "#000000",
+              "title": "ITACHI",
+              "text": "Release your Sharingan with Itachi — a stream package based on the Naruto series. This pack will make you a real Shinobi from the Uchiha clan.",
+              "image": "shopify://shop_images/Itachi_Package_Thumbnail.png",
+              "link": "shopify://products/itachi",
+              "linktext": "BESTSELLER"
+            }
+          },
+          "84db5a35-a60b-4333-803d-61d79316b0ad": {
+            "type": "slide",
+            "settings": {
+              "color": "#f5bad6",
+              "title": "Cute Chat Widget",
+              "text": "Add a playful vibe into your stream with Cute Chat, a stylized chat widget crafted for vibrant and delightful interactions directly on your stream. Explore tons of customization options for size, colors, fonts and much more! Ideal for Twitch and YouTube streaming, tailored for StreamElements, and works any streaming software.",
+              "image": "shopify://shop_images/Thumbnail_58491346-a225-4097-9dbe-800ea45e46f1.png",
+              "link": "shopify://products/cute-chat-widget",
+              "linktext": "KAWAII"
+            }
+          },
+          "c7d15124-9342-471e-9881-a9d45514fc72": {
+            "type": "slide",
+            "settings": {
+              "color": "#3d1989",
+              "title": "Witchy Kitten",
+              "text": "Unveil the magic with Witchy Kitten - a stream overlay package that enchants viewers with mystical cat vibes.",
+              "image": "shopify://shop_images/Witchy_Kitten_Package_Thumbnail.png",
+              "link": "shopify://products/witchy-kitten",
+              "linktext": "SPOOKY"
+            }
+          },
+          "8319b6a3-765c-4bc4-88be-85fa26eaf11a": {
+            "type": "slide",
+            "settings": {
+              "color": "#100811",
+              "title": "DATA",
+              "text": "Crack The Code with Data — a simple futuristic stream overlays package with monochromatic color scheme. This pack suits anything but it’s the best if you want to add some hi-tech glitch flavor to your stream.",
+              "image": "shopify://shop_images/Data_Package_Thumbnail.png",
+              "link": "shopify://products/data",
+              "linktext": "ON SALE"
+            }
+          },
+          "3911a5e7-e69c-48b1-8b23-fc5c6829a80e": {
+            "type": "slide",
+            "settings": {
+              "color": "#0f0a1c",
+              "title": "ABYSS",
+              "text": "Step into a World of Conquest with Abyss — a stream overlay package brimming with dark intensity and epic struggles. As the crimson eclipse dominates and shadows of warriors loom, gear up for tales of valor and might.",
+              "image": "shopify://shop_images/Abyss_Package_Thumbnail.png",
+              "link": "shopify://products/abyss",
+              "linktext": "APPROVED BY GUTS!"
+            }
+          }
+        },
+        "block_order": [
+          "5c68b8b9-4c14-462c-9c46-c0857b5d4666",
+          "9264f47b-71a9-4171-b03a-d8f80364d9ab",
+          "84db5a35-a60b-4333-803d-61d79316b0ad",
+          "c7d15124-9342-471e-9881-a9d45514fc72",
+          "8319b6a3-765c-4bc4-88be-85fa26eaf11a",
+          "3911a5e7-e69c-48b1-8b23-fc5c6829a80e"
+        ],
+        "settings": {}
+      },
+      "collection-new": {
+        "type": "collection-new",
+        "settings": {
+          "menu_list": "collections-menu-2025",
+          "title": "Make Your Stream Look Cool",
+          "description": "<p>With professional overlays, alerts and transitions for Twitch, Youtube and Facebook Gaming</p>",
+          "banner_collection": "",
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "rich-text-3": {
+        "type": "rich-text-3",
+        "settings": {
+          "text": "<p>We’ve been in design industry for nearly a decade now — starting out as a creative studio that produced illustrations, animated videos, and marketing campaigns for startups and enterprises worldwide. But behind the corporate projects and tight deadlines, each of us was a gamer at heart.</p><p><strong>Fun fact: </strong>our cofounders first met in a Call of Duty 4 multiplayer lobby back in 2011 — long before <a href=\"http://kudos.tv\">kudos.tv</a> was even an idea. Over time, we realized we could take our professional design experience and pour it into something we genuinely care about: helping fellow gamers and streamers stand out online. That’s how <a href=\"http://kudos.tv\">kudos.tv</a> was born.</p><p>Though we got our start in Ukraine, we’ve grown into a global team, and we’re thrilled to connect with streamers from every corner of the world.</p>",
+          "background": ""
+        }
+      },
+      "rich-text-4": {
+        "type": "rich-text-4",
+        "settings": {
+          "section_title": "Trusted by Millions",
+          "text": "<p>Since launching kudos.tv, over a million streamers have chosen our overlays, widgets, and stream assets. We’ve also collaborated with brands like Coca Cola, Microsoft Clipchamp, and Loupedeck, and formed official partnerships with Streamlabs and StreamElements. Along the way, our team’s insights have popped up in major media outlets such as <a href=\"https://www.lifewire.com/gamebaby-controller-case-iphone-8706046\" target=\"_blank\" title=\"This Unique Controller Case Makes iPhone Perfect for Retro Gaming\">Lifewire</a>, <a href=\"https://www.dailymail.co.uk/news/article-12881541/Soft-porn-Twitch-Parents-fury-OnlyFans-models-pose-naked-video-streaming-site-used-millions-kids.html\" target=\"_blank\" title=\"DailyMail Article\">DailyMail</a>, <a href=\"https://www.consumeraffairs.com/news/netflix-news/\" target=\"_blank\" title=\"Netflix is going after gamers, but can it attract the serious ones?\">Consumer Affairs</a>, <a href=\"https://edition.cnn.com/cnn-underscored/electronics/accessibility-in-gaming-ps5-access-controller\" target=\"_blank\" title=\"Accessibility in gaming expands with Sony’s new Access Controller for PS5\">CNN</a>, and many more.</p>",
+          "background": ""
+        }
+      },
+      "about-us-reviews": {
+        "type": "about-us-reviews",
+        "custom_css": [
+          ".rich_text__title {margin-bottom: 0;}"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "hero-1",
+      "feature-row",
+      "feature-columns",
+      "collection",
+      "hero-2",
+      "quotes",
+      "image-bar",
+      "1621370196c85ba141"
+    ],
+    "blocks": {
+      "6406956604159796213": {
+        "type": "shopify://apps/smart-seo/blocks/smartseo/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+        "disabled": false,
+        "settings": {}
+      },
+      "8776485610325655785": {
+        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
+        "disabled": false,
+        "settings": {
+          "social_font": "enable"
+        }
+      },
+      "uppromote-affiliate-referral-customer-referral-52196-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
+        "type": "shopify://apps/uppromote-affiliate-referral/blocks/customer-referral/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": true,
+        "settings": {}
+      },
+      "uppromote-affiliate-referral-message-bar-52196-64c32457-930d-4cb9-9641-e24c0d9cf1f4": {
+        "type": "shopify://apps/uppromote-affiliate-referral/blocks/message-bar/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": true,
+        "settings": {}
+      },
+      "4314224506098761161": {
+        "type": "shopify://apps/omega-multi-pinterest-pixels/blocks/app-embed-block/136e8791-2d03-4768-b1f4-95b67b07067f",
+        "disabled": false,
+        "settings": {}
+      },
+      "16278478101612877664": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "4976129024724438625": {
+        "type": "shopify://apps/smartseo/blocks/brokenLinkDetection/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero-1": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "text_size": "large"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "feature-columns": {
+          "type": "feature-columns",
+          "blocks": {
+            "feature-columns-0": {
+              "type": "text_block",
+              "settings": {}
+            },
+            "feature-columns-1": {
+              "type": "text_block",
+              "settings": {}
+            },
+            "feature-columns-2": {
+              "type": "text_block",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "feature-columns-0",
+            "feature-columns-1",
+            "feature-columns-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "grid": 4
+          }
+        },
+        "hero-2": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "quotes": {
+          "type": "quotes",
+          "blocks": {
+            "quotes-0": {
+              "type": "quote",
+              "settings": {}
+            },
+            "quotes-1": {
+              "type": "quote",
+              "settings": {}
+            },
+            "quotes-2": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "quotes-0",
+            "quotes-1",
+            "quotes-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "image-bar": {
+          "type": "image-bar",
+          "blocks": {
+            "image-bar-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "image-bar-1": {
+              "type": "image",
+              "settings": {}
+            },
+            "image-bar-2": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image-bar-0",
+            "image-bar-1",
+            "image-bar-2"
+          ],
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        }
+      },
+      "content_for_index": [
+        "hero-1",
+        "feature-row",
+        "feature-columns",
+        "collection",
+        "hero-2",
+        "quotes",
+        "image-bar"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+            "color_footer_bg": "#f8f8f8",
+            "color_footer_text": "#6d6d6d"
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

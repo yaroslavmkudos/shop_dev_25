@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "9765ba2e-34a2-407f-999c-3d2d6b1e9659": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/streamelements.svg",
+        "title": "StreamElements Overlays",
+        "text": "Are you looking for a StreamElements overlay to spice up your stream? Look no more! Explore our library of the best StreamElements overlays, choose the one that fits your personality and take your streaming channel to the next level! All streaming platforms supported, tons of assets for any cause included and quick install files are ready to get you started in a few minutes!",
+        "link_text": "Explore Overlays"
+      }
+    },
+    "c99e9797-8f65-486e-b1dc-e2ba5fff7b9f": {
+      "type": "landing-products",
+      "blocks": {
+        "7f0b561c-bc63-4488-807c-fa1b0263bc55": {
+          "type": "product",
+          "settings": {
+            "product": "overwatch"
+          }
+        },
+        "5077ac6a-5982-43ac-8a43-21ec8cc048c7": {
+          "type": "product",
+          "settings": {
+            "product": "blaze"
+          }
+        },
+        "858f60ab-75e1-41e2-9ad8-f6783f57a07b": {
+          "type": "product",
+          "settings": {
+            "product": "pixel-city"
+          }
+        },
+        "db4f0a5b-c73a-4933-9d64-82ce867207a5": {
+          "type": "product",
+          "settings": {
+            "product": "constant"
+          }
+        },
+        "66e3313a-e71b-4383-a21f-a4421c8b3f9f": {
+          "type": "product",
+          "settings": {
+            "product": "modern"
+          }
+        },
+        "d46e2197-a078-4d03-aacb-aa7dc23ec413": {
+          "type": "product",
+          "settings": {
+            "product": "samurai"
+          }
+        },
+        "d91c1b4b-e4f4-4abf-b603-54d355b5b06d": {
+          "type": "product",
+          "settings": {
+            "product": "sports"
+          }
+        },
+        "238253be-4a86-4088-bcc9-7fa847bd3f33": {
+          "type": "product",
+          "settings": {
+            "product": "shadow-mask"
+          }
+        },
+        "466c8587-330b-49ba-9315-b6233ef88a37": {
+          "type": "product",
+          "settings": {
+            "product": "summer"
+          }
+        }
+      },
+      "block_order": [
+        "7f0b561c-bc63-4488-807c-fa1b0263bc55",
+        "5077ac6a-5982-43ac-8a43-21ec8cc048c7",
+        "858f60ab-75e1-41e2-9ad8-f6783f57a07b",
+        "db4f0a5b-c73a-4933-9d64-82ce867207a5",
+        "66e3313a-e71b-4383-a21f-a4421c8b3f9f",
+        "d46e2197-a078-4d03-aacb-aa7dc23ec413",
+        "d91c1b4b-e4f4-4abf-b603-54d355b5b06d",
+        "238253be-4a86-4088-bcc9-7fa847bd3f33",
+        "466c8587-330b-49ba-9315-b6233ef88a37"
+      ],
+      "settings": {
+        "link": "shopify://collections/full-packs",
+        "link_text": "Load More"
+      }
+    },
+    "896bb0db-88f8-4cb4-a204-27bf4ae50f52": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "e4f83012-7d61-413f-8b14-2abcf636b665": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "<ul>\n<li>Webcam Overlays\n</li>\n<li>Chatbox Overlays\n</li>\n<li>Stream Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Stream Backgrounds</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "8b70ecf4-1ca1-4952-82fc-8203a7c1f93b": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Screens",
+            "column_text": "<ul>\n<li>Stream Starting Soon\n</li>\n<li>Be Right Back\n</li>\n<li>Intermission\n</li>\n<li>Stream Ending Soon\n</li>\n<li>Offline Screen</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "446da0c0-7b8f-4f52-a139-bb911aed0c0d": {
+          "type": "column",
+          "settings": {
+            "column_title": "StremElements Alerts",
+            "column_text": "<ul>\n<li>Donation Alerts\n</li>\n<li>Follower Alerts\n</li>\n<li>Subscriber Alerts\n</li>\n<li>Cheer Alerts\n</li>\n<li>+7 More Alert Types</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "53c1eb45-1b73-4e0f-9e15-ff946d6a274d": {
+          "type": "column",
+          "settings": {
+            "column_title": "Additional Content",
+            "column_text": "<ul>\n<li>Stream Transitions\n</li>\n<li>Icons\n</li>\n<li>Twitch Panels\n</li>\n<li>Profile Graphics\n</li>\n<li>Sound Effects</li>\n</ul>",
+            "h2_title": false
+          }
+        }
+      },
+      "block_order": [
+        "e4f83012-7d61-413f-8b14-2abcf636b665",
+        "8b70ecf4-1ca1-4952-82fc-8203a7c1f93b",
+        "446da0c0-7b8f-4f52-a139-bb911aed0c0d",
+        "53c1eb45-1b73-4e0f-9e15-ff946d6a274d"
+      ],
+      "settings": {
+        "title": "What You’ll Get with our StreamElements Overlays",
+        "subtitle": ""
+      }
+    },
+    "fb98499f-9601-451b-b0ed-0500d6bf4663": {
+      "type": "landing-faq",
+      "blocks": {
+        "a8134d48-5554-496f-831a-9caab6bb04ba": {
+          "type": "column",
+          "settings": {
+            "question": "How to add StreamElements overlay to OBS?",
+            "answer": "<div>Copy the URL of your overlay from StreamElements dashboard. Open OBS Studio, press a + button under the Sources tab and choose “Browser”. Give it a name, paste your StreamElements overlay’s URL and define the resolution that you’ve set in the StreamElements overlay editor. Press OK and your overlay is ready!</div>"
+          }
+        },
+        "bf49687d-c570-4e34-a286-348377f8721e": {
+          "type": "column",
+          "settings": {
+            "question": "Can I use StreamElements overlays in Streamlabs?",
+            "answer": "<div>Yes, you can use any StreamElements overlay in Streamlabs. Press a + button near the Sources tab and choose Browser Source. Paste the URL of your StreamElements overlay, enter the resolution you’ve set in the editor before and press “Close”.</div>"
+          }
+        },
+        "c80a6c6d-b6a0-46c9-b750-b49996acbf8b": {
+          "type": "column",
+          "settings": {
+            "question": "Are there any free StreamElements overlays?",
+            "answer": "<div>StreamElements offers a small library of free overlays on their website and you can find free overlay packages in the Freebies section of our store.</div>"
+          }
+        }
+      },
+      "block_order": [
+        "a8134d48-5554-496f-831a-9caab6bb04ba",
+        "bf49687d-c570-4e34-a286-348377f8721e",
+        "c80a6c6d-b6a0-46c9-b750-b49996acbf8b"
+      ],
+      "settings": {
+        "title": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9765ba2e-34a2-407f-999c-3d2d6b1e9659",
+    "c99e9797-8f65-486e-b1dc-e2ba5fff7b9f",
+    "896bb0db-88f8-4cb4-a204-27bf4ae50f52",
+    "fb98499f-9601-451b-b0ed-0500d6bf4663"
+  ]
+}

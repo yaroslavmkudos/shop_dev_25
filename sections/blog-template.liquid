@@ -1,0 +1,685 @@
+<link rel="stylesheet" href="{{'blog.css' | asset_url}}">
+
+{% if current_tags %}
+  <div class="page-width blog_with_tag">
+    <div class="blog__breadcrumbs">
+      <ul>
+        <li>
+          <a href="{{blog.url}}">{{blog.title}}</a>
+        </li>
+        <li>
+          {{ current_tags }}
+        </li>
+      </ul>
+    </div>
+
+      {% assign tagImage = current_tags | handleize | append: '.png' %}
+      
+    <h1 class="section_title">
+      <img src="{{tagImage | asset_url}}" alt="" class="tag_icon" loading='lazy'> 
+      {{ current_tags }}
+    </h1>
+  </div>
+{% endif %}
+
+{% unless current_tags %}
+  <div class="page-width">
+    <h1 class="section_title">{{ page_title }}</h1>
+    <div class="subtitle">{{ section.settings.subtitle }}</div>
+  </div>
+{% endunless %}
+
+{% unless current_tags %}
+  {% if section.settings.banner_image != blank%}
+    <div class="blog__banner">
+      <div class="page-width">
+        <div class="blog__banner_content">
+          <div class="blog__banner_block" style="background-color:{{section.settings.banner_background}}">
+            <a href="{{section.settings.banner_link}}" class="blog__banner_link"></a>
+            <div class="blog__banner_image_element">
+              <img src="{{section.settings.banner_image | img_url: '800x'}}" alt="" loading="lazy">
+            </div>
+            <div class="blog__banner_text_element">
+              <div class="blog__banner_title">{{section.settings.banner_title}}</div>
+              <div class="blog__banner_text">{{section.settings.banner_text}}</div>
+              <ul class="blog__banner_tags">
+                
+                {% assign tagsList = section.settings.tags_list | split: ', ' %}
+                {% for tag in tagsList %}
+                  {% assign tagImage = tag | append: '.png' %}
+                  <li class="tag_item">
+                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="tag_link"></a>
+                    <img src="{{tagImage | asset_url}}" alt="" class="tag_icon" loading='lazy'>
+                    <span class="tag_value">{{tag}}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endunless %}
+
+{% unless current_tags %}
+<div class="blog__categories">
+  <div class="page-width">
+    <div class="blog__categories_content">
+      <h2 class="section_title">{{ section.settings.blog_categories_title }}</h2>
+
+      <div class="blog__categories_block">
+
+        {% assign tagsList = section.settings.blog_categories | split: ', ' %}
+        {% for tag in tagsList %}
+          {% assign tagImage = tag | downcase | append: '.png' %}
+          <div class="tag_item">
+            <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="tag_link"></a>
+            <img src="{{tagImage | asset_url}}" alt="" class="tag_icon" loading='lazy'>
+            <span class="tag_value">{{tag}}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endunless %}
+
+{% unless current_tags %}
+<div class="blog__popular">
+  <div class="page-width">
+    <div class="blog__popular_content">
+      <h2 class="section_title">Popular Articles</h2>
+      {% assign popularList = blog.metafields.custom.popular_articles.value %}
+      
+      <ul class="custom_grid">
+        {% for articleItem in popularList %}
+          {% assign articleHandle = blog.handle | append:  '/' %}
+          {% assign articleHandle2 = articleHandle | append:  articleItem %}
+          {% assign article = articles[articleHandle2] %}
+
+          <li class="custom_grid__item">
+            <a href="{{ article.url }}" class="article__link">
+              {% if article.image %}
+                {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  
+                {% include 'image-style', image: article.image, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+                <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
+                  <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" data-image-loading-animation>
+                    <img id="{{ img_id }}"
+                        class="article__grid-image lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                        data-aspectratio="{{ article.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        alt="">
+                  </div>
+                </div>
+                <noscript>
+                  <div class="article__grid-image-wrapper">
+                    {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                  </div>
+                </noscript>
+              {% endif %}
+  
+              <h2 class="article__title h3{% if article.image %} article__title--has-image{% endif %}">
+                {{ article.title | escape }}
+              </h2>
+            </a>
+  
+            <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
+                
+              <div class="rte article__grid-excerpt">
+                {% if article.excerpt.size > 0 %}
+                  {{ article.excerpt }}
+                {% else %}
+                  {{ article.content | strip_html | truncate: 150 }}
+                {% endif %}
+              </div>
+              {% if article.tags.size > 0 %}
+                <div class="article__tags">
+                  <ul  aria-label="{{ 'blogs.article.tags' | t }}">
+                    {% for tag in article.tags %}
+                      {% assign tagImage = tag | downcase | append: '.png' %}
+                      <li class="tag_item">
+                        <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="tag_link"></a>
+                        <img src="{{tagImage | asset_url}}" alt="" class="tag_icon" loading='lazy'>
+                        <span class="tag_value">{{tag}}</span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+  
+  
+            
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endunless %}
+
+<div class="blog__main">
+  {% if section.settings.layout == 'grid' %}
+    <div class="page-width">
+      {% unless current_tags %}
+        <h2 class="section_title">Latest Articles</h2>
+      {% endunless %}
+      {% paginate blog.articles by 6 %}
+        <div id="AjaxinateLoop" class="custom_grid">
+            {% for article in blog.articles %}
+              <div class="custom_grid__item">
+                <a href="{{ article.url }}" class="article__link">
+                  {% if article.image %}
+                    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    {% include 'image-style', image: article.image, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+                    <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
+                      <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" data-image-loading-animation>
+                        <img id="{{ img_id }}"
+                            class="article__grid-image lazyload"
+                            data-src="{{ img_url }}"
+                            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                            data-aspectratio="{{ article.image.aspect_ratio }}"
+                            data-sizes="auto"
+                            alt="">
+                      </div>
+                    </div>
+                    <noscript>
+                      <div class="article__grid-image-wrapper">
+                        {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                      </div>
+                    </noscript>
+                  {% endif %}
+
+                  <h2 class="article__title h3{% if article.image %} article__title--has-image{% endif %}">
+                    {{ article.title | escape }}
+                  </h2>
+                </a>
+
+                <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
+                  {% if section.settings.blog_show_author %}
+                    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                  {% endif %}
+
+                  {% if section.settings.blog_show_date %}
+                    <span class="article__date">
+                      {{ article.published_at | time_tag: format: 'date' }}
+                    </span>
+                  {% endif %}
+
+                  <div class="rte article__grid-excerpt">
+                    {% if article.excerpt.size > 0 %}
+                      {{ article.excerpt }}
+                    {% else %}
+                      {{ article.content | strip_html | truncate: 150 }}
+                    {% endif %}
+                  </div>
+
+                  {% unless current_tags %}
+                    {% if article.tags.size > 0 %}
+                      <div class="article__tags">
+                        <ul  aria-label="{{ 'blogs.article.tags' | t }}">
+                          {% for tag in article.tags %}
+                            {% assign tagImage = tag | downcase | append: '.png' %}
+                            <li class="tag_item">
+                              <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="tag_link"></a>
+                              <img src="{{tagImage | asset_url}}" alt="" class="tag_icon" loading='lazy'>
+                              <span class="tag_value">{{tag}}</span>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    {% endif %}                      
+                  {% endunless %}
+
+                  {% if current_tags %}
+                    <div class="article__author">
+                      {% assign authorPage = article.author | handleize %}
+                      {% assign authorPhoto = pages[authorPage].metafields.custom.author_photo %}
+                      <img src="{{authorPhoto | img_url: '100x'}}" alt="" loading='lazy'>
+                      <a href="/pages/{{authorPage}}" class="article__author_name">{{article.author}}</a> 
+
+                      {% if article.metafields.custom.read_duration != blank %}
+                        <div class="article__duration">{{article.metafields.custom.read_duration}}  min read</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}        
+        </div>
+
+        <div id="AjaxinatePagination">
+          {% if paginate.next %}
+            <a href="{{ paginate.next.url }}" class="button button_2 load_more">Load More</a>
+          {% endif %}
+        </div>
+      {% endpaginate %}
+    </div>
+  {% else %}
+    <ul class="blog-list-view">
+      {% for article in blog.articles %}
+        <li class="border-top">
+          <div class="page-width">
+            <div class="grid">
+              <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+                <div class="article-listing">
+                  <h2 class="article__title h3"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                  {% if section.settings.blog_show_author %}
+                    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                  {% endif %}
+
+                  {% if section.settings.blog_show_date %}
+                    <span class="article__date">
+                      {{ article.published_at | time_tag: format: 'date' }}
+                    </span>
+                  {% endif %}
+
+                  {% if article.image %}
+                    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    {% include 'image-style', image: article.image, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                    <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
+                      <a href="{{ article.url }}" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;" class="article__list-image-container" data-image-loading-animation>
+                        <img id="{{ img_id }}"
+                            class="article__list-image lazyload"
+                            data-src="{{ img_url }}"
+                            data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
+                            data-aspectratio="{{ article.image.aspect_ratio }}"
+                            data-sizes="auto"
+                            alt="">
+                      </a>
+                    </div>
+
+                    <noscript>
+                      <p>
+                        <a href="{{ article.url }}">
+                          {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+                        </a>
+                      </p>
+                    </noscript>
+                  {% endif %}
+
+                  <div class="rte">
+                    {% if article.excerpt.size > 0 %}
+                      {{ article.excerpt }}
+                    {% else %}
+                      {{ article.content | strip_html | truncate: 150 }}
+                    {% endif %}
+                  </div>
+
+                  {% if article.tags.size > 0 %}
+                    <div class="article__tags article__tags--list rte">
+                      {{ 'blogs.article.posted_in' | t }}
+                      {% for tag in article.tags %}
+                        <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+
+                  <ul class="list--inline article__meta-buttons">
+                    <li>
+                      <a href="{{ article.url }}" class="btn btn--tertiary btn--small" aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                        {{ 'blogs.article.read_more' | t }}
+                      </a>
+                    </li>
+
+                    {% if blog.comments_enabled? and article.comments_count > 0 %}
+                      <li>
+                        <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                          {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                        </a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
+
+<div class="bottom_collections">
+  <div class="page-width">
+    <div class="bottom_collections__content">
+      <h2 class="section_title text-center">Everything for your streaming needs!</h2>
+
+      <ul class="bottom_collections__block">
+        <li>
+          <a href="/collections/freebies" class='bottom_collections__link'>
+            <div class="img_wr">
+              <img src="{{ 'active-freebies.svg' | asset_url }}" alt="" loading="lazy" class='active_icon'>
+            </div>
+
+            <div class="bottom_collections__list_text">
+              Freebies
+            </div>
+          </a>
+        </li>
+        {% for link in linklists.collections-menu.links %}
+
+          {% assign activeIcon = '' %}
+
+                   {% case link.title %}
+            {% when 'All Products' %}
+              {% assign icon = 'inactive-store.svg' %}
+              {% assign activeIcon = 'active-store.svg' %}
+                        {% when 'VTuber Models' %}
+              {% assign icon = 'vtubers-active.svg' %}
+              {% assign activeIcon = 'vtubers_inactive.svg' %}
+            {% when 'Full Packs' %}
+              {% assign icon = 'inactive-fpacks.svg' %}
+              {% assign activeIcon = 'active-fpacks.svg' %}
+            {% when 'Overlays' %}
+              {% assign icon = 'inactive-overlays.svg' %}
+              {% assign activeIcon = 'active-overlays.svg' %}
+            {% when 'Alerts' %}
+              {% assign icon = 'inactive-alerts.svg' %}
+              {% assign activeIcon = 'active-alerts.svg' %}
+            {% when 'Transitions' %}
+              {% assign icon = 'inactive-transitions.svg' %}
+              {% assign activeIcon = 'active-transitions.svg' %}
+            {% when 'Emotes' %}
+              {% assign icon = 'inactive-emotes.svg' %}
+              {% assign activeIcon = 'active-emotes.svg' %}
+            {% when 'Badges' %}
+              {% assign icon = 'inactive-badges.svg' %}
+              {% assign activeIcon = 'active-badges.svg' %}
+            {% when 'Widgets' %}
+                {% assign icon = 'inactive-widget.svg' %}
+                {% assign activeIcon = 'active-widget.svg' %}
+            {% when 'Freebies' %}
+              {% assign icon = 'inactive-freebies.svg' %}
+              {% assign activeIcon = 'active-freebies.svg' %}
+            {% else %}
+              
+          {% endcase %}
+
+          {% if link.title == 'Freebies' %} {% continue %} {% endif %}
+          <li >
+            <a href="{{ link.url }}" class='bottom_collections__link'>
+              <div class="img_wr">
+                <img src="{{ activeIcon | asset_url }}" alt="" loading="lazy" class='active_icon'>
+              </div>
+
+              <div class="bottom_collections__list_text">
+                {{ link.title }}
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+        <li>
+          <a href="/collections/" class='bottom_collections__link'>
+            <div class="img_wr">
+              <img src="{{ 'active-store.svg' | asset_url }}" alt="" loading="lazy" class='active_icon'>
+            </div>
+
+            <div class="bottom_collections__list_text">
+              Browse All
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <div class="bottom_collections__text">
+        From webcam overlays and stream screens to twitch alerts and customizable stream labels. <br>
+        Get the full pack or choose the asset you want. As simple as that.
+      </div>
+
+      <a href="/collections" class="button">GO TO STORE</a>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'ajaxinate.min.js' | asset_url  }}" defer></script>
+
+
+
+<script defer>
+  document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate();
+  });
+</script>
+
+{% schema %}
+{
+  "name": {
+    "cs": "Stránky blogu",
+    "da": "Blogsider",
+    "de": "Blogseiten",
+    "en": "Blog pages",
+    "es": "Páginas del blog",
+    "fi": "Blogisivut",
+    "fr": "Pages du blog",
+    "it": "Pagine del blog",
+    "ja": "ブログページ",
+    "ko": "블로그 페이지",
+    "nb": "Bloggsider",
+    "nl": "Blogpagina's",
+    "pl": "Strony blogu",
+    "pt-BR": "Páginas do blog",
+    "pt-PT": "Páginas do blogue",
+    "sv": "Bloggsidor",
+    "th": "หน้าบล็อก",
+    "tr": "Blog sayfaları",
+    "vi": "Trang blog",
+    "zh-CN": "博客页面",
+    "zh-TW": "部落格頁面"
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": {
+        "cs": "Rozvržení",
+        "da": "Layout",
+        "de": "Layout",
+        "en": "Layout",
+        "es": "Diseño",
+        "fi": "Asettelu",
+        "fr": "Mise en page",
+        "it": "Layout",
+        "ja": "レイアウト",
+        "ko": "레이아웃",
+        "nb": "Oppsett",
+        "nl": "Opmaak",
+        "pl": "Układ",
+        "pt-BR": "Layout",
+        "pt-PT": "Esquema",
+        "sv": "Layout",
+        "th": "เลย์เอาต์",
+        "tr": "Düzen",
+        "vi": "Bố cục",
+        "zh-CN": "布局",
+        "zh-TW": "版面配置"
+      },
+      "default": "list",
+      "options": [
+        {
+          "value": "grid",
+          "label": {
+            "cs": "Mřížka",
+            "da": "Gitter",
+            "de": "Raster",
+            "en": "Grid",
+            "es": "Cuadrícula",
+            "fi": "Ruudukko",
+            "fr": "Grille",
+            "it": "Griglia",
+            "ja": "グリッド",
+            "ko": "그리드",
+            "nb": "Rutenett",
+            "nl": "Grid",
+            "pl": "Siatka",
+            "pt-BR": "Grade",
+            "pt-PT": "Grelha",
+            "sv": "Rutnät",
+            "th": "กริด",
+            "tr": "Izgara",
+            "vi": "Lưới",
+            "zh-CN": "网格",
+            "zh-TW": "網格"
+          }
+        },
+        {
+          "value": "list",
+          "label": {
+            "cs": "Seznam",
+            "da": "Liste",
+            "de": "Liste",
+            "en": "List",
+            "es": "Lista",
+            "fi": "Luettelo",
+            "fr": "Liste",
+            "it": "Elenco",
+            "ja": "リスト",
+            "ko": "목록",
+            "nb": "Liste",
+            "nl": "Lijst",
+            "pl": "Lista",
+            "pt-BR": "Lista",
+            "pt-PT": "Lista",
+            "sv": "Lista",
+            "th": "รายการ",
+            "tr": "Liste",
+            "vi": "Danh sách",
+            "zh-CN": "列表",
+            "zh-TW": "清單"
+          }
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_author",
+      "label": {
+        "cs": "Zobrazit autora",
+        "da": "Vis forfatter",
+        "de": "Autor anzeigen",
+        "en": "Show author",
+        "es": "Mostrar autor",
+        "fi": "Näytä tekijä",
+        "fr": "Afficher l'auteur",
+        "it": "Mostra autore",
+        "ja": "執筆者を表示する",
+        "ko": "작성자 표시",
+        "nb": "Vis forfatter",
+        "nl": "Auteur weergeven",
+        "pl": "Pokaż autora",
+        "pt-BR": "Exibir autor",
+        "pt-PT": "Mostrar autor",
+        "sv": "Visa författare",
+        "th": "แสดงผู้เขียน",
+        "tr": "Yazarı göster",
+        "vi": "Hiển thị tác giả",
+        "zh-CN": "显示作者",
+        "zh-TW": "顯示作者"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": {
+        "cs": "Zobrazit datum",
+        "da": "Vis dato",
+        "de": "Datum anzeigen",
+        "en": "Show date",
+        "es": "Mostrar fecha",
+        "fi": "Näytä päivämäärä",
+        "fr": "Afficher la date",
+        "it": "Mostra data",
+        "ja": "日付を表示する",
+        "ko": "날짜 표시",
+        "nb": "Vis dato",
+        "nl": "Datum weergeven",
+        "pl": "Pokaż datę",
+        "pt-BR": "Exibir data",
+        "pt-PT": "Mostrar data",
+        "sv": "Visa datum",
+        "th": "แสดงวันที่",
+        "tr": "Tarihi göster",
+        "vi": "Hiển thị ngày",
+        "zh-CN": "显示日期",
+        "zh-TW": "顯示日期"
+      },
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Banner"
+    },
+    {
+      "type": "color",
+      "id": "banner_background",
+      "label": "Banner background",
+      "default": "#fff"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner title",
+      "default": "Text"
+    },
+    {
+      "type": "text",
+      "id": "banner_text",
+      "label": "Banner text",
+      "default": "Text"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner link"
+    },
+    {
+      "type": "text",
+      "id": "tags_list",
+      "label": "Banner tags",
+      "default": "guides, inspiration"
+    },
+    {
+      "type": "header",
+      "content": "Explore By Category"
+    },
+    {
+      "type": "text",
+      "id": "blog_categories",
+      "label": "Categories",
+      "default": "text"
+    },
+    {
+      "type": "text",
+      "id": "blog_categories_title",
+      "label": "Categories title",
+      "default": "Title"
+    }
+  ]
+}
+{% endschema %}

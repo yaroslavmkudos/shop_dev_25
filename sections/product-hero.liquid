@@ -1,0 +1,46 @@
+<h1 class="collection-hero_title">
+    {{ section.settings.title }}
+</h1>
+{% if collection.description != blank %}
+<div class="rte collection-hero_description">
+  {{ section.settings.description }}
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": {
+    "en": "Collections Banner"
+  },
+  "class": "product-hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Make Your Stream Look Cool"
+      }
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": {
+        "en": "Description"
+      },
+      "default": {
+        "en": "<p>With professional overlays, alerts and transitions for Twitch, Youtube and Facebook Gaming</p>"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Product hero"
+      }
+    }
+  ]
+}
+{% endschema %}

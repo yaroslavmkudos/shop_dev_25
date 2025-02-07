@@ -1,0 +1,61 @@
+<div class="text_two_columns" style="background-color: {{section.settings.background}}">
+    <div class="page-width">
+        <div class="text_two_columns__content">
+            {% for block in section.blocks %}
+                <div class="text_two_columns__item">
+                    <h3 class="text_two_columns__title">{{ block.settings.title }}</h3>
+                    <div class="text_two_columns__text">{{ block.settings.text }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<style>
+    .text_two_columns__text a {
+        display: inline;
+        border: 0 none;
+        background: 0 0;
+        padding: 0;
+        margin: 0;
+        color: var(--color-btn-primary);
+        padding-bottom: 1px;
+    }
+
+    .text_two_columns__text a:focus,
+    .text_two_columns__text a:not([disabled]):hover {
+        color: var(--color-btn-primary-focus);
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "Text 2 columns",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Background color"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text_item",
+                "name": "Text item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "<p>Text</p>"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,164 @@
+
+          <div id='egoi-layer'>
+            <div id='egoi-form'>
+
+              <div id='egoi-form-wrapper'>
+                <h2>Subscribe our newsletter</h2>
+                <h5>Stay up to date on our deals</h5>
+
+                <span id='egoi-close'><a href='#' onClick='hideForm();'>X</a></span>
+
+                {%- assign formId = 'EgoiForm' -%}
+                {% form 'customer', id: formId, novalidate: 'novalidate' %}
+                <input type='hidden' name='contact[tags]' value='newsletter'>
+                <input type='text' name='contact[last_name]' id='{{ formId }}-last_name' class='' value='{{ form.last_name }}'
+                  placeholder='Your name' aria-label='Your name' aria-required='true' required autocorrect='off'
+                  autocapitalize='off'>
+                <input type='email' name='contact[email]' id='{{ formId }}-email' class='' value='{{ form.email }}'
+                  placeholder='Your e-mail' aria-label='Your e-mail' aria-required='true' required autocorrect='off'
+                  autocapitalize='off'>
+
+                <button type='submit' class='' name='commit' id='Subscribe'>
+                  <span class=''>Subscribe</span>
+                </button>
+
+                {% endform %}
+              </div>
+            </div>
+          </div>
+
+          <script>
+
+            function displayFormTimed(timeToWait) {
+              if (getCookie('egoi-form') == 'done') return false;
+              setTimeout(function () {
+                document.getElementById('egoi-layer').style.display = 'block';
+              }, timeToWait);
+            }
+
+            function hideForm() {
+              setCookie('egoi-form', 'done', 7);
+              document.getElementById('egoi-layer').style.display = 'none';
+            }
+
+            function setCookie(name, value, days) {
+              var expires = '';
+              if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = '; expires=' + date.toUTCString();
+              }
+              document.cookie = name + '=' + (value || '') + expires + '; path=/';
+            }
+
+            function getCookie(name) {
+              var nameEQ = name + '=';
+              var ca = document.cookie.split(';');
+              for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+              }
+              return null;
+            }
+
+            document.addEventListener('DOMContentLoaded', displayFormTimed(5000), false);            
+
+            document.querySelector('#EgoiForm').addEventListener('submit', function (e) {
+              setCookie('egoi-form', 'done', 7);
+              return true;
+            });
+          </script>
+
+
+          <style>
+            #egoi-layer {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 10000;
+              background: rgba(0, 0, 0, 0.8);
+              display: none;
+            }
+
+            #egoi-form {
+              color: #000;
+              background: #fff;
+              padding: 10px;
+              margin: 0 auto;
+              width: 50%;
+              max-width: 800px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+            }
+
+            #egoi-form-wrapper {
+              border: 10px solid black;
+              padding: 20px;
+            }
+
+            #egoi-form-wrapper h2 {
+              color: black;
+              font-weight: 600;
+              font-size: 22px;
+              margin-bottom: 10px;
+            }
+
+            #egoi-form-wrapper form {
+              margin-top: 30px;
+            }
+
+            #egoi-form-wrapper form label {
+              display: block;
+              text-align: left;
+            }
+
+            #egoi-form-wrapper form input[type='text'],
+            #egoi-form-wrapper form input[type='email'] {
+              box-sizing: border-box;
+              display: block;
+              text-align: center;
+              width: 100%;
+              height: 34px;
+              padding: 10px;
+              font-size: 14px;
+              line-height: 14px;
+              max-width: 400px;
+              margin: 0 auto 10px auto;
+            }
+
+            #egoi-form-wrapper form button[type='submit'] {
+              border: none;
+              margin-top: 30px;
+              padding: 10px;
+              background-color: black;
+              color: white;
+              font-size: 12px;
+            }
+
+            #egoi-form-wrapper #egoi-close {
+              position: absolute;
+              top: 30px;
+              right: 30px;
+            }
+
+            #egoi-form-wrapper #egoi-close a {
+              color: #868585;
+              font-size: 18px;
+              font-weight: bold;
+            }
+
+            @media only screen and (max-width: 540px) {
+              #egoi-form {
+                width: 90%;
+                left: 10%;
+                transform: translate(-8%, -50%);
+              }
+            }
+          </style>
+        

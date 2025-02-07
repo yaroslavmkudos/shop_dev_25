@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="{{'account.css' | asset_url }}">
+
+
+<div class="form-message form-message--success hide" id="ResetSuccess" tabindex="-1">
+  {{ 'customer.recover_password.success' | t }}
+</div>
+
+<div class="login_inner">
+  <div id="CustomerLoginForm" class="form-vertical">
+
+    <h1 id="LoginHeading" class="text-center">Welcome back!</h1>
+    <div class="subheading text-center">Log in to access and download your orders</div>
+
+    {% form 'customer_login', novalidate: 'novalidate' %}
+
+      {%- if form.errors -%}
+        <div class="form-message form-message--error">
+          {% comment %} <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2> {% endcomment %}
+          {{ form.errors | default_errors }}
+        </div>
+      {%- endif -%}
+
+      <input
+        type="email"
+        name="customer[email]"
+        placeholder="Email"
+        id="CustomerEmail"
+        autocomplete="email"
+        autocorrect="off"
+        autocapitalize="off"
+        {%- if form.errors contains 'form' -%}
+          class="input--error"
+          aria-invalid="true"
+        {%- endif -%}
+        >
+
+      {% if form.password_needed %}
+        <div class="input_wr input_wr--pass">
+
+          <div class="show_pass"></div>
+          <input
+            type="password"
+            value=""
+            name="customer[password]"
+            placeholder="Password"
+            id="CustomerPassword"
+            {%- if form.errors contains 'form' -%}
+              class="input--error"
+              aria-invalid="true"
+            {%- endif -%}
+          >
+        </div>
+        
+      {% endif %}
+
+      <div class="text-center">
+        
+
+        <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
+
+        {% if form.password_needed %}
+          <p class="recovery"><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
+        {% endif %}
+
+        
+      </div>
+
+    {% endform %}
+  </div>
+
+
+  <div id="RecoverPasswordForm" class="hide">
+
+    <div class="text-center">
+      <h2 id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
+      <div class="subheading text-center">We will send you an email to reset your password</div>
+    </div>
+
+    <div class="form-vertical">
+      {% form 'recover_customer_password' %}
+
+        {% comment %}
+          Add a hidden span to indicate the form was submitted succesfully.
+        {% endcomment %}
+        {% if form.posted_successfully? %}
+          <span class="hide reset-password-success"></span>
+        {% endif %}
+
+        
+        <input
+          type="email"
+          value=""
+          name="email"
+          id="RecoverEmail"
+          class="input-full{% if form.errors %} input--error{% endif %}"
+          autocorrect="off"
+          placeholder="Email"
+          autocapitalize="off"
+          {% if form.errors %}
+            aria-invalid="true"
+            aria-describedby="RecoverEmail-email-error"
+          {%- endif -%}
+          >
+        {%- if form.errors -%}
+          <span id="RecoverEmail-email-error" class="input-error-message form-message form-message--error text-center">
+            <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+            <span>{{ form.errors.messages['form'] }}</span>
+          </span>
+        {%- endif -%}
+
+        <div class="text-center">
+          <p>
+            <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+          </p>
+
+          <a href="#LoginHeading" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</a>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+  
+  <a class="go-login" href="/account/register">
+    New around here?
+    <span>Create Account</span>
+  </a>
+  {% comment %}
+    If accounts are set as optional, the following will be shown as an option
+    during checkout, not on the default /login page.
+  {% endcomment %}
+  {% if shop.checkout.guest_login %}
+    {% form 'guest_login' %}
+      <input type="submit" class="btn" value="Continue as a Guest">
+    {% endform %}
+  {% endif %}
+</div>

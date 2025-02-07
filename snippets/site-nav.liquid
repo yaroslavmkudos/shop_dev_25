@@ -1,0 +1,180 @@
+{% comment %}
+    Renders a list of menu items
+    Accepts:
+    - linklist: {Object} Linklist Liquid object (required)
+    - wrapper_class: {String} CSS wrapper class for the navigation (optional)
+
+    Usage:
+    {% include 'site-nav', linklist: section.settings.main_linklist, wrapper_class: 'site-nav--centered' %}
+{% endcomment %}
+<ul class="site-nav list--inline{% if wrapper_class != blank %} {{ wrapper_class }}{% endif %}" id="SiteNav">
+  {% for link in linklists[linklist].links %}
+    {%- assign child_list_handle = link.title | handleize -%}
+
+    {% comment %}
+      Check if third-level nav exists on each parent link.
+    {% endcomment %}
+    {%- assign three_level_nav = false -%}
+    {% if link.links != blank %}
+      {% if link.levels == 2 %}
+        {%- assign three_level_nav = true -%}
+      {% endif %}
+    {% endif %}
+
+    {% if link.links != blank %}
+      <li {% if link.active %} class="site-nav--active"{% endif %}>
+        <a href="{{ link.url }}"
+          class="site-nav__link site-nav__link--main{% if link.active %} site-nav__link--active{% endif %}"
+          {% if link.current %} aria-current="page"{% endif %}
+        >
+          <span class="site-nav__label">{{ link.title | escape }}</span>
+        </a>
+      </li>
+      <div  class="menu_outer">
+          {% if three_level_nav %}
+            <div class="site-nav__childlist">
+              <ul class="site-nav__childlist-grid">
+                {% if link.links != blank %}
+                  {% for childlink in link.links %}
+                    <li class="site-nav__childlist-item">
+                      <a 
+                        class="prki site-nav__link site-nav__child-link site-nav__child-link--parent"
+                        {% if childlink.current %} aria-current="page"{% endif %}
+                      >
+                        <span class="site-nav__label">{{ childlink.title | escape }}</span>
+                      </a>
+
+                      {% if childlink.links != blank %}
+                        <ul>
+                        {% for grandchildlink in childlink.links %}
+                          <li>
+                            <a href="{{ grandchildlink.url }}"
+                            class="site-nav__link site-nav__child-link"
+                            {% if grandchildlink.current %} aria-current="page"{% endif %}
+                          >
+                              <span class="site-nav__label {{ grandchildlink.title | escape }}">{{ grandchildlink.title | escape }}</span>
+                            </a>
+                          </li>
+                          
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+
+                    </li>
+                  {% endfor %}
+                {% endif %}
+              </ul>
+            </div>
+
+          {% else %}
+            <ul>
+              {% for childlink in link.links %}
+                <li>
+                  <a href="{{ childlink.url }}"
+                  class="site-nav__link site-nav__child-link{% if forloop.last %} site-nav__link--last{% endif %}"
+                  {% if childlink.current %} aria-current="page"{% endif %}
+                >
+                    <span class="site-nav__label">{{ childlink.title | escape }}4</span>
+                  </a>
+                </li>
+              
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+    {% else %}
+      <li {% if link.active %} class="site-nav--active"{% endif %}>
+        <a href="{{ link.url }}"
+          class="site-nav__link site-nav__link--main{% if link.active %} site-nav__link--active{% endif %}"
+          {% if link.current %} aria-current="page"{% endif %}
+        >
+          <span class="site-nav__label">{{ link.title | escape }}</span>
+        </a>
+      </li>
+  {% if link.title == "Blog" %}
+    <div class="blog_outer">
+
+  <div class="outerusa">
+<h4>Featured Articles</h4>
+  <div class="blog_inner">
+
+    <div class="article_selected">
+      <a href="{{ section.settings.article.url }}">
+        <img src="{{ section.settings.article.image | img_url: 'master' }}" alt="{{ section.settings.article.title }}">
+        <p>{{ section.settings.article.title }}</p>
+      </a>
+    
+    </div>
+
+    <div class="article_selected">
+      <a href="{{ section.settings.article2.url }}">
+        <img src="{{ section.settings.article2.image | img_url: 'master' }}" alt="{{ section.settings.article2.title }}">
+        <p>{{ section.settings.article2.title }}</p>
+      </a>
+    </div>
+
+    <div class="article_selected">
+      <a href="{{ section.settings.article3.url }}">
+        <img src="{{ section.settings.article3.image | img_url: 'master' }}" alt="{{ section.settings.article3.title }}">
+        <p>{{ section.settings.article3.title }}</p>
+      </a>
+    </div>
+    
+</div>
+
+    <h4>browse by category</h4>
+
+    <div class="categories">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.url }}">
+          <img src="{{ block.settings.svg | img_url: "master" }}">
+        <p>{{ block.settings.text }}</p>
+        </a>
+        {% endfor %}
+    </div>
+
+  </div>
+  
+</div>
+
+  {% elsif link.title == "Support" %}
+  <div class="support_outer">
+
+  <div class="outerusa">
+
+    <div class="suportare">
+      
+        
+      <a href="{{ section.settings.link }}">
+        <img src="{{ section.settings.image | img_url: "master" }}">
+        <p>{{ section.settings.title }}</p>
+      </a>
+
+      <a href="{{ section.settings.link2 }}">
+        <img src="{{ section.settings.image2 | img_url: "master" }}">
+        <p>{{ section.settings.title2 }}</p>
+      </a>
+
+      <a href="{{ section.settings.link3 }}">
+        <img src="{{ section.settings.image3 | img_url: "master" }}">
+        <p>{{ section.settings.title3 }}</p>
+      </a>
+          
+      
+    </div>
+
+    <div class="under_suportare">
+      <p>{{ section.settings.contact }}<a href="{{ section.settings.contacturl }}">{{ section.settings.contacturltext }}</a></p>
+    </div>
+
+  </div>
+  
+</div>
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>
+
+
+
+

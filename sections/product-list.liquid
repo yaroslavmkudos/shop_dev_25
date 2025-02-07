@@ -1,0 +1,81 @@
+
+{% if product.metafields.my_fields.featured_product_1 != blank or product.metafields.my_fields.featured_product_2 != blank or product.metafields.my_fields.featured_product_3 != blank%}
+    <div class="page-width">
+      <div class="limiter">
+        {% if section.settings.title != blank %}
+            <h2 class="section_title big_margin">{{ section.settings.title | escape }}</h2>
+        {% endif %}
+        <div class="collection-grid">
+            <ul class="grid grid--uniform">
+                {% if product.metafields.my_fields.featured_product_1 != blank %}
+                    <li class="grid__item " {{ block.shopify_attributes }}>
+                        {% include 'product-card-grid', max_height: 250, product: all_products[product.metafields.my_fields.featured_product_1]  %}
+                    </li>
+                {% endif %}
+                {% if product.metafields.my_fields.featured_product_2 != blank %}
+                    <li class="grid__item " {{ block.shopify_attributes }}>
+                        {% include 'product-card-grid', max_height: 250, product: all_products[product.metafields.my_fields.featured_product_2]  %}
+                    </li>
+                {% endif %}
+                {% if product.metafields.my_fields.featured_product_3 != blank %}
+                    <li class="grid__item " {{ block.shopify_attributes }}>
+                        {% include 'product-card-grid', max_height: 250, product: all_products[product.metafields.my_fields.featured_product_3]  %}
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+
+        {% if section.blocks.size == 0 %}
+            {% include 'no-blocks' %}
+        {% endif %}
+      </div>
+    </div>
+{% endif %}
+
+
+
+
+{% schema %}
+{
+  "name": "Product list",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Featured Products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_product",
+      "name": "Product",
+      "settings": [
+        {
+          "label": "Product",
+          "id": "product",
+          "type": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product list",
+      "category": "product",
+      "blocks": [
+        {
+          "type": "featured_product"
+        },
+        {
+          "type": "featured_product"
+        },
+        {
+          "type": "featured_product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

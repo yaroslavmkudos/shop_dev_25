@@ -1,0 +1,92 @@
+<style>
+  /* Remove margin/padding from empty elements to eliminate empty space */
+.no-header-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+</style>
+
+<div class="rich_text no-header-section" style="background-color: {{section.settings.background}}">
+  <div class="page-width">
+    <div class="rich_text__content">
+      {% if section.settings.text != blank %}
+        <div class="rich_text__text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": {
+    "cs": "Formát RTF",
+    "da": "RTF",
+    "de": "Rich Text",
+    "en": "Rich text",
+    "es": "Texto enriquecido",
+    "fi": "Rich text",
+    "fr": "Texte enrichi",
+    "it": "Rich text",
+    "ja": "リッチテキスト",
+    "ko": "Rich text",
+    "nb": "Rich text",
+    "nl": "Tekst met opmaak",
+    "pl": "Tekst sformatowany",
+    "pt-BR": "Rich text",
+    "pt-PT": "Texto formatado",
+    "sv": "Rich text",
+    "th": "Rich Text",
+    "tr": "Zengin metin",
+    "vi": "Văn bản đa dạng thức",
+    "zh-CN": "富文本",
+    "zh-TW": "RTF 文字"
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fi": "Teksti",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "ko": "텍스트",
+        "nb": "Tekst",
+        "nl": "Tekst",
+        "pl": "Tekst",
+        "pt-BR": "Texto",
+        "pt-PT": "Texto",
+        "sv": "Text",
+        "th": "ข้อความ",
+        "tr": "Metin",
+        "vi": "Văn bản",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "default": {
+        "en": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      }
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background color"
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Rich text"
+      },
+      "category": {
+        "en": "Text"
+      }
+    }
+  ]
+}
+{% endschema %}

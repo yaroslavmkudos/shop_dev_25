@@ -1,0 +1,1956 @@
+
+  <style> #streamlabs, .scrollable-wrapper table {display: none;}
+  .template-product .product-single .grid__item .product-single__meta {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;}</style>
+
+<!--sections/product-template.liquid-------->
+<div class="product-template__container page-width"
+  id="ProductSection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="product"
+  data-enable-history-state="true"
+  data-ajax-enabled="{{ settings.enable_ajax }}"
+>
+  {% comment %}
+    Get first variant, or deep linked one
+  {% endcomment %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- assign product_image_zoom_size = '1024x1024' -%}
+  {%- assign product_image_scale = '2' -%}
+  {%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+  {%- assign compare_at_price = current_variant.compare_at_price -%}
+  {%- assign price = current_variant.price -%}
+
+  {% case section.settings.media_size %}
+    {% when 'small' %}
+      {%- assign product_media_width = 'medium-up--one-third' -%}
+      {%- assign product_description_width = 'medium-up--two-thirds' -%}
+      {%- assign height = 345 -%}
+    {% when 'medium' %}
+      {%- assign product_media_width = 'medium-up--one-half' -%}
+      {%- assign product_description_width = 'medium-up--one-half' -%}
+      {%- assign height = 530 -%}
+    {% when 'large' %}
+      {%- assign product_media_width = 'medium-up--two-thirds' -%}
+      {%- assign product_description_width = 'medium-up--one-third' -%}
+      {%- assign height = 720 -%}
+    {% when 'full' %}
+      {%- assign product_media_width = '' -%}
+      {%- assign product_description_width = '' -%}
+      {%- assign height = 1090 -%}
+      {%- assign enable_image_zoom = false -%}
+  {% endcase %}
+
+  <div class="pi-popup">
+    <div class="pi-popup_inner"></div>
+  </div>
+
+  <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+    
+    {% render 'breadcrumbs' %}
+    <div class="product-wrapper">
+      <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+        {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+
+        {%- for media in product.media -%}
+          {% include 'media', media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
+        {%- endfor -%}
+
+        <noscript>
+          {% capture product_image_size %}{{ height }}x{% endcapture %}
+          <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
+        </noscript>
+
+        {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
+
+        {%- if first_3d_model -%}
+          <button
+            aria-label="{{ 'products.product.view_in_space_label' | t }}"
+            class="product-single__view-in-space"
+            data-shopify-xr
+            data-shopify-model3d-id="{{ first_3d_model.id }}"
+            data-shopify-title="{{ product.title | escape }}"
+            data-shopify-xr-hidden
+          >
+            {% include 'icon-3d-badge-full-color' %}<span class='product-single__view-in-space-text'>{{ 'products.product.view_in_space' | t }}</span>
+          </button>
+        {%- endif -%}
+
+
+        {% if product.media.size > 1 %}
+          {% comment %} {% if product.media.size > 4 %}
+            {%- assign enable_thumbnail_slides = true -%}
+          {% endif %} {% endcomment %}
+
+          
+            <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} slider-active{% endif %}" data-slider>
+              <ul class="product-single__thumbnails product-single__thumbnails-{{ section.id }}" data-slider-container>
+                {% if enable_thumbnail_slides == true %}
+                  <div class="owl-carousel">
+                {% endif %}
+
+                {% for media in product.media %}
+                  <li class="item product-single__thumbnails-item {% if media.media_type == 'video' or media.media_type == 'external_video' %}  product-single__thumbnails-item--video {% endif %} product-single__thumbnails-item--{{ section.settings.media_size }} {% if enable_thumbnail_slides == true %} product-single__thumbnails-item-slide{% endif %} js"{% if enable_thumbnail_slides == true %} data-slider-slide-index="{{ forloop.index0 }}" data-slider-item{% endif %}>
+                    <a href="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"
+                      class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }} {%- if media.media_type == 'video' or media.media_type =='external_video' -%}product-single__thumbnail--video{%- endif -%}"
+                      data-thumbnail-id="{{ section.id }}-{{ media.id }}"
+                      {% if enable_thumbnail_slides == true %} data-slider-item-link{% endif %}
+                      {% if enable_image_zoom %}data-zoom="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
+
+                        {%- capture thumbnailAlt -%}
+                          {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+                            {{ 'sections.featured_product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                          {%- elsif media.media_type == 'model' -%}
+                            {{ 'sections.featured_product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                          {%- else -%}
+                            {{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+                          {%- endif -%}
+                        {%- endcapture -%}
+
+                        <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" alt="{{ thumbnailAlt }}">
+                        
+                        {%- if media.media_type == 'model' -%}
+                          <div class="product-single__thumbnail-badge">
+                            {% include 'icon-3d-badge-full-color' %}
+                          </div>
+                        {%- endif -%}
+                    </a>
+                  </li>
+                {% endfor %}
+
+                {% if enable_thumbnail_slides == true %}
+                  </div>
+                {% endif %}
+              </ul>
+            </div>
+          
+        {% endif %}
+        <div class="product-single__empty_block">
+        </div>
+        <div class="product-single__description rte">
+          <h2 class="section_title">About</h2>
+          {{product.description}}
+        </div>
+
+<div class="product-single__tags_and_size">
+  <div class="item">
+    <div class="value tags regular_weight">
+      <div class="element_title">Tags:</div>
+      {% for tag in product.tags %}
+        <span data-tag="{{ tag }}">
+          {% assign mainCollection = collections[product.metafields.my_fields.custom_breadcrumb].handle %}
+          <a href="/collections/{{ mainCollection }}/{{ tag | replace: " ", "-" }}">{{ tag }}</a>
+        </span>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+        {% if product.metafields.custom.included.value %}
+          <div id="whats" class="product__included">
+            <h2 class="section_title">What’s Included?</h2>
+            {% comment %} <p class="text">Our full stream packs might be the most complete packs out there.</p> {% endcomment %}
+{% if product.metafields.custom.file_size != blank %}
+            <div class="item">
+              <div class="element_title">File Size:</div>
+              <div class="value  regular_weight">{{product.metafields.custom.file_size}} Mb</div>
+            </div>
+          {% endif %}
+            <div class="product__included_grid">
+              {% for item in product.metafields.custom.included.value.items %}
+                <div class="product__included_item">
+                  <div class="title">{{ item.title }}</div>
+
+                  <ul class="list">
+                    {% for listItem in item.strokes %}
+                    <li class="list_item">
+                      <div class="icon" style="background-color: {{listItem.background}}; ">
+                        <img src="{{ listItem.image | asset_url }}" alt="" loading="lazy" width="24px" height="24px">
+                      </div>
+                      <div class="text">{{listItem.text}}</div>
+                    </li>
+                      
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+
+{%- if product.metafields.custom.pacage_product.value -%}
+  {%- for alt_product in product.metafields.custom.pacage_product.value -%}
+        <div class="stika" onclick="redirectToLink('{{ alt_product.url }}')">
+          <div class="stika_leka">
+
+  
+
+            <p>This product is a part of the <a href="{{ alt_product.url }}">{{ alt_product.title }}</a> Stream Package</p>
+            <span>Get a full stream overhaul with complete pack</span>
+          </div>
+          <div class="stika_reka">
+            <img src="{{ alt_product.featured_image | img_url: '200x' }}" alt="{{ alt_product.title }}" loading="lazy">
+          </div>
+        </div>
+        <script>
+function redirectToLink(url) {
+  window.location.href = url;
+}
+</script>
+        {%- endfor -%}
+        {%- endif -%}
+        
+
+        {% if product.metafields.my_fields.video %}
+          <div class="product_video">
+            <h2 class="section_title big_margin">Take A Closer Look</h2>
+            <div class="product_video__content" data-url="{{ product.metafields.my_fields.video }}">
+            {%- assign featured_media = product.featured_media | img_url: '700x'-%}
+
+                <div class="product_video__banner">
+                  <div class="product_video__banner_container"></div>
+
+                  <img id="{{ media_id }}"
+                    class="product_video__banner_image lazyload"
+                    data-src="{{ featured_media }}"
+                    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                    data-aspectratio="{{ featured_media.aspect_ratio }}"
+                    data-sizes="auto"
+                    width='100%'
+                    height="393px"
+                    alt="{{ media.alt | escape }}">                   
+                    <button class="product_video__play">
+                      {% render 'icon-play-product' %}
+                    </button>
+                </div>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% if product.metafields.custom.how_to_setup.value %}
+          <div class="product__setup">
+            <h2 class="section_title big_margin">How To Setup</h2>
+
+            <div class="grid">
+
+              {% for item in product.metafields.custom.how_to_setup.value.items %}
+                <div class="item" style="background-color: {{item.background}};">
+                  <div class="title">{{ item.title }}</div>
+                  <img src="{{item.image | asset_url }}" alt="" loading="lazy" class="product__setup_image">
+                  
+                  {% if item.video_link %} <button class="product__setup_button" data-link="{{item.video_link}}">
+                    {% if item.button_icon %}
+                      <img src="{{ item.button_icon | asset_url }}" alt="" loading="lazy">
+                    {% endif %}
+                    {{item.button_text}}</button>{% endif %}
+                  {% if item.url %} <a href="{{ item.url }}" class="product__setup_button" target="_blank" >
+                    {% if item.button_icon %}
+                      <img src="{{ item.button_icon | asset_url }}" alt="" loading="lazy">
+                    {% endif %}
+                    {{item.button_text}}</a>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        
+        {% if section.settings.faq_title_1 %}
+          <div class="faq">
+            <h2 class="section_title big_margin">Frequently Asked Questions</h2>
+  
+            {% if section.settings.faq_title_1 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_1}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_1}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_2 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_2}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_2}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_3 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_3}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_3}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_4 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_4}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_4}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_5 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_5}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_5}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_6 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_6}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_6}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_7 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_7}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_7}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_8 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_8}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_8}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_9 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_9}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_9}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+  
+            {% if section.settings.faq_title_10 != blank %}
+              <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq__title_container">
+                  <div class=" faq__accordion_title" itemprop="name">
+                    {{section.settings.faq_title_10}}
+                  </div>
+                  
+                  {% render 'icon-arrow' %}
+                </div>
+                <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <div itemprop="text">
+                    {{section.settings.faq_text_10}}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+        <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Replace 'customizable-vtuber-model' with the actual handle of the product you want to customize
+    var specialProductHandle = 'customizable-vtuber-model';
+    var currentProductHandle = "{{ product.handle }}";
+
+    if (currentProductHandle === specialProductHandle) {
+      // Clear the existing FAQ content
+      var faqContainer = document.querySelector('.faq');
+      faqContainer.innerHTML = '';
+
+      // Customize the FAQ for the specific product
+      var customFaqs = [
+        {
+          question: "Will this model work with VTube Studio on my iPhone/Android?",
+          answer: "Yes, technically it can work. However, we advise against using it solely on your phone. Phones may overheat due to the model's high quality, leading to unstable performance. Its primary practical use on a phone is as a tracking device."
+        },
+        {
+          question: "Is it possible to use this model with PrprLive or Animaze by Facerig?",
+          answer: "No. This model is optimized only for VTube Studio. With highly customizable models, it is very hard to make it compatible with every software out there, so we decided to focus on delivering the best experience only for VTube Studio."
+        },
+        {
+          question: "Why aren't my eyes or mouth moving?",
+          answer: "First, ensure you've selected the correct version of our model — Full Tracking for high-quality eye tracking or Auto Blinking without it. Set your tracking quality to Level 1 and above for eye tracking (we recommend Level 4 or higher). If everything seems alright, check if your webcam or phone supports high-quality eye tracking. Lastly, you can adjust smoothing and limit range for blinking and mouth in VTube Studio Settings."
+        },
+        {
+          question: "Can you add more customization to the model on my request?",
+          answer: "No. This model is provided as is. At this point, it’s impossible to add more customization to this model due to technical limitations."
+        },
+        {
+          question: "Do you have a (specific customization option) in the model?",
+          answer: "You can find a list of available customization options in this guide above."
+        },
+        {
+          question: "Can I use this model for commercial purposes, in games, apps, merch etc?",
+          answer: "No. This model is for personal use only. You can use it for monetized content (for example, YouTube videos and live streams), but using it in apps, games, and for merch is forbidden. However, we do offer custom solutions for businesses. You can always contact our support and ask us about custom work."
+        },
+        {
+          question: "I've changed my mind and no longer want this model, can I request a refund?",
+          answer: "Since your purchase is a digital product, it is deemed “used” after download or opening. Since the products made available here are intangible, there is a strict no refund policy. The onus is on you, as a consumer, to make responsible decisions about the purchases you make online."
+        }
+      ];
+
+      customFaqs.forEach(function(faq) {
+        var faqItem = document.createElement('div');
+        faqItem.classList.add('faq__accordion', 'accordion');
+        faqItem.setAttribute('itemscope', '');
+        faqItem.setAttribute('itemprop', 'mainEntity');
+        faqItem.setAttribute('itemtype', 'https://schema.org/Question');
+
+        var faqTitleContainer = document.createElement('div');
+        faqTitleContainer.classList.add('faq__title_container');
+
+        var faqTitle = document.createElement('div');
+        faqTitle.classList.add('faq__accordion_title');
+        faqTitle.setAttribute('itemprop', 'name');
+        faqTitle.innerHTML = faq.question;
+
+        faqTitleContainer.appendChild(faqTitle);
+        faqTitleContainer.appendChild(document.createElement('icon-arrow')); // Assuming this renders the arrow icon
+
+        var faqContent = document.createElement('div');
+        faqContent.classList.add('faq__accordion_content', 'rte');
+        faqContent.setAttribute('itemscope', '');
+        faqContent.setAttribute('itemprop', 'acceptedAnswer');
+        faqContent.setAttribute('itemtype', 'https://schema.org/Answer');
+
+        var faqContentText = document.createElement('div');
+        faqContentText.setAttribute('itemprop', 'text');
+        faqContentText.innerHTML = faq.answer;
+
+        faqContent.appendChild(faqContentText);
+        faqItem.appendChild(faqTitleContainer);
+        faqItem.appendChild(faqContent);
+        faqContainer.appendChild(faqItem);
+      });
+    }
+  });
+</script>
+        
+
+        
+        {% if product.metafields.my_fields.featured_product_1 != blank or product.metafields.my_fields.featured_product_2 != blank or product.metafields.my_fields.featured_product_3 != blank%}
+          <div class="product_pack">
+            <h2 class="section_title big_margin">
+              {% assign isFullPacks = false %}
+              {% for collection in product.collections %}
+                {% if collection.handle == 'full-packs' %}
+                  {% assign isFullPacks = true %}
+                {% endif %}
+              {% endfor %}
+              {% if isFullPacks %}
+                In This Pack
+              {% else %}
+                Featured products
+              {% endif %}
+            </h2>
+            
+            <div class="collection-grid">
+              <ul class="grid grid--uniform">
+                {% if product.metafields.my_fields.featured_product_1 != blank %}
+                  <li class="grid__item " {{ block.shopify_attributes }}>
+                    {% include 'product-card-grid', max_height: 250, product: all_products[product.metafields.my_fields.featured_product_1]  %}
+                  </li>
+                {% endif %}
+                {% if product.metafields.my_fields.featured_product_2 != blank %}
+                  <li class="grid__item " {{ block.shopify_attributes }}>
+                    {% include 'product-card-grid', max_height: 250, product: all_products[product.metafields.my_fields.featured_product_2]  %}
+                  </li>
+                {% endif %}
+                {% if product.metafields.my_fields.featured_product_3 != blank %}
+                  <li class="grid__item " {{ block.shopify_attributes }}>
+                    {% include 'product-card-grid', max_height: 250, product: all_products[product.metafields.my_fields.featured_product_3]  %}
+                  </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+        
+      
+
+        {%- if recommendations.performed -%}
+          {%- if recommendations.products_count > 0 -%}
+            <div class="product-recommendations__inner">
+              <h2 class="section_title big_margin">Other Products You Might Like</h2>
+              
+              <ul class="grid grid--product-recommendations grid--uniform grid--view-items">
+                {%- for product in recommendations.products limit: 4-%}       
+                  <li class="grid__item product-recommendations__item">
+                    {% include 'product-card-grid', max_height: 250, product: product, show_vendor: false, recommendations_section: true %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          
+          {%- endif -%}
+        {%- else  -%}
+          <div  data-base-url="{{ routes.product_recommendations_url }}" data-product-id="{{ product.id }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations">
+            <div class="product-recommendations__inner">
+              <h2 class="section_title big_margin">Other Products You Might Like</h2>
+              
+              <ul class="grid grid--product-recommendations grid--uniform grid--view-items">
+                {%- for product in recommendations.products limit: 4-%}       
+                  <li class="grid__item product-recommendations__item">
+                    {% include 'product-card-grid', max_height: 250, product: product, show_vendor: false, recommendations_section: true %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        {%- endif -%}
+        <!-- Start of Judge.me code --> 
+  <div style='clear:both'></div> 
+  <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-id='{{ product.id }}'> 
+    {{ product.metafields.judgeme.widget }} 
+  </div> 
+<!-- End of Judge.me code -->
+
+
+        <div class="product__setup product__questions">
+          <h2 class="section_title big_margin">Still Got Questions?</h2>
+
+          <div class="grid">
+              <div class="item" style="background-color: #EBBB28;">
+                <div class="title">Ask Us <br> Anything</div>
+                <img src="{{'ask_us.svg' | asset_url }}" alt="" loading="lazy" class="product__setup_image">
+
+                <a href="{{ section.settings.ask_us_link }}" class="product__setup_button" target="_blank" >
+                    <img src="{{ 'play.svg' | asset_url }}" alt="" loading="lazy">
+                  CONTACT US</a>
+              </div>
+              <div class="item" style="background-color: #EBBB28;">
+                <div class="title">Knowledge <br> Base</div>
+                <img src="{{'knowledge_base.svg' | asset_url }}" alt="" loading="lazy" class="product__setup_image">
+
+                <a href="{{ section.settings.knowledge_base_link }}" class="product__setup_button" target="_blank" >
+                    <img src="{{ 'play.svg' | asset_url }}" alt="" loading="lazy">
+                    OPEN HELP</a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="product_right" class="grid__item product-single__info {{ product_description_width }}">
+        <div class="product-single__meta">
+
+          <h1 class="product-single__title">{{ product.title }}</h1>
+          <!-- Start of Judge.me code --> 
+  <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'> 
+    {{ product.metafields.judgeme.badge }} 
+  </div> 
+<!-- End of Judge.me code -->
+          <div id="kec" class="product__price">
+            {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
+          </div>
+
+          <style>
+
+.container {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  
+  min-width: 231.5px;
+  width: 100% !important;
+  max-width: 483px;
+}
+
+  .ikac_mikac {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* the code below is for the dropdown heading */
+.setting-description {
+  background-color: #1c2028; 
+  border-radius: 15px 15px 0px 0px;
+  
+  min-width: 231.5px;
+  width: 100% !important;
+  max-width: 483px;
+}
+
+h10 {
+  font-size: 12px;
+  margin-left: 5px !important;
+  letter-spacing: 0.8px;
+  font-family: Arial !important;
+}
+
+.setting-description-text {
+  padding-top: 18px !important;
+  color: #81828b;
+  font-family: Gilroy-Regular !important;
+}
+
+/* the code below is for the dropdown menu */
+.wrapper-dropdown {
+  position: relative;
+  display: inline-block;
+  min-width: 231.5px;
+  width: 100%; !important;
+  max-width: 483px;
+  padding: 0px 0px 0px 0px;
+  min-height: 44px;
+  border-radius: 0px 0px 15px 15px;
+  background: #1c2028;
+  text-align: left;
+  color: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 16px;
+  font-family: Arial;
+}
+
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.arrow {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+  rotate: 180deg;
+}
+
+.selected-display {
+  margin-left: 24px;
+}
+
+            div#dropdown svg {
+    margin-right: 21px;
+}
+
+svg {
+  transition: all 0.3s;
+}
+
+.wrapper-dropdown::before {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+
+  margin-top: -2px;
+
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #fff transparent;
+}
+
+.rotated {
+  transform: rotate(-180deg);
+}
+
+.wrapper-dropdown .dropdown {
+  transition: 0.3s;
+
+  position: absolute;
+  top: 120%;
+  right: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  z-index: 99;
+
+  border-radius: 15px;
+  box-shadow: inherit;
+  background: inherit;
+
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapper-dropdown .dropdown li {
+  line-height: 45px;
+  overflow: hidden;
+}
+
+.wrapper-dropdown .dropdown li:last-child {
+  border-bottom: none;
+}
+
+.wrapper-dropdown.active .dropdown {
+  opacity: 1;
+  visibility: visible;
+
+  border-radius: 15px;
+}
+
+            /* klokovaca */
+            div#dropdown {
+    border-radius: 16px;
+    border: 2px solid #EDEDED;
+    background: #FFF;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span#destination {
+    color: #000;
+    text-align: right;
+    font-family: gilory;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: Gilroy-Regular;
+}
+
+li.item {
+    color: #000;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+ul.dropdown {
+    border-radius: 8px !important;
+    background: #F2F2F2;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25) !important;
+}
+
+           .product-single__meta a.grid-view-item__link.grid-view-item__image-container.full-width-link {
+    display: flex;
+}
+
+.product-single__meta .grid-view-item.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-single__meta .item .h4.grid-view-item__title.product-card__title {
+    color: #000;
+    text-align: right;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.item .grid-view-item.product-card {
+    margin-bottom: 0;
+}
+
+
+
+
+.wrapper-dropdown.active .selected-display {
+    opacity: 0.4;
+}
+
+            .ikac {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    position: absolute;
+    top: 12px;
+    color: #000;
+    text-align: right;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.nat-vake {position: relative;}
+
+.nat-vake:hover {
+    background: #F2F2F2 !important;
+}
+
+.priki span:first-child {
+    color: #000;
+    text-align: right;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration-line: line-through;
+    opacity: 0.20;
+    margin-right: 8px;
+}
+
+.priki span:last-child {
+    color: #F00;
+    text-align: right;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+.nat-vake {
+    border-top: 1px solid #F2F2F2;
+}
+
+            .form-box {
+    width: 100%;
+    border-radius: 16px;
+    border: 2px solid #EDEDED;
+    background: #FFF;
+}
+
+.product-single__meta button.btn.product-form__cart-submit.btn--secondary-accent {margin-bottom: 0px;margin-left: 14px;margin-right: 24px;width: calc(100% - 29px);}
+
+.shopify-payment-button {
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.product-single__meta .product__price {
+    padding-top: 24px;
+}
+
+.form-box span.price-item.price-item--sale {
+    color: #F00;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+  margin-right: 0px;
+    margin-left: 8px;
+}
+
+          
+
+.product-single__meta s.price-item.price-item--regular {
+    color: #000;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration-line: strikethrough;
+    opacity: 0.20;
+
+}
+
+            h1.product-single__title {
+    margin-bottom: 8px !important;
+    font-family: 'Gilroy-Heavy' !important;
+    font-size: 36px !important;
+  
+}
+
+            .wats a {
+    text-align: center;
+    color: #0080FF;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.wats {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+           .nat-vake li.item {
+    font-size: 0;
+                 position: relative;
+    z-index: 9999;
+}
+
+            .dropdown span.price-item.price-item--sale {
+    color: #F00;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.dropdown s.price-item.price-item--regular {
+    color: #000;
+    text-align: right;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Bold';
+    font-size: 36px !important;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration-line: strikethrough;
+}
+
+            ul.dropdown li {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+            .form-box span.price-item.price-item--regular {
+    color: #000;
+text-align: right;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: 'Gilroy-Bold';
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+}
+
+           .product-single__meta a.grid-view-item__link.grid-view-item__image-container.full-width-link:hover {
+    text-decoration: none;
+}
+
+
+div#kec {
+    display: none;
+}
+
+            .stika {
+    border-radius: 16px;
+    background: rgba(0, 128, 255, 0.10);
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+              cursor: pointer;
+}
+
+.stika img {
+    max-width: 112px;
+    border-radius: 4px;
+}
+
+.stika_leka p {
+    color: #0080FF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Regular';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 160% */
+  margin-bottom: 0;
+}
+
+.stika_leka a {
+    color: #0080FF;
+}
+
+            .stika_leka span {
+    color: #0080FF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+}
+
+.product-single__meta .price__regular span {
+    color: #000;
+    text-align: right;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+li.item.tobe:hover {
+    background-color: #F2F2F2 !important;
+}
+
+.product-single__meta .grid-view-item.product-card:hover .h4 {
+  border: none;
+}
+
+            .product-single__tags_and_size .item {
+    width: 100%;
+}
+            .tags .element_title {
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 0;
+    text-decoration: none !important;
+}
+
+            .product-single__tags_and_size .tags {
+    text-decoration-line: none !important;
+}
+
+.value.tags.regular_weight {
+  display: flex;             /* put everything (label + pills) on one row */
+  align-items: center;       /* vertically center them */
+  flex-wrap: wrap;           /* let tags wrap to the next line if there are many */
+  gap: 8px;                 /* space between the label & pills */
+}
+
+/* If you had any margin or special styling on .element_title, reduce or remove it */
+.value.tags.regular_weight .element_title {
+  margin: 0; 
+  flex: 0 0 auto;
+}
+
+/* your existing pill styles remain the same */
+.value.tags.regular_weight a {
+  display: inline-block;
+  background-color: #F1F1F1;
+  border-radius: 32px;
+  padding: 4px 16px;
+  text-decoration: none;
+  font-family: 'Gilroy-Regular';
+  font-size: 16px;
+  color: #000;
+  transition: background-color 0.1s, color 0.1s;
+}
+.value.tags.regular_weight a:hover {
+  background-color: #0080FF;
+  color: #FFF;
+}
+
+
+div#whats .item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 40px;
+}
+
+div#whats .item .element_title {
+    margin: 0;
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+}
+
+div#whats .item .value {
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Gilroy-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+            span.price-item.price-item--sale {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+            span.klkl {
+    color: #000 !important;
+}
+            li.item.tobe {
+    border-top: 1px solid #f2f2f2;
+}
+
+            @media only screen and (max-width: 600px) {
+.stika {
+    flex-direction: column-reverse;
+    gap: 16px;
+}
+
+.stika img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.stika {
+    padding: 16px;
+}
+}
+
+.wrapper-dropdown.active {
+    border-color: #007efa !important;
+}
+li.item.selected ~ .ikac {
+    color: #0074e7 !important;
+}
+            .shopify-payment-button {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+            div#product_right {
+    padding-left: 24px;
+}
+            .grid__item.product-single__media-group {
+    margin-right: 24px !important;
+}
+
+            @media screen and (max-width: 1024px) {
+ div#product_right {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100%;
+}
+}
+.jdgm-rev-widg {
+  padding: 0 !important;
+}
+.jdgm-rev-widg__summary-inner {
+  width: 100% !important;
+}
+.jdgm-widget-actions-wrapper {
+  border-left: none !important;
+}
+.jdgm-write-rev-link {
+  justify-content: center !important;
+  border: none !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    font-size: 16px !important;
+    line-height: 32px !important;
+      background: #0080ff !important;
+  max-width: 100% !important;
+}
+ @media only screen and (max-width: 992px) {
+   .jdgm-write-rev-link {
+     max-width: 240px !important;
+   }
+ }
+.jdgm-row-profile {
+font-family: 'Gilroy-Bold' !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+}
+.jdgm-rev__body {
+  font-family: 'Gilroy-Regular' !important;
+    font-size: 16px !important;
+}
+.jdgm-rev-widg__summary-text {
+    font-family: 'Gilroy-Regular' !important;
+    font-size: 16px !important;
+    margin-top: 8px !important;
+}
+ @media only screen and (min-width: 992px) {
+   .jdgm-row-stars {
+        padding-bottom: 24px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+   }
+ }
+.jdgm-histogram, .jdgm-rev__title, .jdgm-rev__icon, .jdgm-row-actions, .jdgm-row-extra, .jdgm-paginate__last-page, .jdgm-paginate__first-page, .jdgm-form__reviewer-name-format-container, .jdgm-rev__buyer-badge-wrapper, .jdgm-row-media {
+  display: none !important;
+}
+.jdgm-rev__reply {
+  display: block !important;
+  background: #f1f1f1 !important;
+  border-radius: 16px !important;
+}
+.jdgm-rev__reply-content {
+    font-family: 'Gilroy-Regular' !important;
+    font-size: 16px !important;
+}
+.jdgm-rev__replier-wrapper {
+      font-family: 'Gilroy-Semibold' !important;
+    font-size: 16px !important;
+}
+.jdgm-paginate__page {
+        font-family: 'Gilroy-Bold' !important;
+    font-size: 16px !important;
+}
+.jdgm-paginate__page.jdgm-curt {
+  color: #0080ff !important;
+}
+.jdgm-row-media, .jdgm-row-search, .jdgm-subtab, .jdgm-row-actions, .jdgm-quest, .jdgm-rev, .jdgm-paginate {
+  border-top: none !important;
+}
+
+.jdgm-prev-badge {
+  margin-bottom: 24px;
+  font-family: gilroy-regular;
+  font-size: 16px;
+}
+.jdgm-prev-badge__text {
+  padding-left: 8px;
+  font-family: 'Gilroy-Bold' !important;
+  font-size: 16px !important;
+  opacity: 50%; 
+}
+
+ @media only screen and (min-width: 992px) {
+   .jdgm-rev-widg__title {
+      text-align: left !important;
+}
+ }
+.jdgm-rev-widg__title {
+    font-size: 32px !important;
+ }
+ .jdgm-form-wrapper {
+   font-family: 'Gilroy-Regular' !important;
+   font-size: 16px !important;
+ }  
+jdgm-form__fieldset {
+  border-radius: 16px !important;
+}          
+
+.jdgm-form__fieldset input[aria-label="Review Title"] {
+    display: none !important;
+}
+.jdgm-form__fieldset label[for="jdgm_review_title"] {
+    display: none !important;
+
+}
+.jdgm-form__inline-label[for^="jdgm_review_title"] {
+    display: none !important;
+}
+.jdgm-countdown {
+display: none !important;
+}
+
+.jdgm-form__fieldset textarea {
+  border-radius: 16px !important;
+}
+.jdgm-form__fieldset input {
+  border-radius: 16px !important;
+}
+.jdgm-input-error {
+  border-radius: 16px !important; 
+}
+.jdgm-submit-rev {
+        background: #0080ff !important;
+  border: none !important;
+  font-family: 'Gilroy-Bold' !important;
+    font-size: 16px !important;
+}
+.jdgm-cancel-rev {
+    border: none !important;
+  border-radius: 16px !important;
+  background: #f1f1f1 !important;
+  font-family: 'Gilroy-Bold' !important;
+    font-size: 16px !important;
+}
+.jdgm-form__fieldset-actions {
+      display: flex !important;
+    justify-content: space-between !important;
+}
+.jdgm-form__title {
+  font-family: 'Gilroy-Bold' !important;
+}
+            .product__price {
+              margin-bottom: 8px !important;
+              margin-top: 16px !important;
+                }
+
+            /* ============================= */
+/* 1) "One-Time Purchase" text   */
+/* ============================= */
+.one-time-purchase {
+  margin-bottom: 24px;
+  font-family: 'Gilroy-Bold' !important;
+  font-size: 16px !important;
+  opacity: 0.5;
+  text-align: center;
+}
+
+/* ============================= */
+/* 2) Trust badges container     */
+/* ============================= */
+.trust-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid #EDEDED;
+  background: #FFF;
+  gap: 30px;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+.trust-badges .badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.trust-badges .badge span {
+  font-family: 'Gilroy-Bold';
+  font-size: 16px;
+  color: #000;
+  opacity: 0.5;
+}
+
+/* ============================= */
+/* 3) "What’s included?" block   */
+/* ============================= */
+.whats-included {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 16px;
+  border: 2px solid #EDEDED;
+  background: #FFF;
+  padding: 16px;
+  margin-bottom: 16px !Important;
+}
+
+/* Ensure the link is also displayed as flex so icon & text line up nicely. */
+.whats-included a {
+  display: flex;
+  align-items: center;
+  font-family: 'Gilroy-Bold';
+  font-size: 16px;
+  color: #000;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.whats-included a:hover {
+  color: #0080FF;
+  opacity: 1;
+}
+
+/* ============================= */
+/* 4) "Works with" title styling */
+/* ============================= */
+.works_with__title {
+  font-family: 'Gilroy-Bold' !important;
+  font-size: 16px !important;
+  color: #000 !important;
+  opacity: 0.5;
+  margin-bottom: 8px;
+  margin-top: 0px !important;
+}
+.works_with__grid {
+  gap: 12px !important;
+}
+          </style>
+          
+
+        
+          {% capture "form_classes" -%}
+            product-form product-form-{{ section.id }}
+            {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+          {%- endcapture %}
+
+          {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+            {% assign variantCounter = 0 %}
+            {% for variantItem in product.variants %}
+              {% assign variantCounter = variantCounter | plus: 1 %}
+            {% endfor %}
+
+
+
+          <!-- There are two dropdowns to show multi-menu support -->
+<div class="container">
+  <div class="wrapper-dropdown" id="dropdown">
+    <span class="selected-display" id="destination">
+      {% if product.variants.first %}
+        {{ product.variants.first.title }}
+      {% else %}
+        Pick an option!
+      {% endif %}
+    </span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<g clip-path="url(#clip0_202_1020)">
+<path d="M18 10.0001L16.59 8.59009L12 13.1701L7.41 8.59009L6 10.0001L12 16.0001L18 10.0001Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_202_1020">
+<rect width="24" height="24" fill="white" transform="matrix(0 1 -1 0 24 0)"/>
+</clipPath>
+</defs>
+</svg>
+    <ul class="dropdown">
+            <span class="kudos-select">
+      {% for variant in product.variants %}
+        <div class="nat-vake">
+          <li class="item" data-name="{{ variant.title }}" data-price="{{ variant.price }}" data-compare="{{ variant.compare_at_price | money | replace: ".00", " " }}"></li>
+          <div class="ikac"><div class="tiki">{{ variant.title }}</div><div class="priki">
+            {% if variant.compare_at_price > 0 %}
+             <span>{{ variant.compare_at_price | money | replace: ".00", " " }}</span> <span {% if variant.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ variant.price | money | replace: ".00", " " }}</span>
+              {% else %}
+              <span>{{ variant.compare_at_price | money | replace: ".00", " " }}</span><span {% if variant.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ variant.price | money | replace: ".00", " " }}</span>
+              {% endif %}
+          </div></div>
+        </div>
+      {% endfor %}
+      </span>
+            {% if product.metafields.custom.sub_variant_1 %}
+      <li class="item tobe blo">
+
+<a href="{{ product.metafields.custom.sub_variant_1.value.url }}">
+   <div class="ikac_mikac">
+  <div class="tiki">{{ product.metafields.custom.sub_variant_title_1 }}</div>
+     <div class="priki">
+              {% if product.metafields.custom.sub_variant_1.value.compare_at_price > 0 %}
+             <span>{{ product.metafields.custom.sub_variant_1.value.compare_at_price | money | replace: ".00", " " }}</span> <span {% if product.metafields.custom.sub_variant_1.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_1.value.price | money | replace: ".00", " " }}</span>
+              {% else %}
+              <span>{{ product.metafields.custom.sub_variant_1.value.compare_at_price | money | replace: ".00", " " }}</span><span {% if product.metafields.custom.sub_variant_1.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_1.value.price | money | replace: ".00", " " }}</span>
+              {% endif %}
+             </div>
+   </div>
+</a>
+              </li>
+      {% endif %}
+            
+            {% if product.metafields.custom.sub_variant_2 %}
+      <li class="item tobe blo">
+
+<a href="{{ product.metafields.custom.sub_variant_2.value.url }}">
+   <div class="ikac_mikac">
+  <div class="tiki">{{ product.metafields.custom.sub_variant_title_2 }}</div>
+     <div class="priki">
+              {% if product.metafields.custom.sub_variant_2.value.compare_at_price > 0 %}
+             <span>{{ product.metafields.custom.sub_variant_2.value.compare_at_price | money | replace: ".00", " " }}</span> <span {% if product.metafields.custom.sub_variant_2.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_2.value.price | money | replace: ".00", " " }}</span>
+              {% else %}
+              <span>{{ product.metafields.custom.sub_variant_2.value.compare_at_price | money | replace: ".00", " " }}</span><span {% if product.metafields.custom.sub_variant_2.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_2.value.price | money | replace: ".00", " " }}</span>
+              {% endif %}
+             </div>
+   </div>
+</a>
+              </li>
+      {% endif %}
+            
+            {% if product.metafields.custom.sub_variant_3 %}
+      <li class="item tobe blo">
+
+<a href="{{ product.metafields.custom.sub_variant_3.value.url }}">
+   <div class="ikac_mikac">
+  <div class="tiki">{{ product.metafields.custom.sub_variant_title_3 }}</div>
+     <div class="priki">
+              {% if product.metafields.custom.sub_variant_3.value.compare_at_price > 0 %}
+             <span>{{ product.metafields.custom.sub_variant_3.value.compare_at_price | money | replace: ".00", " " }}</span> <span {% if product.metafields.custom.sub_variant_3.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_3.value.price | money | replace: ".00", " " }}</span>
+              {% else %}
+              <span>{{ product.metafields.custom.sub_variant_3.value.compare_at_price | money | replace: ".00", " " }}</span><span {% if product.metafields.custom.sub_variant_3.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_3.value.price | money | replace: ".00", " " }}</span>
+              {% endif %}
+             </div>
+   </div>
+</a>
+              </li>
+      {% endif %}
+            
+            {% if product.metafields.custom.sub_variant_4 %}
+      <li class="item tobe blo">
+
+<a href="{{ product.metafields.custom.sub_variant_4.value.url }}">
+   <div class="ikac_mikac">
+  <div class="tiki">{{ product.metafields.custom.sub_variant_title_4 }}</div>
+     <div class="priki">
+              {% if product.metafields.custom.sub_variant_4.value.compare_at_price > 0 %}
+             <span>{{ product.metafields.custom.sub_variant_4.value.compare_at_price | money | replace: ".00", " " }}</span> <span {% if product.metafields.custom.sub_variant_4.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_4.value.price | money | replace: ".00", " " }}</span>
+              {% else %}
+              <span>{{ product.metafields.custom.sub_variant_4.value.compare_at_price | money | replace: ".00", " " }}</span><span {% if product.metafields.custom.sub_variant_4.value.compare_at_price > 0 %}{% else %}class="klkl"{% endif %}>{{ product.metafields.custom.sub_variant_4.value.price | money | replace: ".00", " " }}</span>
+              {% endif %}
+             </div>
+   </div>
+</a>
+              </li>
+      {% endif %}
+    </ul>
+  </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+         <script>
+
+           jQuery(window).load(function(){
+const selectedAll = document.querySelectorAll(".wrapper-dropdown");
+
+selectedAll.forEach((selected) => {
+  const optionsContainer = selected.children[2];
+  const optionsList = selected.querySelectorAll("div.wrapper-dropdown li");
+
+  selected.addEventListener("click", () => {
+    let arrow = selected.children[1];
+
+    if (selected.classList.contains("active")) {
+      handleDropdown(selected, arrow, false);
+    } else {
+      let currentActive = document.querySelector(".wrapper-dropdown.active");
+
+      if (currentActive) {
+        let anotherArrow = currentActive.children[1];
+        handleDropdown(currentActive, anotherArrow, false);
+      }
+
+      handleDropdown(selected, arrow, true);
+    }
+  });
+
+  // update the display of the dropdown
+  for (let o of optionsList) {
+    o.addEventListener("click", () => {
+      selected.querySelector(".selected-display").innerHTML = o.innerHTML;
+    });
+  }
+});
+
+// check if anything else ofther than the dropdown is clicked
+window.addEventListener("click", function (e) {
+  if (e.target.closest(".wrapper-dropdown") === null) {
+    closeAllDropdowns();
+  }
+});
+
+// close all the dropdowns
+function closeAllDropdowns() {
+  const selectedAll = document.querySelectorAll(".wrapper-dropdown");
+  selectedAll.forEach((selected) => {
+    const optionsContainer = selected.children[2];
+    let arrow = selected.children[1];
+
+    handleDropdown(selected, arrow, false);
+  });
+}
+
+// open all the dropdowns
+function handleDropdown(dropdown, arrow, open) {
+  if (open) {
+    arrow.classList.add("rotated");
+    dropdown.classList.add("active");
+  } else {
+    arrow.classList.remove("rotated");
+    dropdown.classList.remove("active");
+  }
+}
+});
+
+           
+            
+         </script>
+  <!-- WHAT’S INCLUDED BLOCK -->
+<div class="whats-included">
+  <a href="#whats">
+    <img
+      src="{{ 'inventory_2.svg' | asset_url }}"
+      alt="What's included?"
+      width="24"
+      height="24"
+      style="margin-right: 8px;"
+    />
+    What’s included?
+  </a>
+</div>       
+            
+  <div class="form-box">
+    <div id="dvica" class="product__price">
+            {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
+          </div>
+<div class="one-time-purchase">One-Time Purchase</div>
+     <div class="product-form__controls-group product-form__controls-group--submit">
+              <div class="product-form__item product-form__item--submit
+                {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
+                {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
+              >
+               
+                <button type="submit" name="add"
+
+                  {% unless current_variant.available %} aria-disabled="true"{% endunless %}
+                  aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+                  class="btn product-form__cart-submit{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}" disabled
+                  {% if settings.enable_ajax %}aria-haspopup="dialog"{% endif %}
+                  data-add-to-cart onclick="pintrk('track', 'addtocart');" data-collection='{% if collections[product.metafields.my_fields.custom_breadcrumb].title == 'Stream Overlay Packages' %}Full Packs{% else %}{{collections[product.metafields.my_fields.custom_breadcrumb].title}}{% endif %}'>
+                  <span data-add-to-cart-text class="text-cart">
+                    {% unless current_variant.available %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                    {% endunless %}
+                  </span>
+                  <span class="in-cart">In your cart</span>
+                  <span class="hide" data-loader>
+                    {% include 'icon-spinner' %}
+                  </span>
+
+                  {% render "icon-cart" %}      
+                  <div class="icon-check"></div>            
+                </button>
+
+                {% comment %} <button id="to_checkout" class="btn" type="submit" name="checkout">
+                  Buy Now
+                  {% render "icon-cart" %}
+                </button> {% endcomment %}
+                {% if section.settings.enable_payment_button %}
+                  {{ form | payment_button }}
+                {% endif %}
+              </div>
+            </div>
+  </div>
+     <!-- TRUST BADGES (SECURE PAYMENT & INSTANT DOWNLOAD) -->
+<div class="trust-badges">
+  <div class="badge">
+    <!-- shield.svg from your theme's assets folder -->
+    <img src="{{ 'shield.svg' | asset_url }}" alt="Secure Payment" width="24" height="24" />
+    <span>Secure Payment</span>
+  </div>
+  <div class="badge">
+    <!-- history_2.svg from your theme's assets folder -->
+    <img src="{{ 'history_2.svg' | asset_url }}" alt="Instant Download" width="24" height="24" />
+    <span>Instant Download</span>
+  </div>
+</div>
+
+              <div class="product-form__controls-group">
+                {% for option in product.options_with_values %}
+                  <div class="selector-wrapper js product-form__item">
+                    <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input"
+                      id="SingleOptionSelector-{{ forloop.index0 }}"
+                      data-index="option{{ forloop.index }}"
+                    >
+                      {% for value in option.values %}
+                        <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                {% endfor %}
+              </div>
+            
+
+            <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" {%- if variant == current_variant %} selected="selected" {%- endif -%}>
+                  {{ variant.title }}  {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                </option>
+              {% endfor %}
+            </select>
+
+            <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}"
+              data-error-message-wrapper
+              role="alert"
+            >
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% include 'icon-error' %}
+              <span class="product-form__error-message" data-error-message>{{ 'products.product.quantity_minimum_message' | t }}</span>
+            </div>
+
+           
+          {% endform %}
+
+          <div class="works_with">
+            <div class="works_with__title">Works with</div>
+            <div class="works_with__grid">
+              {% for item in product.metafields.custom.works_with.value %}
+                {% assign image = item | append: '.png'%}
+                <div class="works_with__item">
+                  <img src="{{image | asset_img_url: '40x'}}" alt="" width="40px" height="40px">
+                </div>
+              {% endfor %}
+            </div>
+            
+          </div>
+        </div>
+
+        {%- comment -%}
+          Live region for announcing updated price and availability to screen readers
+        {%- endcomment -%}
+        <p class="visually-hidden" data-product-status
+          aria-live="polite"
+          role="status"
+        ></p>
+
+        {%- comment -%}
+          Live region for announcing that the product form has been submitted and the
+          product is in the process being added to the cart
+        {%- endcomment -%}
+        <p class="visually-hidden" data-loader-status
+          aria-live="assertive"
+          role="alert"
+          aria-hidden="true"
+        >{{ 'products.product.loader_label' | t }}</p>
+
+        <div
+          class="product-single__store-availability-container"
+          data-store-availability-container
+          data-product-title="{{ product.title | escape }}"
+          data-has-only-default-variant="{{ product.has_only_default_variant }}"
+          data-base-url="{{ shop.url }}{{ routes.root_url }}"
+        >
+        </div>
+
+        {% if section.settings.show_share_buttons %}
+          {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% unless product == empty %}
+  <script type="application/json" id="ProductJson-{{ section.id }}">
+    {{ product | json }}
+  </script>
+  <script type="application/json" id="ModelJson-{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Product pages",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": "Show dynamic checkout button",
+      "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_image_zoom",
+      "label": "Enable image zoom",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "ask_us_link",
+      "label": "Ask Us Anything link"
+    },
+    {
+      "type": "url",
+      "id": "knowledge_base_link",
+      "label": "Knowledge Base link"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_1",
+      "label": "Faq title 1"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_1",
+      "label": "Faq text 1"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_2",
+      "label": "Faq title 2"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_2",
+      "label": "Faq text 2"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_3",
+      "label": "Faq title 3"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_3",
+      "label": "Faq text 3"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_4",
+      "label": "Faq title 4"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_4",
+      "label": "Faq text 4"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_5",
+      "label": "Faq title 5"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_5",
+      "label": "Faq text 5"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_6",
+      "label": "Faq title 6"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_6",
+      "label": "Faq text 6"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_7",
+      "label": "Faq title 7"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_7",
+      "label": "Faq text 7"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_8",
+      "label": "Faq title 8"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_8",
+      "label": "Faq text 8"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_9",
+      "label": "Faq title 9"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_9",
+      "label": "Faq text 9"
+    },
+    {
+      "type": "text",
+      "id": "faq_title_10",
+      "label": "Faq title 10"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_text_10",
+      "label": "Faq text 10"
+    }
+  ]
+}
+{% endschema %}

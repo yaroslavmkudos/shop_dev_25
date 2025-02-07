@@ -1,0 +1,47 @@
+<div class="landing__learn_more page-width">
+    {% if section.settings.title != blank %}
+        <h2 class="landing__learn_more_title lh2">{{section.settings.title}}</h2>
+    {% endif %}
+    
+    <ul class="landing__learn_more_posts">
+        {% for block in section.blocks %}
+            <li class="landing__learn_more_post">
+                <a href="{{block.settings.article.url}}"></a>
+                <img src="{{block.settings.article.image | img_url: '400x'}}" alt="" loading="lazy">
+                <h3 class="lh3">{{block.settings.article.title}}</h3>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</div>
+
+{% schema %}
+    {
+        "name": "Landing learn more",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "article",
+                "name": "Article",
+                "settings": [
+                    {
+                        "type": "article",
+                        "id": "article",
+                        "label": "Article"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing learn more"
+            }
+        ]
+    }
+{% endschema %}

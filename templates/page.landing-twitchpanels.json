@@ -1,0 +1,478 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "52b8580d-bd58-455b-b9c0-d5d67556ffa7": {
+      "type": "landing-banner",
+      "settings": {
+        "title": "Free Twitch Panels",
+        "text": "Spice up your streaming channel with our collection of twitch panels. Download a premade package or use one of the templates to customize everything to your taste.About Me, Donation, and dozens of other panel types are included with each pack - completely free!",
+        "link_text": ""
+      }
+    },
+    "c84e47b5-fd70-47c2-bf7a-96473ea243e6": {
+      "type": "landing-bundle",
+      "settings": {
+        "title": "700+ Twitch Panels Bundle",
+        "text": "Please welcome - Twitch Panels Mega Bundle. This package includes 20 different design types for any taste - from cute pixel art panels to futuristic sci-fi layouts.",
+        "link": "shopify://products/free-twitch-panels",
+        "link_text": "Get it Now",
+        "image": "shopify://shop_images/twitchpanels_bundle.webp",
+        "background_color": "#f9f9f9"
+      }
+    },
+    "086cd690-092c-4a94-b6f8-eb4ed4941293": {
+      "type": "landing-pfp",
+      "blocks": {
+        "e74a3029-da09-4b99-b0a3-e8232279a99d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sketch_c554c9f0-d064-46b0-9ff3-1aef50f28c9d.png",
+            "text": "Sketch",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sketch_Panels.zip?v=1679070136",
+            "round": false
+          }
+        },
+        "43676b08-9cf6-4170-96b2-fe1807261bae": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/New_Year.png",
+            "text": "New Year",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/New_Year_Panels.zip?v=1679070132",
+            "round": false
+          }
+        },
+        "9f7dfd0f-cf32-4f0b-a687-25818526f3de": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Constant.png",
+            "text": "Constant",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Constant_Panels.zip?v=1679070132",
+            "round": false
+          }
+        },
+        "f173d28f-f71b-4e16-b3b6-d999946b8d6c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Halloween.png",
+            "text": "Halloween",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Halloween_Panels.zip?v=1679070131",
+            "round": false
+          }
+        },
+        "4e977361-a22b-4c0b-99f3-80d92280f50a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Phonk.png",
+            "text": "Phonk",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Phonk_Panels.zip?v=1679070134",
+            "round": false
+          }
+        },
+        "40bb010d-7c0b-4cde-ab46-d497d13912d5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sakura.png",
+            "text": "Sakura",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sakura_Panels.zip?v=1679070130",
+            "round": false
+          }
+        },
+        "97e991c1-151d-48db-a78f-0b112f54c420": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Lofi_Room_dc6e17de-7bfb-456b-b1c5-5ba7d6213098.png",
+            "text": "Lofi Room",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Lofi_Room_Panels.zip?v=1679070133",
+            "round": false
+          }
+        },
+        "a9c0d44f-a44c-4b3b-99b0-3cd8f3b9d1d2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Stickers_80c72e3a-0acd-48a3-89cf-da3c47fb4e71.png",
+            "text": "Stickers",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Stickers_Panels.zip?v=1679070133",
+            "round": false
+          }
+        },
+        "baec5d72-bb14-45a4-b8c0-0212155a8c86": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Retro_Neon_004ecea8-a0b3-4daf-8264-3eb220592a76.png",
+            "text": "Retro Neon",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Retro_Neon_Panels.zip?v=1679070134",
+            "round": false
+          }
+        },
+        "f9892314-ddd9-4174-b3ab-d0787ff8212f": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Vikings.png",
+            "text": "Vikings",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Vikings_Panels.zip?v=1679070136",
+            "round": false
+          }
+        },
+        "4591de69-7846-471b-9c16-893ddd279440": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Acid_58240b6e-c614-4d02-a714-ff802a673e4d.png",
+            "text": "Acid",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Acid_Panels.zip?v=1679070127",
+            "round": false
+          }
+        },
+        "0301d372-dc1c-4a56-bcbb-09da324e6d41": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Carbon.png",
+            "text": "Carbon",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Carbon_Panels.zip?v=1679070133",
+            "round": false
+          }
+        },
+        "9c7ce7b1-842e-48f8-ab9f-0feb759a8e97": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Zodiac.png",
+            "text": "Zodiac",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Zodiac_Panels.zip?v=1679070133",
+            "round": false
+          }
+        },
+        "a980b1fa-4814-4a4b-8ac0-2863d50affad": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Esports_Yellow.png",
+            "text": "Esports Yellow",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Esports_Yellow_Panels.zip?v=1679070133",
+            "round": false
+          }
+        },
+        "f8fd2933-8438-47a5-8685-72f1c25d3eb3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Space.png",
+            "text": "Space",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Space_Panels.zip?v=1679070132",
+            "round": false
+          }
+        },
+        "bb4df487-7978-47ed-8528-c84a20385fbf": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Battle_Field.png",
+            "text": "Battle Field",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Battle_Field_Panels.zip?v=1679070129",
+            "round": false
+          }
+        },
+        "0813589a-495f-4905-91d4-2a610f234b1d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Reflect.png",
+            "text": "Reflect",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Reflect_Panels.zip?v=1679070132",
+            "round": false
+          }
+        },
+        "5ac7da3c-9b72-4b6b-bed9-87e2121384bb": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Christmas.png",
+            "text": "Christmas",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Christmas_Panels.zip?v=1679070464",
+            "round": false
+          }
+        },
+        "0542b956-98e2-4d73-b135-cf20e194ed3a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Noir_Night_40f8ef18-e906-47f8-a2e3-e8f27b690d8b.png",
+            "text": "Noir Night",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Noir_Night_Panels.zip?v=1679070125",
+            "round": false
+          }
+        },
+        "3e04cad8-5c8b-49f6-947c-e64342915c95": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Purple_Night_09204bae-6c07-4241-a96b-58cec60025c9.png",
+            "text": "Purple Night",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Purple_Night_Panels.zip?v=1679070128",
+            "round": false
+          }
+        },
+        "0db60048-ca0a-4aa3-a389-d80fab916da7": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Infinite.png",
+            "text": "Infinite",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Infinite_Panels.zip?v=1679070126",
+            "round": false
+          }
+        },
+        "0a4e68a6-bab4-4fa6-ab1e-fa852b3e181b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Retro_Halloween.png",
+            "text": "Retro Halloween",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Retro_Halloween_Panels.zip?v=1679070135",
+            "round": false
+          }
+        },
+        "5c77b3f2-7c13-4de5-a471-b2847b8b5df3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/League.png",
+            "text": "League",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/League_Panels.zip?v=1679070130",
+            "round": false
+          }
+        },
+        "52bf05e4-3787-49ab-929c-536d86ba8d0c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Spirit.png",
+            "text": "Japan Spirit",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Japan_Spirit_Panels.zip?v=1679070130",
+            "round": false
+          }
+        },
+        "6dd69329-204b-4f60-b605-93649bbf4b48": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Cuteness.png",
+            "text": "Cuteness",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Cuteness_Panels.zip?v=1679070127",
+            "round": false
+          }
+        },
+        "c3efabe8-4193-457f-90f9-9e926a05c693": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Overwatch.png",
+            "text": "Overwatch",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Overwatch_Panels.zip?v=1679070129",
+            "round": false
+          }
+        },
+        "95b928b1-d401-41d3-b76a-d7b95da282f7": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Pixel_Neon.png",
+            "text": "Pixel Neon",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Pixel_Neon_Panels.zip?v=1679070128",
+            "round": false
+          }
+        },
+        "5352f0e7-beef-45a2-8d59-4cb77e8276d5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Neon_Christmas.png",
+            "text": "Neon Christmas",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Neon_Christmas_Panels.zip?v=1679070133",
+            "round": false
+          }
+        },
+        "c4283fd0-ffc5-4d90-a171-d310618d6826": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Motion.png",
+            "text": "Motion",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Motion_Panels.zip?v=1679070127",
+            "round": false
+          }
+        },
+        "3947e1fd-2816-445f-9803-ddb563455cd4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Daruma.png",
+            "text": "Daruma",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Daruma_Panels.zip?v=1679070129",
+            "round": false
+          }
+        },
+        "0ac628be-14d3-4caa-b193-bed16f23b591": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Neon_Japan.png",
+            "text": "Neon Japan",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Neon_Japan_Panels.zip?v=1679070128",
+            "round": false
+          }
+        },
+        "d0bfb427-124b-4cdf-9774-8a7e466b9e02": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Triangulation_ba1bc01a-a825-4ce4-b3fb-a3eac7958b61.png",
+            "text": "Triangulation",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Triangulation_Panels.zip?v=1679070126",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "e74a3029-da09-4b99-b0a3-e8232279a99d",
+        "43676b08-9cf6-4170-96b2-fe1807261bae",
+        "9f7dfd0f-cf32-4f0b-a687-25818526f3de",
+        "f173d28f-f71b-4e16-b3b6-d999946b8d6c",
+        "4e977361-a22b-4c0b-99f3-80d92280f50a",
+        "40bb010d-7c0b-4cde-ab46-d497d13912d5",
+        "97e991c1-151d-48db-a78f-0b112f54c420",
+        "a9c0d44f-a44c-4b3b-99b0-3cd8f3b9d1d2",
+        "baec5d72-bb14-45a4-b8c0-0212155a8c86",
+        "f9892314-ddd9-4174-b3ab-d0787ff8212f",
+        "4591de69-7846-471b-9c16-893ddd279440",
+        "0301d372-dc1c-4a56-bcbb-09da324e6d41",
+        "9c7ce7b1-842e-48f8-ab9f-0feb759a8e97",
+        "a980b1fa-4814-4a4b-8ac0-2863d50affad",
+        "f8fd2933-8438-47a5-8685-72f1c25d3eb3",
+        "bb4df487-7978-47ed-8528-c84a20385fbf",
+        "0813589a-495f-4905-91d4-2a610f234b1d",
+        "5ac7da3c-9b72-4b6b-bed9-87e2121384bb",
+        "0542b956-98e2-4d73-b135-cf20e194ed3a",
+        "3e04cad8-5c8b-49f6-947c-e64342915c95",
+        "0db60048-ca0a-4aa3-a389-d80fab916da7",
+        "0a4e68a6-bab4-4fa6-ab1e-fa852b3e181b",
+        "5c77b3f2-7c13-4de5-a471-b2847b8b5df3",
+        "52bf05e4-3787-49ab-929c-536d86ba8d0c",
+        "6dd69329-204b-4f60-b605-93649bbf4b48",
+        "c3efabe8-4193-457f-90f9-9e926a05c693",
+        "95b928b1-d401-41d3-b76a-d7b95da282f7",
+        "5352f0e7-beef-45a2-8d59-4cb77e8276d5",
+        "c4283fd0-ffc5-4d90-a171-d310618d6826",
+        "3947e1fd-2816-445f-9803-ddb563455cd4",
+        "0ac628be-14d3-4caa-b193-bed16f23b591",
+        "d0bfb427-124b-4cdf-9774-8a7e466b9e02"
+      ],
+      "settings": {
+        "title": "Twitch Panel Templates",
+        "subtitle": "Get a separate panels package that fits your aesthetic. Each one comes with 36 ready-to-use panels and a .PSD template to get deeper into customization.",
+        "aspect_ratio": "16/9",
+        "id": "",
+        "use_paddings": true
+      }
+    },
+    "c4c27882-8032-4cb7-9514-d77f0ab5e11f": {
+      "type": "landing-what-is-a",
+      "settings": {
+        "title": "What are Twitch Panels?",
+        "image": "shopify://shop_images/what_are_twitch_panels.png",
+        "text": "<div>Twitch panels are images, text blocks or interactive extensions that you can place in the About section of your Twitch profile.<br><br>They provide your viewers with useful information about your stream and effectively convey your branding. Commonly used panels include images with links to your social media profiles, donation and subscription pages.<br><br>On top of that, Twitch allows you to use special markdown to stylize plain text under your panels with emphasis, lists, quotes and headings.</div>",
+        "background": "#282a2e",
+        "color": "#ffffff"
+      }
+    },
+    "e379e172-4a2b-4474-811a-a677fe2303bb": {
+      "type": "landing-tutorial",
+      "settings": {
+        "title": "How to Add Panels on Twitch?",
+        "text": "<div>\n<ol>\n<li>Log in to your Twitch account\n</li>\n<li>Click on your profile picture at the top-right side of the screen and go to \"Channel”\n</li>\n<li>Click the \"About\" button under the channel name\n</li>\n<li>Click on \"Edit Panels\" at the bottom of the screen\n</li>\n<li>Press the + window and choose \"Add a Text or Image Panel”</li>\n<li>Press \"Add Image\", choose the panel you want to upload, and press \"Done”</li>\n<li>Then add a description text and URL (if needed) to the other fields</li>\n<li>That's it! Your panel is up and running :)</li>\n</ol>\n</div>",
+        "background_color": "#f9f9f9"
+      }
+    },
+    "c15c78c1-e79f-4af4-bd81-b3e7166a6e2f": {
+      "type": "landing-guide",
+      "blocks": {
+        "27f7e4d4-1a3d-4061-a5d6-9d039c366454": {
+          "type": "guide_item",
+          "settings": {
+            "title": "Text Emphasis",
+            "table": "<div class=\"row\">\n<div>Bold Text</div>\n<div>**Bold**</div>\n</div>\n\n<div class=\"row\">\n<div>Italic</div>\n<div>*Italic*</div>\n</div>\n\n<div class=\"row\">\n<div>Link</div>\n<div>[Link](https://kudos.tv)</div>\n</div>\n\n<div class=\"row\">\n<div>Header 1</div>\n<div>#Your Text</div>\n</div>\n\n<div class=\"row\">\n<div>Header 2</div>\n<div>##Your Text</div>\n</div>\n\n<div class=\"row\">\n<div>Header 3</div>\n<div>###Your Text</div>\n</div>",
+            "image": "shopify://shop_images/image_43.jpg"
+          }
+        },
+        "65d3f1ed-9ab5-45fa-9d80-966059cd2965": {
+          "type": "guide_item",
+          "settings": {
+            "title": "Text Formatting",
+            "table": "<div>\n<div class=\"row\">\n<div>Quote</div>\n<div>\n&gt;This is a quote!\n</div>\n</div>\n\n<div class=\"row\">\n<div>Nested Quote</div>\n<div>\n&gt;&gt;This is a nested quote!\n</div>\n</div>\n\n</div>",
+            "image": "shopify://shop_images/twitch_formatting.png"
+          }
+        },
+        "3b983c41-7acf-4547-8550-4e7efa8228d5": {
+          "type": "guide_item",
+          "settings": {
+            "title": "Lists",
+            "table": "<div class=\"row\">\n<div>Unordered list</div>\n<div>\n* Item 1\n<br>\n* Item 2\n<br>\n* Item 3\n</div>\n</div>\n\n<div class=\"row\">\n<div>Ordered list</div>\n<div>\n1. Item 1\n<br>\n2. Item 2\n<br>\n3. Item 3\n<br>\n</div>\n</div>",
+            "image": "shopify://shop_images/image_45.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "27f7e4d4-1a3d-4061-a5d6-9d039c366454",
+        "65d3f1ed-9ab5-45fa-9d80-966059cd2965",
+        "3b983c41-7acf-4547-8550-4e7efa8228d5"
+      ],
+      "settings": {
+        "title": "Twitch Markdown Guide",
+        "text": "Markdown allows you to customize the text under your panels even further. You can emphasize it, add headers, links, lists and much more. Use the cheat sheet below to get started quickly."
+      }
+    },
+    "dd9986a4-c29b-41f0-a126-05baaa30026a": {
+      "type": "landing-faq",
+      "blocks": {
+        "78d694f1-53c2-4fff-9ddf-51308ffaa4c5": {
+          "type": "column",
+          "settings": {
+            "question": "What size are Twitch panels?",
+            "answer": "<div>The maximum twitch panel width is 320 pixels. Take note that it will automatically resize your panel to 320px, whether it is broader or narrower. This resize might result in a distortion that affects their overall look and makes them absolutely unusable.\n\nPanel height provides greater flexibility as you are not so limited. This way you can create narrow panels, square or wide rectangular ones although we suggest setting the height to 70px. This is typically the best size to include a line of text and an icon. And, of course, panels of this size will work well in any situation.</div>"
+          }
+        },
+        "bdd39019-50a5-4523-9c95-7b9fd0ba3a64": {
+          "type": "column",
+          "settings": {
+            "question": "How to make Twitch Panels?",
+            "answer": "<div>There are dozens of ways to make twitch panels from scratch. The best and, obviously, the hardest one is to use a design software such as Adobe Photoshop or Illustrator, it allows you to take control of each aspect of your panels but the learning curve is a bit steep and such software is not cheap. Another way is to use one of twitch panel makers available online. This way is faster and easier but the editing possibilities are a bit limited and if you’re not a designer the outcome will probably look a bit amateur. The easiest way is to get one of predesigned template (like the ones above). That way you’ll have professionally looking panels with customisation options.</div>"
+          }
+        },
+        "27151655-90a5-4cdc-9522-724d24da9ba0": {
+          "type": "column",
+          "settings": {
+            "question": "How many panels can you have on Twitch?",
+            "answer": "<div></div>"
+          }
+        },
+        "e7ea04f0-05ac-448b-97f9-2222e618f621": {
+          "type": "column",
+          "settings": {
+            "question": "Can Twitch Panels be animated?",
+            "answer": "<div>Regular twitch panels can’t be animated but there are some extensions that allow you to get some premade animated panels. Unfortunately, you can’t edit them as deep as the native ones and you’re limited to only 3 extension panels in your about page.</div>"
+          }
+        }
+      },
+      "block_order": [
+        "78d694f1-53c2-4fff-9ddf-51308ffaa4c5",
+        "bdd39019-50a5-4523-9c95-7b9fd0ba3a64",
+        "27151655-90a5-4cdc-9522-724d24da9ba0",
+        "e7ea04f0-05ac-448b-97f9-2222e618f621"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "52b8580d-bd58-455b-b9c0-d5d67556ffa7",
+    "c84e47b5-fd70-47c2-bf7a-96473ea243e6",
+    "086cd690-092c-4a94-b6f8-eb4ed4941293",
+    "c4c27882-8032-4cb7-9514-d77f0ab5e11f",
+    "e379e172-4a2b-4474-811a-a677fe2303bb",
+    "c15c78c1-e79f-4af4-bd81-b3e7166a6e2f",
+    "dd9986a4-c29b-41f0-a126-05baaa30026a"
+  ]
+}

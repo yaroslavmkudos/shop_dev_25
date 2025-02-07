@@ -1,0 +1,524 @@
+<style>
+  .collection-menu-new {
+    position: sticky;
+    top: 50px;
+    flex-shrink: 0;
+    width: 376px;
+    padding-right: 72px;
+    margin-right: 0px;
+ }
+  @media screen and (max-width: 1024px) {
+    .collection-menu-new {
+      width: 100%;
+      height: calc(100% - 80px);
+      border-radius: 0;
+      overflow: scroll;
+      bottom: 80px;
+      padding: 96px 16px 16px 16px;
+      bottom: 70px !important;
+   }
+ }
+  .collection-menu-new .menu-container {
+    width: 300px;
+    position: relative;
+    max-height: calc(100vh - 40px);
+ }
+ .collection-menu-new predictive-search {
+  width: 100%;
+}
+  @media screen and (max-width: 1024px) {
+    .collection-menu-new .menu-container {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+   }
+ }
+  .collection-menu-new .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+   /* Transparent border to avoid layout shift */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+ }
+  .collection-menu-new .search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    min-height: auto;
+ }
+  .collection-menu-new .search-bar input::placeholder {
+    color: #aaa;
+ }
+  .collection-menu-new .search-bar svg {
+    margin-right: 10px;
+    color: #007aff;
+ }
+  .collection-menu-new .search-bar .search-bar__form {
+    position: static;
+ }
+  .collection-menu-new .search-bar .search-bar__form .predictive-search {
+    width: 100%;
+ }
+  .collection-menu-new .search-bar .search-bar__form .predictive-search #predictive-search-results {
+    padding-right: 0px;
+    max-height: 60dvh;
+ }
+  .collection-menu-new .search-bar .search-bar__form .predictive-search .predictive-search__results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px !important;
+ }
+  .collection-menu-new .search-bar .search-bar__form .predictive-search .predictive-search__results-list .predictive-search__item {
+    display: flex;
+ }
+  .collection-menu-new .search-bar .search-bar__form .predictive-search .predictive-search__results-list .predictive-search__item-heading {
+    font-size: 14px;
+    white-space: normal;
+    width: 100%;
+ }
+  .collection-menu-new .search-bar:hover, .collection-menu-new .search-bar:focus-within {
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #f1f1f1;
+   /* emulate the border */
+ }
+  .collection-menu-new .search-results-popup {
+    display: none;
+    position: fixed;
+   /* Changed from absolute to fixed */
+    top: 78px;
+   /* Adjusted positioning to align under the search bar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+   /* Higher than the modal */
+    max-height: 300px;
+    overflow-y: auto;
+ }
+  .collection-menu-new .search-results-popup::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f1f1f1;
+   /* Background of scrollbar track */
+ }
+  .collection-menu-new .search-results-popup::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1;
+   /* Thumb color */
+    border-radius: 8px;
+ }
+  .collection-menu-new .search-results-popup::-webkit-scrollbar-thumb:hover {
+    background-color: #b5b5b5;
+   /* Darker color on hover */
+ }
+  .collection-menu-new .results-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+ }
+  .collection-menu-new .search-result-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-family: 'Gilroy-bold', sans-serif;
+    text-decoration: none;
+   /* Remove underline from links */
+    color: inherit;
+   /* Inherit text color */
+ }
+  .collection-menu-new .search-result-item:hover .result-title {
+    color: #0080ff;
+   /* Change title color to blue on hover */
+ }
+  .collection-menu-new .search-result-item img {
+    width: 90px;
+    height: 51px;
+    border-radius: 8px;
+    margin-right: 10px;
+ }
+  .collection-menu-new .result-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+  .collection-menu-new .result-title {
+    font-size: 16px;
+    color: black;
+    font-family: 'Gilroy-bold', sans-serif;
+    transition: color 0.3s ease;
+   /* Smooth transition for hover color change */
+ }
+  .collection-menu-new .result-price {
+    font-size: 14px;
+    color: black;
+    margin-top: auto;
+   /* Aligns the price to the bottom of the result-details container */
+ }
+  .collection-menu-new .search-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+ }
+  .collection-menu-new .search-query {
+    font-size: 14px;
+    color: #0080ff;
+    text-decoration: none;
+ }
+  .collection-menu-new .search-query:hover {
+    text-decoration: underline;
+ }
+  .collection-menu-new .arrow-search {
+    color: #0080ff;
+ }
+  .collection-menu-new .menu-item {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid transparent;
+   /* Transparent border to prevent layout shift */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: 'Gilroy-bold', sans-serif;
+ }
+  .collection-menu-new .menu-item a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+ }
+  .collection-menu-new .menu-item:hover {
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #f1f1f1;
+   /* emulate the border */
+ }
+  .collection-menu-new .spacer {
+    height: 20px;
+ }
+  .collection-menu-new .sale-icon {
+    color: #ff0040;
+ }
+  .collection-menu-new .menu-item.new {
+    position: relative;
+    font-weight: 700;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Gilroy-bold', sans-serif;
+ }
+  .collection-menu-new .menu-item.new:hover {
+    background-color: #fff;
+   /* Only background change on hover */
+    box-shadow: 0 0 0 #f1f1f1;
+   /* emulate the border */
+ }
+  .collection-menu-new .menu-item.new::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff0040, #fd0, #00ff80, #0df, #f0f);
+    background-size: 300%;
+    z-index: -1;
+    animation: rainbow-border 5s linear infinite;
+ }
+  .collection-menu-new .modal-open .menu-item.new::before {
+    display: none;
+ }
+  .collection-menu-new .menu-item.new .icon {
+    {% comment %} background: linear-gradient(90deg, #ff0040, #fd0, #00ff80, #0df, #f0f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: rainbow-border 5s linear infinite; {% endcomment %}
+ }
+  .collection-menu-new .menu-item.new .text {
+    color: #333;
+    font-weight: 500;
+    font-family: 'Gilroy-bold', sans-serif;
+ }
+  .collection-menu-new .modal {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 58px);
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 0 20px;
+    overflow-y: auto;
+    z-index: 10;
+    opacity: 1;
+ }
+  .collection-menu-new .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+ }
+  .collection-menu-new .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+ }
+  .collection-menu-new .modal-items {
+    padding-top: 10px;
+    flex-grow: 1;
+    font-family: 'Gilroy-Regular', sans-serif;
+ }
+  .collection-menu-new .modal-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+ }
+ .collection-menu-new .modal-item .item-number {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+  .collection-menu-new .modal-item a:hover {
+    color: #0080ff;
+ }
+  .collection-menu-new .modal-item:hover .item-number {
+    background-color: #0080ff;
+    color: #fff;
+ }
+  .collection-menu-new .item-number {
+    background-color: #d1d1d1;
+    width: 30px;
+   /* Fixed width to accommodate different number lengths */
+    text-align: center;
+   /* Center-align text */
+    padding: 2px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 8px;
+    font-weight: bold;
+ }
+  .collection-menu-new .modal::-webkit-scrollbar {
+    width: 8px;
+ }
+  .collection-menu-new .modal::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1;
+    border-radius: 8px;
+ }
+  .collection-menu-new .modal::-webkit-scrollbar-thumb:hover {
+    background-color: #b5b5b5;
+ }
+  .collection-menu-new .modal-close {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+ }
+  .collection-menu-new #modal-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 0;
+ }
+  
+  @keyframes rainbow-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
+<div class="collection-menu-new collections-list">
+  <div class="menu-container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.9 17.3L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.146 12.371 1.888 11.113C0.629333 9.85433 0 8.31667 0 6.5C0 4.68333 0.629333 3.14567 1.888 1.887C3.146 0.629 4.68333 0 6.5 0C8.31667 0 9.85433 0.629 11.113 1.887C12.371 3.14567 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L17.325 15.925C17.5083 16.1083 17.6 16.3333 17.6 16.6C17.6 16.8667 17.5 17.1 17.3 17.3C17.1167 17.4833 16.8833 17.575 16.6 17.575C16.3167 17.575 16.0833 17.4833 15.9 17.3ZM6.5 11C7.75 11 8.81267 10.5627 9.688 9.688C10.5627 8.81267 11 7.75 11 6.5C11 5.25 10.5627 4.18733 9.688 3.312C8.81267 2.43733 7.75 2 6.5 2C5.25 2 4.18733 2.43733 3.312 3.312C2.43733 4.18733 2 5.25 2 6.5C2 7.75 2.43733 8.81267 3.312 9.688C4.18733 10.5627 5.25 11 6.5 11Z" fill="#aaa"/>
+      </svg>
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+        <form
+          action="{{ routes.search_url }}"
+          method="get"
+          role="search"
+          class="search search-modal__form search-form search-bar__form"
+        >
+          <input type="hidden" name="type" value="product">
+          <div class="field">
+            <input
+              class="search__input field__input search-form__input search-bar__input"
+              id="Search-In-Modal-1"
+              type="search"
+              name="q"
+              value=""
+              placeholder="Search by name or #tag"
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results-list"
+              aria-controls="predictive-search-results-list"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            >
+            <button
+              class="search-bar__submit search-form__submit"
+              type="submit"
+              data-search-form-submit
+            >
+              {% comment %} {% include 'icon-search' %} {% endcomment %}
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </div>
+
+          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+            <div class="predictive-search__loading-state">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="spinner"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        </form>
+      </predictive-search>
+    </div>
+
+    {%- for link in section.settings.menu_list.links -%}
+      
+      {%- if link.title == '---divider---' -%}
+        <div class="spacer"></div>
+        {%- assign stop = true -%}
+      {%- else -%}
+        {%- assign stop = false -%}
+      {%- endif -%}
+      {%- unless stop -%}
+        {%- assign menu_object = link.title | split: '||' -%}
+        {%- if menu_object[1] == ' --featured--' -%}
+          <a href="{{ link.url }}" class="menu-item new">
+            <span class="text">{{ menu_object[0] }}</span>
+            <span class="icon">✨</span>
+          </a>
+        {%- else -%}
+          {%- if menu_object[2] == ' --featured--' -%}
+            <a href="{{ link.url }}" class="menu-item new">
+              <span class="text">{{ menu_object[0] }}</span>
+              <span class="icon">{{ menu_object[1] }}</span>
+            </a>
+          {%- else -%}
+            {%- if menu_object[1] != blank -%}
+              <a class="menu-item" href="{{ link.url }}">
+                {{menu_object[0]}}
+                <span>{{ menu_object[1] }}</span>
+              </a>
+            {%- else -%}
+              {%- if link.levels > 0 -%}
+                <div class="menu-item" {% if link.levels > 0 %} onclick="openModal('{{link.title}}')" {% endif %}>
+                  {{link.title}}
+                  <svg width="10" height="14" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.819667 16.0302C0.556588 15.7671 0.425049 15.4323 0.425049 15.0257C0.425049 14.6191 0.556588 14.2843 0.819667 14.0212L6.41608 8.4248L0.819667 2.82839C0.556588 2.56531 0.425049 2.23048 0.425049 1.82391C0.425049 1.41733 0.556588 1.0825 0.819667 0.819423C1.08275 0.556344 1.41757 0.424805 1.82415 0.424805C2.23073 0.424805 2.56556 0.556344 2.82864 0.819423L9.42953 7.42032C9.57303 7.56382 9.67491 7.71927 9.73518 7.88669C9.7945 8.0541 9.82415 8.23347 9.82415 8.4248C9.82415 8.61613 9.7945 8.79551 9.73518 8.96292C9.67491 9.13033 9.57303 9.28579 9.42953 9.42929L2.82864 16.0302C2.56556 16.2933 2.23073 16.4248 1.82415 16.4248C1.41757 16.4248 1.08275 16.2933 0.819667 16.0302Z" fill="black"/>
+                  </svg>
+                </div>
+              {%- else -%}
+                <a class="menu-item" href="{{ link.url }}">{{ link.title }}</a>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Categories</h2>
+          <span class="modal-close" onclick="closeModal()">×</span>
+        </div>
+        <div class="modal-items" id="modal-items"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+function openModal(title) {
+  document.getElementById('modal-title').textContent = title;
+  const modalItems = document.getElementById('modal-items');
+  modalItems.innerHTML = '';
+
+  const items = getItemsForTitle(title);
+  items.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.className = 'modal-item';
+      itemElement.innerHTML = `<a href="${item.url}"><span>${item.name}</span><span class="item-number">${item.number}</span></a>`;
+      modalItems.appendChild(itemElement);
+  });
+
+  document.getElementById('modal').style.display = 'block';
+  document.querySelector('.menu-container').classList.add('modal-open');
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+  document.querySelector('.menu-container').classList.remove('modal-open');
+}
+
+function getItemsForTitle(title) {
+  const itemsData = {
+      {%- for link in section.settings.menu_list.links -%}
+        {%- if link.levels > 0 -%}
+          '{{ link.title }}': [
+            {%- for child in link.links -%}
+              { name: '{{ child.title }}', number: {{ child.object.products_count }}, url: '{{ child.url }}'}{%- unless forloop.last -%}, {%- endunless -%}
+            {%- endfor -%}
+          ]{%- unless forloop.last -%},{%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+  };
+  return itemsData[title] || [];
+}
+
+
+</script>

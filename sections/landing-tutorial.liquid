@@ -1,0 +1,44 @@
+<style>
+    #shopify-section-{{section.id}} {
+        background-color:{{section.settings.background_color}}
+    }
+</style>
+
+<div class="landing__tutorial page-width">
+    <div class="left">
+        <h2 class="landing__tutorial_title lh2">{{section.settings.title}}</h2>
+    </div>
+    <div class="right">
+        <div class="landing__tutorial_text lbody">{{section.settings.text}}</div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Landing tutorial",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "html",
+                "id": "text",
+                "label": "Text",
+                "default": "<div></div>"
+            },
+            {
+                "type": "color",
+                "id": "background_color",
+                "label": "Background color",
+                "default": "#F9F9F9"
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing tutorial"
+            }
+        ]
+    }
+{% endschema %}

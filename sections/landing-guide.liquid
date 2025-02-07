@@ -1,0 +1,63 @@
+<div class="landing__guide page-width ">
+    <h2 class="lh2 landing__guide_title">{{section.settings.title}}</h2>
+    <div class="lbody">{{section.settings.text}}</div>
+    {% for block in section.blocks %}
+        <div class="landing__guide_item">
+            <div class="left">
+                <h3 class="lh3">{{block.settings.title}}</h3>
+                <div class="table">{{block.settings.table}}</div>
+            </div>
+            <div class="right">
+                <img src="{{block.settings.image | img_url: '600x'}}" alt="" loading='lazy'>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% schema %}
+    {
+        "name": "Landing guide",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text"
+            }
+        ],
+        "blocks":[
+            {
+                "type":"guide_item",
+                "name":"Guide item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "html",
+                        "id": "table",
+                        "label": "Table",
+                        "default": "<div></div>"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing guide"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,1263 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "a540ce04-2a7f-4666-9417-c39bca45b90a": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/twitch.svg",
+        "title": "Twitch Layouts",
+        "text": "Whether you’re a seasoned streamer or just starting out, our Twitch layouts are designed to take your stream to the next league! Explore our collection of overlays, widgets and designs to find the one that fits your style!",
+        "link_text": "Explore Library"
+      }
+    },
+    "6e1c5293-c003-41de-9aab-a98ecabc6f88": {
+      "type": "landing-products",
+      "blocks": {
+        "719d0680-dd6b-417b-b89c-ac3a100a1c61": {
+          "type": "product",
+          "settings": {
+            "product": "acid"
+          }
+        },
+        "50b4c165-8d4e-4264-b10e-6978acd58aab": {
+          "type": "product",
+          "settings": {
+            "product": "acid-transition"
+          }
+        },
+        "c9564ea8-6e5a-4986-b551-322fb9db50ae": {
+          "type": "product",
+          "settings": {
+            "product": "alchemy-alerts"
+          }
+        }
+      },
+      "block_order": [
+        "719d0680-dd6b-417b-b89c-ac3a100a1c61",
+        "50b4c165-8d4e-4264-b10e-6978acd58aab",
+        "c9564ea8-6e5a-4986-b551-322fb9db50ae"
+      ],
+      "settings": {
+        "link": "shopify://collections/full-packs",
+        "link_text": "Explore Library"
+      }
+    },
+    "cc03278b-43c1-4b40-84ca-1eb5e4cd9cc7": {
+      "type": "landing-what-is-a",
+      "settings": {
+        "title": "What is a  Twitch Layout?",
+        "image": "shopify://shop_images/twitch-layout2.png",
+        "text": "Twitch Layout is, essentially, another name for an overlay. It’s a design element that streamers use to improve the look of their streams and add interactivity to the viewing experience. \n<br> <br>\nMost of the time streamers combine different static images and animated overlays to create unique Twitch layouts that represent their personal brand identity. They can include stream screens, webcam frames, banners, labels and much more.",
+        "background": "",
+        "color": ""
+      }
+    },
+    "3441533d-f188-40cc-b2f2-b8212871c0b5": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "82c2e6c1-c80b-483d-baf7-da11cb6a8354": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Equip your stream with the most important assets:\n<br><br>\n<ul>\n<li>Webcam Borders</li>\n<li>Headers</li>\n<li>Stream Labels</li>\n<li>Chat Overlays</li>\n</ul>"
+          }
+        },
+        "efdfb9cd-fa35-4244-b1e2-239a916df78d": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Equip your stream with the most important assets:\n<br><br>\n<ul>\n<li>Webcam Borders</li>\n<li>Headers</li>\n<li>Stream Labels</li>\n<li>Chat Overlays</li>\n</ul>"
+          }
+        },
+        "c75c87a0-5fc8-4638-b113-482b73328b6e": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Equip your stream with the most important assets:\n<br><br>\n<ul>\n<li>Webcam Borders</li>\n<li>Headers</li>\n<li>Stream Labels</li>\n<li>Chat Overlays</li>\n</ul>"
+          }
+        },
+        "1f7404f9-58c0-4d73-b304-53b7e2e70b2d": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Equip your stream with the most important assets:\n<br><br>\n<ul>\n<li>Webcam Borders</li>\n<li>Headers</li>\n<li>Stream Labels</li>\n<li>Chat Overlays</li>\n</ul>"
+          }
+        },
+        "a80ada25-286a-4358-821e-d819a30a8305": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "Equip your stream with the most important assets:\n<br><br>\n<ul>\n<li>Webcam Borders</li>\n<li>Headers</li>\n<li>Stream Labels</li>\n<li>Chat Overlays</li>\n</ul>"
+          }
+        }
+      },
+      "block_order": [
+        "82c2e6c1-c80b-483d-baf7-da11cb6a8354",
+        "efdfb9cd-fa35-4244-b1e2-239a916df78d",
+        "c75c87a0-5fc8-4638-b113-482b73328b6e",
+        "1f7404f9-58c0-4d73-b304-53b7e2e70b2d",
+        "a80ada25-286a-4358-821e-d819a30a8305"
+      ],
+      "settings": {
+        "title": "What’s Inside the Template?",
+        "subtitle": "Engage your viewers with beautiful stream screens for any cause: Starting, Ending, BRB, Intermission and much more!"
+      }
+    },
+    "f2553f78-d926-436a-8bdd-6fc27e3c1ee7": {
+      "type": "landing-faq",
+      "blocks": {
+        "16813802-01e0-45ed-b766-edcbc5aedc8e": {
+          "type": "column",
+          "settings": {
+            "question": "Q1",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        },
+        "2ad52890-3769-4b85-b050-90440e335a39": {
+          "type": "column",
+          "settings": {
+            "question": "Q1",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        },
+        "54a6e898-f9ce-4526-9d26-413853485a9f": {
+          "type": "column",
+          "settings": {
+            "question": "Q1",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          }
+        }
+      },
+      "block_order": [
+        "16813802-01e0-45ed-b766-edcbc5aedc8e",
+        "2ad52890-3769-4b85-b050-90440e335a39",
+        "54a6e898-f9ce-4526-9d26-413853485a9f"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "56c29739-e1f8-47bd-b4d4-0c8e3d874d83": {
+      "type": "landing-learn-more",
+      "blocks": {
+        "06c26e60-08ed-4729-ba3a-333a494eadfd": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/pngtuber"
+          }
+        },
+        "f03304bc-bacf-4653-9728-7dea60646799": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/pngtuber"
+          }
+        },
+        "1c10b5ec-eb9c-48a8-8a0e-ae482fb546ae": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/pngtuber"
+          }
+        }
+      },
+      "block_order": [
+        "06c26e60-08ed-4729-ba3a-333a494eadfd",
+        "f03304bc-bacf-4653-9728-7dea60646799",
+        "1c10b5ec-eb9c-48a8-8a0e-ae482fb546ae"
+      ],
+      "settings": {
+        "title": "Learn More"
+      }
+    },
+    "b19dfb9c-b4ed-4ed1-800a-ae1b3ab6e0cd": {
+      "type": "landing-tutorial",
+      "settings": {
+        "title": "How to add an Offline Banner on Twitch?",
+        "text": "<ul>\n<li>Log in to Twitch</li>\n<li>Click on your profile picture and press the Settings button</li>\n<li>Go to the Channel and Videos tab</li>\n<li>Click the Brand tab, scroll to the Video Player Banner section and press the Update button</li>\n<li>Click on Upload a Photo and choose your Offline Banner\n</li>\n<li>Woohoo, your banner is uploaded!</li>\n</ul>"
+      }
+    },
+    "1ba03d52-0f47-4a23-ad9a-9cc932411911": {
+      "type": "landing-bundle",
+      "settings": {
+        "title": "700+ Twitch Panels Bundle",
+        "text": "Please welcome - Twitch Panels Mega Bundle. This package includes 20 different design types for any taste - from cute pixel art panels to futuristic sci-fi layouts.",
+        "link": "shopify://collections/freebies",
+        "link_text": "Download",
+        "image": "shopify://shop_images/Pngtuber_1.png"
+      }
+    },
+    "579ee70d-da03-44c7-acfb-7d5689c7708a": {
+      "type": "landing-navigation",
+      "blocks": {
+        "abb250e4-a63b-4ba6-8b27-d20cea4774e4": {
+          "type": "item",
+          "settings": {
+            "text": "Cool"
+          }
+        },
+        "d94fa0a7-d65c-436e-97dc-4ee6ff27ab7c": {
+          "type": "item",
+          "settings": {
+            "text": "Anime"
+          }
+        }
+      },
+      "block_order": [
+        "abb250e4-a63b-4ba6-8b27-d20cea4774e4",
+        "d94fa0a7-d65c-436e-97dc-4ee6ff27ab7c"
+      ],
+      "settings": {}
+    },
+    "0bd75095-24ac-4025-b120-2c07356d0496": {
+      "type": "landing-pfp",
+      "blocks": {
+        "c78edc00-6b1f-4584-baa7-84c3a7eeb71f": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "6e151011-8402-4691-a0c4-6373bab9b53c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ba24e4e9-e0c3-49e3-8100-82af98771ae5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "257ea0a7-ea99-4ae7-845a-683eee6ad99c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "5d4978e0-7561-44e1-9349-8112bf7b75d5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "235d2413-43c4-41fd-adcd-2df2a4c03425": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "934304fb-ac9b-42ee-b1f7-62b9d59da936": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "c303ee79-36fe-4a75-8286-8b08f2f97fc2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "e03430fc-83c4-4689-a12c-b4ac63c4bbed": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "f5f93f88-083e-44e7-8077-ac0c51c47010": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "aefa9171-5709-4687-b0f5-9a2cc7fe81ed": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "a5b65e55-a378-4892-96ab-0b1401b4a758": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "5f600e9a-1a4d-4db1-b256-62a72a237cbc": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "b8b00af3-8f0c-4ac5-83d0-10424554a2c0": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ffa11f0a-7ec5-4157-9456-5e9c0a4d075e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "deff3bb3-b26c-4106-88c7-60b870525983": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "56e7b805-b6bc-4651-b6c7-8c5317ae289a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "d6c7be12-e62c-4911-bcab-8bbdc3be5c9f": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "29c53040-1147-4272-b10d-5b64f2dfb787": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "34f44db6-cd14-4683-ae1f-35575bd1d542": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ea572937-d23c-4781-a170-7bea7e9b9930": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "cd5faab9-8ea7-4f22-8455-2a4859eae68e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "afb2f727-04bf-4b04-8d4c-c76a69122da9": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "d1d8e79e-c3e6-4dbc-8202-590ac6f548fd": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "5c52f653-dc99-42ec-ae37-16c466ddd62e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "be667833-54c9-4671-8d4f-e1db8d00c0b6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "6a37559c-575b-4711-a36b-45dfb61663ae": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "64ed2505-6c8b-4641-abde-e11d9c34fae8": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "9f934601-5f84-41e4-8463-ab6730a3e7c5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "9ef7e9a2-216e-413e-9d53-77da88ef834a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "9d2a033e-59e9-4387-bc2c-e5fc2e42cf35": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "8645e869-4cc1-47a4-9429-dd4a7e120fae": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "39afa4f4-2979-4eb9-8780-d7387d2383d0": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "a60cabcf-80a1-4784-9245-5a52ab5d6baa": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "083b4c7b-8c5d-4f57-9962-67737ac51d80": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "1e9f9ef2-c1dc-4da0-b9c2-472f3c021291": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "3d71c8cb-fb2b-4f0d-ba6e-765464796945": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "e8060852-59c5-449c-9706-54de878213b6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "e6a6eac9-13e6-47b9-a8d4-1ceae550d06b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ead1a5b2-2337-446f-836e-92f3e5eb48a1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "14a083ac-49bb-44cb-90d6-98b601605bfa": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "e28f5fd9-fe8c-406c-8bf6-e9bd46763249": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "313fa685-c1ad-4276-92b9-9717bfe5334b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "a5c90811-5f5e-487b-bddb-8464fa299fe6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "128ad680-39b6-4645-aa88-fb3bda9022d5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ce905424-97d0-4fa7-9b95-f45c22e220a5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "8b94067f-a754-4a45-a4d0-2177f2e13e1b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "dabe5fe3-80cf-4d24-8bef-7e920c0dd57a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "8e5b763a-09d8-40d1-b129-dbf6f49c16e6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "faa61d95-f828-48a8-b336-e09f8b8a69a2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "c78edc00-6b1f-4584-baa7-84c3a7eeb71f",
+        "6e151011-8402-4691-a0c4-6373bab9b53c",
+        "ba24e4e9-e0c3-49e3-8100-82af98771ae5",
+        "257ea0a7-ea99-4ae7-845a-683eee6ad99c",
+        "5d4978e0-7561-44e1-9349-8112bf7b75d5",
+        "235d2413-43c4-41fd-adcd-2df2a4c03425",
+        "934304fb-ac9b-42ee-b1f7-62b9d59da936",
+        "c303ee79-36fe-4a75-8286-8b08f2f97fc2",
+        "e03430fc-83c4-4689-a12c-b4ac63c4bbed",
+        "f5f93f88-083e-44e7-8077-ac0c51c47010",
+        "aefa9171-5709-4687-b0f5-9a2cc7fe81ed",
+        "a5b65e55-a378-4892-96ab-0b1401b4a758",
+        "5f600e9a-1a4d-4db1-b256-62a72a237cbc",
+        "b8b00af3-8f0c-4ac5-83d0-10424554a2c0",
+        "ffa11f0a-7ec5-4157-9456-5e9c0a4d075e",
+        "deff3bb3-b26c-4106-88c7-60b870525983",
+        "56e7b805-b6bc-4651-b6c7-8c5317ae289a",
+        "d6c7be12-e62c-4911-bcab-8bbdc3be5c9f",
+        "29c53040-1147-4272-b10d-5b64f2dfb787",
+        "34f44db6-cd14-4683-ae1f-35575bd1d542",
+        "ea572937-d23c-4781-a170-7bea7e9b9930",
+        "cd5faab9-8ea7-4f22-8455-2a4859eae68e",
+        "afb2f727-04bf-4b04-8d4c-c76a69122da9",
+        "d1d8e79e-c3e6-4dbc-8202-590ac6f548fd",
+        "5c52f653-dc99-42ec-ae37-16c466ddd62e",
+        "be667833-54c9-4671-8d4f-e1db8d00c0b6",
+        "6a37559c-575b-4711-a36b-45dfb61663ae",
+        "64ed2505-6c8b-4641-abde-e11d9c34fae8",
+        "9f934601-5f84-41e4-8463-ab6730a3e7c5",
+        "9ef7e9a2-216e-413e-9d53-77da88ef834a",
+        "9d2a033e-59e9-4387-bc2c-e5fc2e42cf35",
+        "8645e869-4cc1-47a4-9429-dd4a7e120fae",
+        "39afa4f4-2979-4eb9-8780-d7387d2383d0",
+        "a60cabcf-80a1-4784-9245-5a52ab5d6baa",
+        "083b4c7b-8c5d-4f57-9962-67737ac51d80",
+        "1e9f9ef2-c1dc-4da0-b9c2-472f3c021291",
+        "3d71c8cb-fb2b-4f0d-ba6e-765464796945",
+        "e8060852-59c5-449c-9706-54de878213b6",
+        "e6a6eac9-13e6-47b9-a8d4-1ceae550d06b",
+        "ead1a5b2-2337-446f-836e-92f3e5eb48a1",
+        "14a083ac-49bb-44cb-90d6-98b601605bfa",
+        "e28f5fd9-fe8c-406c-8bf6-e9bd46763249",
+        "313fa685-c1ad-4276-92b9-9717bfe5334b",
+        "a5c90811-5f5e-487b-bddb-8464fa299fe6",
+        "128ad680-39b6-4645-aa88-fb3bda9022d5",
+        "ce905424-97d0-4fa7-9b95-f45c22e220a5",
+        "8b94067f-a754-4a45-a4d0-2177f2e13e1b",
+        "dabe5fe3-80cf-4d24-8bef-7e920c0dd57a",
+        "8e5b763a-09d8-40d1-b129-dbf6f49c16e6",
+        "faa61d95-f828-48a8-b336-e09f8b8a69a2"
+      ],
+      "settings": {
+        "title": "Cool Discord PFPs",
+        "subtitle": "About Me, Donation, and dozens of other panel types are included with each pack - completely free!",
+        "aspect_ratio": "1",
+        "id": "cool"
+      }
+    },
+    "914b8675-9c94-4a2b-8a71-c041e04eb067": {
+      "type": "landing-pfp",
+      "blocks": {
+        "872f91df-365d-4705-8852-de89641b89ec": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "3c09999a-02c5-4663-ad7a-937d704ee19c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "014e94f7-1892-4474-b46f-cd50b3b45e41": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "b5676755-1155-4823-854b-0015e5c79506": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "6df466b3-3565-4bd3-ac40-bdb6d76102fe": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "c722ac57-2ae2-4532-9ce4-f5acecd7dce1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "36f752ec-9c0c-4468-8c4f-047cce3efaa6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "1e23dab2-45c8-4754-82c4-a10ba9ee2814": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "e20b1ca0-e28e-4b44-b2d3-772013f714ff": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "32a0cbde-45d0-457e-94ed-5c95e2597a9e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "6d0d3ca0-3b8f-4732-8983-41dfe664e678": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "d0947df1-fd16-44ac-812c-3333716074e5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": true
+          }
+        },
+        "fcc8b4f7-9f58-4ce8-8c53-fcfdd603e34b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "3b3382fa-a762-4849-9f5c-a668894e1c08": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "b43249f5-f31d-4f45-a3d9-f9e0b7fc774a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "3bd1eb00-0919-491e-965e-c7e2f8ead8c7": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "9cf1c8c9-901f-4f40-ae1d-89029f134e35": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "5f36f9e3-166c-4db4-b14c-8d8d17b2e5b5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "f833c312-71d7-47a5-962a-6f0c60d4ffc5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "b8c20ec2-da8f-4af3-a173-01e644c32ffb": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "59748f6e-ddb3-431c-a0b7-4cc3673b95d5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "7ce612d0-80d9-4440-a642-cac2f58ed560": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "2e54f7e0-2c02-458b-812e-810beba800f5": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ef88bda8-9f00-4bc6-939b-3bd4857fbc53": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "1b5928bc-c5f9-4d55-bcea-6286d5ae3019": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "61952f06-d51c-4f20-b719-b0d960d258e9": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "d779ded3-a6f1-4efd-9522-4abe83bd46d8": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "6633b5bf-6d35-4670-b40b-65c101f65d57": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "2b185751-fed4-4318-ba18-bbd3e074ca6d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "e03b64b2-3e99-453b-8833-f2dbd4821ac9": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "6fbcfb7e-e572-4546-9e6d-fee920755ac4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "c6767f60-41db-4a4c-bd55-e4f642fa90eb": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "cb64d683-2cb2-4099-bffb-801ab6b1258e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "9bfb25ff-d281-4821-bf07-83458b23b72c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "9782acf3-84d8-4d06-af9d-b8881b23aadd": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "342d96bc-46de-48a2-8614-bb7f0d5a6fd4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ae9fd71e-3b84-4575-a9cb-e0712e7ffa80": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "05a28a59-f357-4526-a01b-89d369dd4e61": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "69b3e1e6-9f47-485b-8d34-6bae53372c07": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "50f0fe4e-0883-471c-b085-a2885dbf4ebe": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "5f2daf0e-7a24-499c-985c-4f7d7c150d6c": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "12a87dff-6dc5-48e8-8b7a-684df4107fbd": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "d98902bc-c036-4ce9-bd07-6a0bf34c5c54": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "e924d8f9-06b7-42be-9f21-51120fc9b0cc": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "ef8fbcb4-55be-441e-9fef-245c6083b1ad": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "599088e3-a848-4dbd-8b1a-e7a9025c3c7e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "d793b883-c4de-4fd3-8baf-adf5ea032dad": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "8ceab2f0-8ea1-4230-9107-875039ed1c75": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "8671c924-f6a8-4d39-a0a8-b6f72c314b81": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        },
+        "5c1b400c-b6df-4622-a0c2-c7228afce600": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Soul_Package_Thumbnail.png",
+            "text": "Name.png",
+            "link": "shopify://products/acid",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "872f91df-365d-4705-8852-de89641b89ec",
+        "3c09999a-02c5-4663-ad7a-937d704ee19c",
+        "014e94f7-1892-4474-b46f-cd50b3b45e41",
+        "b5676755-1155-4823-854b-0015e5c79506",
+        "6df466b3-3565-4bd3-ac40-bdb6d76102fe",
+        "c722ac57-2ae2-4532-9ce4-f5acecd7dce1",
+        "36f752ec-9c0c-4468-8c4f-047cce3efaa6",
+        "1e23dab2-45c8-4754-82c4-a10ba9ee2814",
+        "e20b1ca0-e28e-4b44-b2d3-772013f714ff",
+        "32a0cbde-45d0-457e-94ed-5c95e2597a9e",
+        "6d0d3ca0-3b8f-4732-8983-41dfe664e678",
+        "d0947df1-fd16-44ac-812c-3333716074e5",
+        "fcc8b4f7-9f58-4ce8-8c53-fcfdd603e34b",
+        "3b3382fa-a762-4849-9f5c-a668894e1c08",
+        "b43249f5-f31d-4f45-a3d9-f9e0b7fc774a",
+        "3bd1eb00-0919-491e-965e-c7e2f8ead8c7",
+        "9cf1c8c9-901f-4f40-ae1d-89029f134e35",
+        "5f36f9e3-166c-4db4-b14c-8d8d17b2e5b5",
+        "f833c312-71d7-47a5-962a-6f0c60d4ffc5",
+        "b8c20ec2-da8f-4af3-a173-01e644c32ffb",
+        "59748f6e-ddb3-431c-a0b7-4cc3673b95d5",
+        "7ce612d0-80d9-4440-a642-cac2f58ed560",
+        "2e54f7e0-2c02-458b-812e-810beba800f5",
+        "ef88bda8-9f00-4bc6-939b-3bd4857fbc53",
+        "1b5928bc-c5f9-4d55-bcea-6286d5ae3019",
+        "61952f06-d51c-4f20-b719-b0d960d258e9",
+        "d779ded3-a6f1-4efd-9522-4abe83bd46d8",
+        "6633b5bf-6d35-4670-b40b-65c101f65d57",
+        "2b185751-fed4-4318-ba18-bbd3e074ca6d",
+        "e03b64b2-3e99-453b-8833-f2dbd4821ac9",
+        "6fbcfb7e-e572-4546-9e6d-fee920755ac4",
+        "c6767f60-41db-4a4c-bd55-e4f642fa90eb",
+        "cb64d683-2cb2-4099-bffb-801ab6b1258e",
+        "9bfb25ff-d281-4821-bf07-83458b23b72c",
+        "9782acf3-84d8-4d06-af9d-b8881b23aadd",
+        "342d96bc-46de-48a2-8614-bb7f0d5a6fd4",
+        "ae9fd71e-3b84-4575-a9cb-e0712e7ffa80",
+        "05a28a59-f357-4526-a01b-89d369dd4e61",
+        "69b3e1e6-9f47-485b-8d34-6bae53372c07",
+        "50f0fe4e-0883-471c-b085-a2885dbf4ebe",
+        "5f2daf0e-7a24-499c-985c-4f7d7c150d6c",
+        "12a87dff-6dc5-48e8-8b7a-684df4107fbd",
+        "d98902bc-c036-4ce9-bd07-6a0bf34c5c54",
+        "e924d8f9-06b7-42be-9f21-51120fc9b0cc",
+        "ef8fbcb4-55be-441e-9fef-245c6083b1ad",
+        "599088e3-a848-4dbd-8b1a-e7a9025c3c7e",
+        "d793b883-c4de-4fd3-8baf-adf5ea032dad",
+        "8ceab2f0-8ea1-4230-9107-875039ed1c75",
+        "8671c924-f6a8-4d39-a0a8-b6f72c314b81",
+        "5c1b400c-b6df-4622-a0c2-c7228afce600"
+      ],
+      "settings": {
+        "title": "Anime Discord Banners",
+        "subtitle": "About Me, Donation, and dozens of other panel types are included with each pack - completely free!",
+        "aspect_ratio": "16/9",
+        "id": "anime"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a540ce04-2a7f-4666-9417-c39bca45b90a",
+    "6e1c5293-c003-41de-9aab-a98ecabc6f88",
+    "cc03278b-43c1-4b40-84ca-1eb5e4cd9cc7",
+    "3441533d-f188-40cc-b2f2-b8212871c0b5",
+    "f2553f78-d926-436a-8bdd-6fc27e3c1ee7",
+    "56c29739-e1f8-47bd-b4d4-0c8e3d874d83",
+    "b19dfb9c-b4ed-4ed1-800a-ae1b3ab6e0cd",
+    "1ba03d52-0f47-4a23-ad9a-9cc932411911",
+    "579ee70d-da03-44c7-acfb-7d5689c7708a",
+    "0bd75095-24ac-4025-b120-2c07356d0496",
+    "914b8675-9c94-4a2b-8a71-c041e04eb067"
+  ]
+}

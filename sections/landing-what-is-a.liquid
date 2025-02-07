@@ -1,0 +1,64 @@
+<div class="landing__what_is" style="background-color:{{section.settings.background}};color:{{section.settings.color}}">
+    <div class="page-width">
+        <div class="landing__what_is_content">
+            <div class="left">
+                {% if section.settings.title != blank %}
+                    <h2 class="landing__what_is_title lh2 small--hide">{{section.settings.title}}</h2>
+                {% endif %}
+                
+                {% if section.settings.image != blank %}
+                    <img src="{{section.settings.image | img_url: '400x'}}" alt="" loading='lazy' class="landing__what_is_image">
+                {% endif %}
+                
+            </div>
+            <div class="right">
+                {% if section.settings.title != blank  %}
+                    <h2 class="landing__what_is_title lh2 medium-up--hide">{{section.settings.title}}</h2>
+                {% endif %}
+                
+                {% if section.settings.text != blank %}
+                    <div class="landing__what_is_text lbody">{{section.settings.text}}</div>
+                {% endif %}                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Landing what is a",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "html",
+                "id": "text",
+                "label": "Text",
+                "default": "<div></div>"
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Background"
+            },
+            {
+                "type": "color",
+                "id": "color",
+                "label": "Color"
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing what is a"
+            }
+        ]
+    }
+{% endschema %}

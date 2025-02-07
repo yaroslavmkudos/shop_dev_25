@@ -1,0 +1,101 @@
+<div id="{{section.settings.id}}" class="landing__pfp page-width {% if section.settings.aspect_ratio == '16/9' %} image_16_9{% endif %} {% if section.settings.use_paddings %} use_paddings{% endif %}">
+    {% if section.settings.title != blank %}
+        <h2 class="landing__pfp_title {% if section.settings.subtitle != blank %}landing__pfp_title--with_subtitle{% endif %}  lh2">{{section.settings.title}}</h2>
+    {% endif %}
+    {% if section.settings.subtitle != blank %}
+        <div class="landing__pfp_subtitle lbody">{{section.settings.subtitle}}</div>
+    {% endif %}
+    <div class="landing__pfp_images">
+        {% for block in section.blocks %}
+
+            <div class="landing__pfp_image">
+                <div class="img_wr">
+                    <img src="{{block.settings.image | img_url: '300x'}}" alt="" loading="lazy" class="{% if block.settings.round %}round{% endif %}">
+                    
+                    <a href="{{block.settings.link}}" class="landing__pfp_download btn" download target="_blank">
+                        {% render 'icon-download' %}
+                        Download
+                    </a>
+                </div>
+                    
+                <div class="landing__pfp_image_text lbody_sm">{{block.settings.text}}</div>
+            </div>
+            
+        {% endfor %}
+        
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Landing pfp",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle"
+            },
+            {
+                "type": "radio",
+                "id": "aspect_ratio",
+                "label": "Aspect ratio",
+                "options": [
+                    { "value": "1", "label": "1/1" },
+                    { "value": "16/9", "label": "16/9" }
+                ],
+                "default": "1"
+            },
+            {
+                "type": "text",
+                "id": "id",
+                "label": "Id" 
+            },
+            {
+                "type": "checkbox",
+                "id": "use_paddings",
+                "label": "Use paddings",
+                "default": false
+            }
+        ],
+        "blocks": [
+            {
+                "type": "pfp",
+                "name": "Pfp",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "Name.png"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link",
+                        "label": "link"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "round",
+                        "label": "Round",
+                        "default": false
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing pfp"
+            }
+        ]
+    }
+{% endschema %}

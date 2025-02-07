@@ -1,0 +1,75 @@
+<div class="landing__what_inside">
+    <div class="page-width">
+        {% if section.settings.title != blank %}
+            <h2 class="landing__what_inside_title lh2">{{section.settings.title}}</h2>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+            <div class="landing__what_inside_subtitle lbody">{{section.settings.subtitle}}</div>            
+        {% endif %}
+
+        <ul class="landing__what_inside_block">
+            {% for block in section.blocks %}
+                <li class="landing__what_inside_item">
+                    {% if block.settings.h2_title %}
+                        <h2 class="lh2 landing__what_inside_item_title">{{block.settings.column_title}}</h2>
+                        {% else %}
+                        <h3 class="lh3 landing__what_inside_item_title">{{block.settings.column_title}}</h3>
+                    {% endif %}
+                    
+
+                    <div class="landing__what_inside_item_text lbody">
+                        {{block.settings.column_text}}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>        
+</div>
+
+{% schema %}
+    {
+        "name": "Landing what inside",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "column",
+                "name": "Column",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "column_title",
+                        "label": "Column title"
+                    },
+                    {
+                        "type": "html",
+                        "id": "column_text",
+                        "label": "Column text"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "h2_title",
+                        "label": "Use h2 for title",
+                        "default": false
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing what inside"
+            }
+        ]
+    }
+{% endschema %}

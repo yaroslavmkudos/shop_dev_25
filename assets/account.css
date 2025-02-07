@@ -1,0 +1,382 @@
+.template-customers-account .main-content,
+.template-customers-addresses .main-content,
+.template-customers-login .main-content,
+.template-customers-register .main-content,
+.template-customers-order .main-content {
+    background: #E5E5E5;
+    margin-top: 0;
+    padding: 32px 0;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.template-customers-addresses .myaccount__info {
+    padding: 24px;
+}
+
+.template-customers-register .main-content,
+.template-customers-login .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-bottom: 160px; */
+}
+
+.myaccount {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.myaccount-sidebar {
+    width: 416px;
+    padding: 24px 24px 32px 24px;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.myaccount__name_container span {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.myaccount__name {
+    margin-bottom: 60px;
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: capitalize;
+}
+
+.myaccount-sidebar li a {
+    display: block;
+    margin-bottom: 24px;
+    line-height: 24px;
+    color: #0080FF;
+    text-transform: uppercase;
+}
+
+.myaccount-sidebar li:last-child a {
+    margin-bottom: 0;
+}
+
+.myaccount-sidebar .logout a {
+    color: #DD2E2E;
+}
+
+.myaccount__info_container {
+    flex: 1;
+}
+
+.myaccount__info {
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.myaccount__order-history_top {
+    padding: 24px;
+}
+
+.myaccount__order-history_counter {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.myaccount__order-history_text {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.myaccount__order_item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 24px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.myaccount__order_item:hover .btn_arrow {
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='48' height='48' rx='16' fill='%230080FF' fill-opacity='0.1'/%3E%3Cg clip-path='url(%23clip0_1205_4018)'%3E%3Cpath d='M21.3331 16L19.4531 17.88L25.5598 24L19.4531 30.12L21.3331 32L29.3331 24L21.3331 16Z' fill='%230080FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1205_4018'%3E%3Crect width='32' height='32' fill='white' transform='translate(8 8)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.myaccount__order_item a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.myaccount__order_item_name_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.myaccount__order_item_name_right time {
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.myaccount__order_item_name {
+    font-size: 16px;
+    line-height: 24px;
+    color: #0080FF;
+}
+
+.order__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order__item .img_wr {
+    flex-shrink: 0;
+    width: 140px;
+}
+
+.order__item .img_wr img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.order__left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.back-order {
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1205_4088)'%3E%3Cpath d='M18.6669 24L20.5469 22.12L14.4402 16L20.5469 9.88L18.6669 8L10.6669 16L18.6669 24Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1205_4088'%3E%3Crect width='32' height='32' fill='white' transform='translate(32 32) rotate(-180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.order-top {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.order-top h2 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.order_date_and_status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.order_date_and_status span:last-child {
+    color: #0ED923;
+    text-transform: uppercase;
+}
+
+.order__item {
+    padding: 24px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.order__title a {
+    font-family: Gilroy-SemiBold;
+    text-decoration-line: underline;
+    color: #0080FF;
+}
+
+.order__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+}
+
+.order__details_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.digitalAssets .border {
+    margin-top: 8px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 0;
+} 
+
+.digitalAssets .border h2 {
+    margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.digitalAssets .border a {
+    margin-bottom: 8px;
+    font-family: Gilroy-SemiBold;
+    color: #0080FF;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.digitalAssets .border a:last-child {
+    margin-bottom: 0;
+}
+
+.order__details_name {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.login_inner {
+    width: 100%;
+    max-width: 416px;
+    margin: 0 8px;
+}
+
+#CustomerLoginForm,
+#RecoverPasswordForm {
+    padding: 40px 24px 32px 24px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.h_divider {
+    margin: 36px 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.go-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.go-login span {
+    color: #0080FF;
+}
+
+.show_pass {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2' clip-path='url(%23clip0_1622_5711)'%3E%3Cpath d='M12 6.5C15.79 6.5 19.17 8.63 20.82 12C19.17 15.37 15.8 17.5 12 17.5C8.2 17.5 4.83 15.37 3.18 12C4.83 8.63 8.21 6.5 12 6.5ZM12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 9.5C13.38 9.5 14.5 10.62 14.5 12C14.5 13.38 13.38 14.5 12 14.5C10.62 14.5 9.5 13.38 9.5 12C9.5 10.62 10.62 9.5 12 9.5ZM12 7.5C9.52 7.5 7.5 9.52 7.5 12C7.5 14.48 9.52 16.5 12 16.5C14.48 16.5 16.5 14.48 16.5 12C16.5 9.52 14.48 7.5 12 7.5Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1622_5711'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    cursor: pointer;
+}
+
+.form-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    z-index: 1;
+    max-width: 416px;
+    margin-bottom: 0;
+    padding: 16px 20px;
+    transform: translateX(-50%);
+    background: #D80000;
+    border-radius: 8px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.grid__item[class*="--push"] {
+    position: static;
+}
+
+.subheading {
+    margin-bottom: 40px;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+body .h_buttons div:last-child {
+    margin-bottom: 0;
+}
+
+.h_buttons div {
+    justify-content: flex-start;
+    padding-left: 70px;
+}
+
+.h_discord_button.h_discord_center > i,
+.h_twitch_button.h_twitch_center > i {
+    margin: 0 !important;
+}
+
+.h_google_button.h_google_center > p {
+    margin-left: 19px !important;
+}
+
+#customer_login_guest div[name="hiko-container"] {
+    display: none;
+}
+
+#customer_login_guest .btn {
+    margin-top: 88px;
+    background: #CBCBCB;
+}
+
+@media (max-width: 1200px) {
+    .myaccount-sidebar {
+        width: 345px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .myaccount {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .myaccount-sidebar {
+        width: 100%;
+    }
+
+    .myaccount__info_container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    #CustomerLoginForm {
+        padding: 40px 51px 36px 51px;
+    }
+
+    .login_inner {
+        max-width: 470px;
+    }
+}
+
+@media (max-width: 767px) {
+    .h_buttons div {
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .order__text {
+        display: none;
+    }
+}

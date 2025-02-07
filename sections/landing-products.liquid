@@ -1,0 +1,51 @@
+<div id="products" class="landing__products collection__main page-width ">
+    <ul class="grid grid--uniform grid--view-items wide">
+        {% for block in section.blocks %}
+            <li>
+                {% render 'product-card-grid', product: block.settings.product %}
+            </li>
+            
+        {% endfor %}
+    </ul>
+
+    {% if section.settings.link_text != blank %}
+        <a href="{{section.settings.link}}" class='btn'>{{section.settings.link_text}}</a>
+    {% endif %}
+</div>
+
+
+{% schema %}
+    {
+        "name": "Landing products",
+        "settings": [
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link text"
+            }
+        ],
+        "blocks":[
+            {
+                "type":"product",
+                "name":"Products",
+                "settings": [
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "Product"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing products"
+            }
+        ]
+    }
+{% endschema %}

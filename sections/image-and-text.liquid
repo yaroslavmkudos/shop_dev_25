@@ -1,0 +1,68 @@
+<div class="image_and_text">
+    <div class="page-width">
+        <div class="image_and_text__content">
+            <div class="image_and_text__text">
+                {{section.settings.text}}
+            </div>
+            <div class="image_and_text__image">
+                <img src="{{section.settings.image | img_url: '300x'}}" alt="" loading='lazy' style="max-width: {{section.settings.max_width}}px">
+                
+            </div>
+        </div>
+
+        {% if section.settings.collout_title %}
+            <div class="collout">
+                <div class="collout__title">{{section.settings.collout_title}}</div>
+                {{section.settings.collout_text}}
+            </div>
+        {% endif %}
+        
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image and text",
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "<p></p>"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "html",
+                "id": "image_svg",
+                "label": "Image svg",
+                "default": "<svg></svg>"
+            },
+            {
+                "type": "range",
+                "id": "max_width",
+                "min": 100,
+                "max": 500,
+                "step": 10,
+                "unit": "px",
+                "label": "Max width",
+                "default": 160
+            },
+            {
+                "type": "text",
+                "id": "collout_title",
+                "label": "Collout title",
+                "default": "Title"
+            },
+            {
+                "type": "text",
+                "id": "collout_text",
+                "label": "Collout text",
+                "default": "Text"
+            }
+        ]
+    }
+{% endschema %}

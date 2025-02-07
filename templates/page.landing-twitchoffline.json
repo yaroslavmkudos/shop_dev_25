@@ -1,0 +1,484 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "5cca1b53-b95a-4515-8c7b-cd392ea2115c": {
+      "type": "landing-banner",
+      "settings": {
+        "title": "Twitch Offline Banners",
+        "text": "Engage your viewers while your stream is offline! Download dozens of twitch offline banners for your streaming channel - completely free!",
+        "link_text": "Get Your Banner"
+      }
+    },
+    "2db76578-3ff9-46ec-88ed-1b2f6268929a": {
+      "type": "landing-pfp",
+      "blocks": {
+        "147876c7-fa8a-4a27-8431-da8afffbdd55": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Ink_Offline.png",
+            "text": "Ink",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Ink_Offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "52d39738-28a0-4548-a4c8-2526aa909ee1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Nexus_Offline.png",
+            "text": "Nexus",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Nexus_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "c411f4e5-3ab1-4eef-9e46-09937fa0f3a2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Christmas_Neon_Offline.png",
+            "text": "Christmas Neon",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Christmas_Neon_Offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "d027c574-925f-4edd-8d00-85fe49730945": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Razor_offline1.png",
+            "text": "Razor",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Razor_offline1.png?v=1679414966",
+            "round": false
+          }
+        },
+        "d7633f12-a3e0-48f6-b38e-74ffee914bc4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Gaming_Zone_offline.png",
+            "text": "Gaming Zone",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Gaming_Zone_offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "a034caa7-2dfc-4a62-a0ea-549660afc239": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Figure_Offline.png",
+            "text": "Figure",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Figure_Offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "50144df0-ce1d-4b89-b9f7-e70f46b4cb03": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Japan_Offline.png",
+            "text": "Japan",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Japan_Offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "ad9b28de-aa99-47ff-8954-093ab060470b": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/VHS_offline.png",
+            "text": "VHS",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/VHS_offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "bf95718d-7ef6-4b33-a176-56ed1b65d37d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Flow_Offline.png",
+            "text": "Flow",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Flow_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "a7fe92dc-cf85-4d96-ac2a-3c4a552b1784": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Neon_Valentine_Offline.png",
+            "text": "Neon Valentine",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Neon_Valentine_Offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "06006c9b-6f9e-4726-84f2-93aab0595ad2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Hack_Offline.png",
+            "text": "Hack",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Hack_Offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "a698e9da-1379-493b-9010-e91294bfa6f3": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Crust_Offline.png",
+            "text": "Crust",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Crust_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "2c5452c4-8884-46d5-a35e-b716ad98635a": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Warning_Offline.png",
+            "text": "Warning",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Warning_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "4125dd9f-acf2-4ade-ac80-4f5f5fe39735": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Retro_offline.png",
+            "text": "Retro",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Retro_offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "42393710-4232-48ae-8553-f0cd6e55bb5d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Noir_Offline.png",
+            "text": "Noir",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Noir_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "95b815f7-b017-4c3f-b84b-962a15885f1f": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Winter_Magic_offline.png",
+            "text": "Winter Magic",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Winter_Magic_offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "c59784f9-654b-44af-a7d0-2febc421d5bb": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Blaze_Offline.png",
+            "text": "Blaze",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Blaze_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "a1c259c1-bfc6-4e89-a446-0b7bc693e709": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Purple_Flow_Offline.png",
+            "text": "Purple Flow",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Purple_Flow_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "16533c7e-77da-4075-8b36-247d3b1ad97e": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Deluxe_Offline.png",
+            "text": "Deluxe",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Deluxe_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "5b091b07-375c-4220-ae3a-98e12229e772": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Boost_Offline.png",
+            "text": "Boost",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Boost_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "c99def6b-61a2-4ffc-81b1-fb691fffe8b8": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Invaders_Offline.png",
+            "text": "Invaders",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Invaders_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "26c8f18e-6cc0-4c65-a62d-ff03db983bf2": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Halloween_Stream_Offline.png",
+            "text": "Halloween Stream",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Halloween_Stream_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "2d318754-3bf8-4ce4-8638-875aab9d48c8": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Rainbow_Offline.png",
+            "text": "Rainbow",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Rainbow_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "2d456b98-e35f-4016-9a31-f70c0dc756d4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Smooth_Offline.png",
+            "text": "Smooth",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Smooth_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "e48e871c-414c-4ab0-97b6-ca3629346996": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Crystal_Offline.png",
+            "text": "Crystal",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Crystal_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "4b42eeb6-30f9-41cf-ba20-ec5d4b886b73": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Silhouette_offline.png",
+            "text": "Silhouette",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Silhouette_offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "7c70689d-b6ec-416e-adae-e4c6a22f0fb1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Mist_offline.png",
+            "text": "Mist",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Mist_offline.png?v=1679069125",
+            "round": false
+          }
+        },
+        "ab1a23be-0e8b-496f-8a6b-c3bf8d6d69e4": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Rift_offline.png",
+            "text": "Rift",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Rift_offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "9157d636-1f22-4a37-b412-bfe135240c0d": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Melting_Offline.png",
+            "text": "Melting",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Melting_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "22bb7784-76bf-4e3d-8382-621734a35712": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Fall_Guys_Offline.png",
+            "text": "Drop Boys",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Fall_Guys_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "b71454a8-4cb3-404a-a595-4e35ac1bfe71": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Aperture_Offline.png",
+            "text": "Aperture",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Aperture_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "143d7a6a-f257-4d1b-8102-7cf7cae16593": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Shapes_Offline.png",
+            "text": "Shapes",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Shapes_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "11928b59-82a4-471c-b03c-e92d92c9b052": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Sharp_Offline.png",
+            "text": "Sharp",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Sharp_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "1cc93754-cdec-4822-87f2-78b61681edbe": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Slices_Offline.png",
+            "text": "Slices",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Slices_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "7f613372-d591-4b19-9035-9b653dbfe1b6": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Bricks_Offline.png",
+            "text": "Bricks",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Bricks_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "70f6cccc-d18f-41a1-bb08-fe54564234bb": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Monochrome_Offline.png",
+            "text": "Monochrome",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Monochrome_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "dad30e69-c6d4-4700-bee8-9b10f383f213": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Soft_Offline.png",
+            "text": "Soft",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Soft_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "1f725ef6-005b-4849-a21c-c42997ae7ffb": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Shape_Offline.png",
+            "text": "Shape",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Shape_Offline.png?v=1679069123",
+            "round": false
+          }
+        },
+        "4b1c8948-6813-44fb-ad54-e88246fc84b1": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Brave_Offline.png",
+            "text": "Brave",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Brave_Offline.png?v=1679069124",
+            "round": false
+          }
+        },
+        "43156280-44c3-41c0-960c-43489678e122": {
+          "type": "pfp",
+          "settings": {
+            "image": "shopify://shop_images/Block_Offline.png",
+            "text": "Block",
+            "link": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Block_Offline.png?v=1679069123",
+            "round": false
+          }
+        }
+      },
+      "block_order": [
+        "147876c7-fa8a-4a27-8431-da8afffbdd55",
+        "52d39738-28a0-4548-a4c8-2526aa909ee1",
+        "c411f4e5-3ab1-4eef-9e46-09937fa0f3a2",
+        "d027c574-925f-4edd-8d00-85fe49730945",
+        "d7633f12-a3e0-48f6-b38e-74ffee914bc4",
+        "a034caa7-2dfc-4a62-a0ea-549660afc239",
+        "50144df0-ce1d-4b89-b9f7-e70f46b4cb03",
+        "ad9b28de-aa99-47ff-8954-093ab060470b",
+        "bf95718d-7ef6-4b33-a176-56ed1b65d37d",
+        "a7fe92dc-cf85-4d96-ac2a-3c4a552b1784",
+        "06006c9b-6f9e-4726-84f2-93aab0595ad2",
+        "a698e9da-1379-493b-9010-e91294bfa6f3",
+        "2c5452c4-8884-46d5-a35e-b716ad98635a",
+        "4125dd9f-acf2-4ade-ac80-4f5f5fe39735",
+        "42393710-4232-48ae-8553-f0cd6e55bb5d",
+        "95b815f7-b017-4c3f-b84b-962a15885f1f",
+        "c59784f9-654b-44af-a7d0-2febc421d5bb",
+        "a1c259c1-bfc6-4e89-a446-0b7bc693e709",
+        "16533c7e-77da-4075-8b36-247d3b1ad97e",
+        "5b091b07-375c-4220-ae3a-98e12229e772",
+        "c99def6b-61a2-4ffc-81b1-fb691fffe8b8",
+        "26c8f18e-6cc0-4c65-a62d-ff03db983bf2",
+        "2d318754-3bf8-4ce4-8638-875aab9d48c8",
+        "2d456b98-e35f-4016-9a31-f70c0dc756d4",
+        "e48e871c-414c-4ab0-97b6-ca3629346996",
+        "4b42eeb6-30f9-41cf-ba20-ec5d4b886b73",
+        "7c70689d-b6ec-416e-adae-e4c6a22f0fb1",
+        "ab1a23be-0e8b-496f-8a6b-c3bf8d6d69e4",
+        "9157d636-1f22-4a37-b412-bfe135240c0d",
+        "22bb7784-76bf-4e3d-8382-621734a35712",
+        "b71454a8-4cb3-404a-a595-4e35ac1bfe71",
+        "143d7a6a-f257-4d1b-8102-7cf7cae16593",
+        "11928b59-82a4-471c-b03c-e92d92c9b052",
+        "1cc93754-cdec-4822-87f2-78b61681edbe",
+        "7f613372-d591-4b19-9035-9b653dbfe1b6",
+        "70f6cccc-d18f-41a1-bb08-fe54564234bb",
+        "dad30e69-c6d4-4700-bee8-9b10f383f213",
+        "1f725ef6-005b-4849-a21c-c42997ae7ffb",
+        "4b1c8948-6813-44fb-ad54-e88246fc84b1",
+        "43156280-44c3-41c0-960c-43489678e122"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "aspect_ratio": "16/9",
+        "id": ""
+      }
+    },
+    "e5a2142f-4cc5-4466-90e0-4a74486af806": {
+      "type": "landing-tutorial",
+      "settings": {
+        "title": "How to add an Offline Banner on Twitch?",
+        "text": "<div>\n<ol>\n<li>Log in to Twitch</li>\n<li>Click on your profile picture and press the Settings button\n</li>\n<li>Go to the Channel and Videos tab</li>\n<li>Click the Brand tab, scroll to the Video Player Banner section and press the Update button</li>\n<li>Click the Brand tab, scroll to the Video Player Banner section and press the Update button</li>\n<li>Click on Upload a Photo and choose your Offline Banner</li>\n<li>Woohoo, your banner is uploaded!</li>\n</ol>\n</div>",
+        "background_color": "#F9F9F9"
+      }
+    },
+    "470414b0-acec-4b6a-9762-c6faddba3f6c": {
+      "type": "landing-learn-more",
+      "blocks": {
+        "590a72c9-9cbc-4156-9e7c-a036171c6d02": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/twitch-graphics-size-the-ultimate-guide-2022"
+          }
+        },
+        "d300a15a-a323-40c4-ad17-df2256aca965": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/what-is-a-twitch-overlay"
+          }
+        },
+        "a4ea1be3-0522-4c0d-bbdb-55cc52796929": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/how-to-stream-on-twitch"
+          }
+        }
+      },
+      "block_order": [
+        "590a72c9-9cbc-4156-9e7c-a036171c6d02",
+        "d300a15a-a323-40c4-ad17-df2256aca965",
+        "a4ea1be3-0522-4c0d-bbdb-55cc52796929"
+      ],
+      "settings": {
+        "title": "Learn More"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "5cca1b53-b95a-4515-8c7b-cd392ea2115c",
+    "2db76578-3ff9-46ec-88ed-1b2f6268929a",
+    "e5a2142f-4cc5-4466-90e0-4a74486af806",
+    "470414b0-acec-4b6a-9762-c6faddba3f6c"
+  ]
+}

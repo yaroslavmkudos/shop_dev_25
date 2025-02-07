@@ -1,0 +1,194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "7b0e6bf9-92b1-4cb9-a357-6775943cdb53": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/image_42.svg",
+        "title": "Youtube Stream Overlays",
+        "text": "Upgrade your channel with the best YouTube stream overlays, alerts and widgets. Quick and easy installs, dozens of assets and everything you need to make your YouTube streams look like a dream.",
+        "link_text": "Get Your Overlay Now"
+      }
+    },
+    "8e51628d-55b9-4f89-aab0-57194ba55d56": {
+      "type": "landing-products",
+      "blocks": {
+        "aca4311d-fdbe-4acd-b35d-abddd89909da": {
+          "type": "product",
+          "settings": {
+            "product": "lofi-room"
+          }
+        },
+        "f183f171-3217-43e8-b1d2-af4aa1ea43a1": {
+          "type": "product",
+          "settings": {
+            "product": "pokemon"
+          }
+        },
+        "7bdab267-bfb5-4683-b454-18d5fd06ba1e": {
+          "type": "product",
+          "settings": {
+            "product": "japan-spirit"
+          }
+        },
+        "67210e7e-b538-4587-89b0-be91e2e8b28c": {
+          "type": "product",
+          "settings": {
+            "product": "phonk"
+          }
+        },
+        "9bca7977-80d8-440e-8aef-e8f56d1708c5": {
+          "type": "product",
+          "settings": {
+            "product": "call-of-duty"
+          }
+        },
+        "0a441632-c850-4ea3-a9dd-2990c8a5e945": {
+          "type": "product",
+          "settings": {
+            "product": "cuteness"
+          }
+        },
+        "7f91c03e-108f-4265-8578-d41dadab1a63": {
+          "type": "product",
+          "settings": {
+            "product": "space"
+          }
+        },
+        "881d560d-2dc5-4be4-a169-b92e9c5d594b": {
+          "type": "product",
+          "settings": {
+            "product": "essential"
+          }
+        },
+        "2df84c6a-aa83-47cc-b51c-b3b9d275942c": {
+          "type": "product",
+          "settings": {
+            "product": "hyperspace"
+          }
+        }
+      },
+      "block_order": [
+        "aca4311d-fdbe-4acd-b35d-abddd89909da",
+        "f183f171-3217-43e8-b1d2-af4aa1ea43a1",
+        "7bdab267-bfb5-4683-b454-18d5fd06ba1e",
+        "67210e7e-b538-4587-89b0-be91e2e8b28c",
+        "9bca7977-80d8-440e-8aef-e8f56d1708c5",
+        "0a441632-c850-4ea3-a9dd-2990c8a5e945",
+        "7f91c03e-108f-4265-8578-d41dadab1a63",
+        "881d560d-2dc5-4be4-a169-b92e9c5d594b",
+        "2df84c6a-aa83-47cc-b51c-b3b9d275942c"
+      ],
+      "settings": {
+        "link": "shopify://collections/full-packs",
+        "link_text": "Load More"
+      }
+    },
+    "34d7ed87-8cbd-4631-8957-8910520d921f": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "20a6d1d1-34ef-4435-b5f8-a62d9bc8f7db": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Starting Soon and Other Stream Screens",
+            "column_text": "Give your viewers a sneak peek of what’s coming up in your stream or engage with them while you’re away. Want to craft your own screen?<br>\n<br>\nEach pack comes with a background for you to get creative!",
+            "h2_title": false
+          }
+        },
+        "b227d142-dac0-469f-a66b-dc8bb083ed90": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Overlays",
+            "column_text": "Get the most important assets for your YouTube streams:\n<br>\n<br>\n<ul>\n<li>Webcam Overlays\n</li>\n<li>Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Chat Overlays</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "56ee2603-62d8-4af9-ba0c-7228870f41a0": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Alerts",
+            "column_text": "Interact with your viewers on a completely new level with animated stream alerts. <br>\n<br>\nAppreciate the donation, praise your latest subscriber and surprise your supporters - it’s never been easier to take your stream to the next level!",
+            "h2_title": false
+          }
+        },
+        "fba4135d-a732-4b86-b2f3-4ce5eaee7e99": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stinger Transitions",
+            "column_text": "A secret ingredient that takes your stream to another league. Transition between your stream screens like a pro with dozens of stingers from our library!",
+            "h2_title": false
+          }
+        },
+        "b36801a9-6717-496f-bdcf-ffeb01f044cf": {
+          "type": "column",
+          "settings": {
+            "column_title": "Youtube Banner Templates and Profile Pictures",
+            "column_text": "Want a complete overhaul of your YouTube channel? We’ve included a handy customizable .PSD template with each stream package.\n<br>\n<br>\nCreate channel banners and profile pictures or use them as a base for your social media posts - possibilities are endless!",
+            "h2_title": false
+          }
+        }
+      },
+      "block_order": [
+        "20a6d1d1-34ef-4435-b5f8-a62d9bc8f7db",
+        "b227d142-dac0-469f-a66b-dc8bb083ed90",
+        "56ee2603-62d8-4af9-ba0c-7228870f41a0",
+        "fba4135d-a732-4b86-b2f3-4ce5eaee7e99",
+        "b36801a9-6717-496f-bdcf-ffeb01f044cf"
+      ],
+      "settings": {
+        "title": "What’s Inside Our YouTube Overlay Packages?",
+        "subtitle": ""
+      }
+    },
+    "f0ee85e0-0779-4f22-82b6-f6a96fbfad05": {
+      "type": "landing-learn-more",
+      "blocks": {
+        "39d1e01e-15d4-44fe-9056-926ea8eb6d30": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/how-to-live-stream-on-youtube"
+          }
+        },
+        "9b47c80b-1980-4cf7-9edd-0eb061f3ad7e": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/youtube-size-guide"
+          }
+        },
+        "6d386cd4-d7cf-4310-8c0d-fc53b9a8063e": {
+          "type": "article",
+          "settings": {
+            "article": "stream-blog/best-live-streaming-platforms"
+          }
+        }
+      },
+      "block_order": [
+        "39d1e01e-15d4-44fe-9056-926ea8eb6d30",
+        "9b47c80b-1980-4cf7-9edd-0eb061f3ad7e",
+        "6d386cd4-d7cf-4310-8c0d-fc53b9a8063e"
+      ],
+      "settings": {
+        "title": "Learn More"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7b0e6bf9-92b1-4cb9-a357-6775943cdb53",
+    "8e51628d-55b9-4f89-aab0-57194ba55d56",
+    "34d7ed87-8cbd-4631-8957-8910520d921f",
+    "f0ee85e0-0779-4f22-82b6-f6a96fbfad05"
+  ]
+}

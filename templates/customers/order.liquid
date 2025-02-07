@@ -1,0 +1,113 @@
+{%- assign order_date = order.created_at | date: '%B %d, %Y'  -%}
+<link rel="stylesheet" href="{{'account.css' | asset_url }}">
+<div class="page-width">
+
+  <div class="myaccount__content">
+
+    <div class="myaccount">
+      <div class="myaccount-sidebar">
+        <div class="myaccount__name_container">
+          <span class="regular">Welcome back,</span>
+          <div class="myaccount__name ">
+            {{customer.first_name}} {{customer.last_name}}
+          </div>
+        </div>
+        <ul>
+          <li class="selected"><a href="/account">Orders</a></li>
+          <li><a href="/account/addresses">Account Info</a></li>
+          <li><a href="/account/login?reset_password">CHANGE PASSWORD</a></li>
+          <li class="logout">{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+        </ul>
+      </div>
+
+      <div class="myaccount__info_container">
+        <div class="myaccount__info">
+          <div class="myaccount__order-history">
+            <div class="order-top">
+              <a href="/account" class="back-order"></a>
+              <h2>{{ order.name }}</h2>
+            </div>
+
+            <div class="order_date_and_status">
+              <span class='regular'>{{ order_date }}</span>
+              <span>{{ order.fulfillment_status_label }}</span>
+            </div>
+            
+            <div class="placed-hidden" style="display: none">{{ 'customer.order.date_html' | t: date: order_date }}</div>
+    
+            {%- if order.cancelled -%}
+              <div class="order--cancelled">
+                {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
+                <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
+                <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
+              </div>
+            {%- endif -%}
+            {%- for line_item in order.line_items -%}
+              
+              <div id="{{ line_item.key }}" class="order__item">
+                <div class="order__left">
+                  <div class="img_wr">
+                    <img src="{{ line_item.product.featured_image | img_url: '300x' }}" alt="" loading="lazy">
+                  </div>
+
+                  <div class="order__text">
+                    <div class="order__title">
+                      <a href="{{ line_item.product.url }}">{{ line_item.product.title }}</a>
+                    </div>
+                    <div class="order__collection">
+                      <a class="regular" href="{{collections[line_item.product.metafields.my_fields.custom_breadcrumb].url}}">{{collections[line_item.product.metafields.my_fields.custom_breadcrumb].title}}</a>
+                    </div>
+                  </div>                
+                </div>
+                
+                <div class="order__right">
+                  <div class="order__price regular">{{ line_item.original_price | money }}</div>
+                </div>
+              </div>
+            {%- endfor -%}
+            <div class="order__details regular">
+              {%- for discount_application in order.cart_level_discount_applications -%}
+                <div class="order__details_item">
+                  <div class="order__details_name">Discount ({{- discount_application.title -}})</div>
+                      
+                  <div class="order__details_value">
+                    -{{ discount_application.total_allocated_amount | money }}
+                  </div>
+                </div>
+              {%- endfor -%}
+
+              <div class="order__details_item">
+                <div class="order__details_name">Subtotal ({{ order.item_count items }} items)</div>
+                      
+                  <div class="order__details_value">
+                    {{ order.subtotal_price | money }}
+                  </div>
+              </div>
+
+              <div class="order__details_item">
+                <div class="order__details_name">Tax</div>
+                      
+                  <div class="order__details_value">
+                    {{ order.tax_price | money }}
+                  </div>
+              </div>
+
+              <div class="order__details_item">
+                <div class="order__details_name">Total</div>
+                      
+                  <div class="order__details_value">
+                    {{ order.total_price | money }}
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="digitalAssets">
+          <div id='digitalAssets'></div>        
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
+

@@ -1,0 +1,64 @@
+<div class="faq">
+  <div class="page-width"> 
+    <div class="limiter">
+      <h2 class="section_title big_margin">{{ section.settings.title }}</h2>
+      {% for block in section.blocks %}
+        
+        <div class="faq__accordion accordion" {{ block.shopify_attributes }} itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <div class="faq__title_container">
+            <div class=" faq__accordion_title" itemprop="name">
+              {{block.settings.item_title}}
+            </div>
+            
+            {% render 'icon-arrow' %}
+          </div>
+          <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+              {{block.settings.item_text}}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+   
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    }
+  ],
+  "blocks" : [
+    {
+      "type": "item",
+      "name": "Faq item",
+      "settings": [
+        {
+          "type": "text",
+          "id" : "item_title",
+          "default": "Title",
+          "label" : "Title"
+        },
+        {
+          "type": "text",
+          "id" : "item_text",
+          "default": "Text",
+          "label" : "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

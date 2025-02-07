@@ -1,0 +1,1238 @@
+<style> 
+  .collections-list {
+  position: sticky;
+  top: 50px;
+  flex-shrink: 0;
+  width: 376px;
+  padding-right: 72px;
+  margin-right: 72px;  
+}
+
+.collections-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background: url({{ 'border_dashed.svg' | asset_url }});
+}
+
+    a.button.button_2.loka {
+    margin: 0 auto;
+}
+
+.collections-list.collapse {
+  width: 48px;
+  padding-right: 0;
+}
+
+.collections-list.collapse::before {
+  width: 0;
+}
+
+.collections-list .collection-list_text {
+  white-space: nowrap;
+}
+
+.collections-list.collapse .search-toolbar,
+.collections-list.collapse .collection-list_text {
+  width: 0;
+  opacity: 0;
+}
+
+.collections-list .collection__icon .img_wr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  margin-left: 8px;
+}
+
+.collections-list.collapse .collection__icon .img_wr {
+  background: #F1F1F1;
+  margin-left: 0;
+}
+
+    .collari_topovaca .filters-toolbar-wrapper {
+    margin-bottom: 0;
+}
+
+.collections-list.collapse .collection__size {
+  opacity: 0;
+}
+
+.template-collection .collections-list.collapse li:hover .collection__icon .img_wr {
+  background: #0080FF;
+}
+
+.template-collection .collections-list.collapse li.selected .collection__icon .img_wr {
+  background: #0080FF;
+}
+
+.collection__main {
+  flex-grow: 1;
+  
+}
+
+.collection__main.expand {
+  padding-left: 64px;
+  border-left: 0;
+}
+
+.template-collection .collections-list ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: #F1F1F1;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+    .collari_inner {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.collari_inner a {
+    flex: calc(25% - 8px);
+    background: #F1F1F1;
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    padding-top: 28px;
+  transition: .2s ease-in-out;
+    outline: 2px solid #f1f1f1;
+}
+
+      .collari_inner a:hover {
+    background: #fff;
+    border: 1px;
+    outline: 2px solid #f1f1f1;
+    outline-offset: -2px;
+}
+
+  .collari_inner img {
+    min-height: 38px;
+}
+
+  .collari_topovaca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+  .colari {
+    margin-bottom: 62px;
+}
+
+  .asetovaca a {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.asetovaca h3 {
+    font-family: Gilroy-Regular,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+/* identical to box height, or 150% */
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+  .dropdown-content {
+    
+    left: -82px;
+   
+}
+
+
+.dropdown li:hover>.sub-menu {right: 0 !important;}
+  .dropdown li:hover>.sub-menu {
+       left: -328px;
+    padding-right: 8px;
+}
+
+  @media only screen and (max-width: 500px) {
+  .collari_inner a {
+    flex: calc(50% - 8px);
+}
+}
+  
+</style>
+
+<!---------sections/collection-template.liquid---->
+<link
+  rel="stylesheet"
+  href="{{ 'swiper-bundle.min.css' | asset_url }}"
+/>
+
+
+
+
+
+<div data-section-id="{{ section.id }}" data-section-type="collection-template">
+  {%- comment -%}
+  <div class="collection_banner_slider swiper">
+    
+    <div class="swiper-wrapper">
+     
+      {% for collectionItem in section.settings.banner_collection.products %}
+        <div class="collection_banner_item swiper-slide">
+          <a href="{{ collectionItem.url }}">
+            <img src="{{ collectionItem.featured_image | img_url: '800x' }}" alt="" loading="lazy">
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+  </div>
+  {%- endcomment -%}
+  <div class="page-width" id="Collection">
+    <div class="collection__content">
+<style>
+  .collections-menu-container {
+      max-height: calc(100vh - 128px); /* Adjust to match header height */
+      overflow-y: auto;  /* Enable vertical scroll */
+      scrollbar-width: thin; /* Makes scrollbar thinner (for Firefox) */
+      padding-bottom: 128px; /* Adds space at the bottom for better scrolling */
+      position: relative; /* Allows absolute positioning */
+  }
+
+  .collections-menu-container::-webkit-scrollbar {
+      width: 8px; /* Set scrollbar width for Webkit browsers */
+  }
+
+  .collections-menu-container::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3); /* Set thumb color */
+      border-radius: 4px; /* Rounded scrollbar */
+  }
+
+  .collections-menu-container::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.5); /* Darker thumb on hover */
+  }
+    .collection__bottom_bar.filters-custom.filters-toolbar-wrapper {
+      position: fixed; /* Fix it to the viewport */
+      bottom: 0; /* Align it to the bottom of the screen */
+      left: 0;
+      right: 0;
+      z-index: 100; /* Make sure it stays above other elements */
+      background-color: white; /* Set a background color to ensure it's visible */
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow to make it stand out */
+      padding: 10px 0; /* Add some padding for better touch accessibility */
+  }
+  
+  /* Ensure it appears properly on mobile */
+  @media (max-width: 768px) {
+      .collection__bottom_bar.filters-custom.filters-toolbar-wrapper {
+          width: 100%;
+          padding: 10px 15px; /* Add padding for touch devices */
+      }
+  }
+</style>
+
+    {% include 'collection-menu-new', section: section %}
+
+      <div class="collection__main">
+        
+
+        {% for block in section.blocks%}
+
+        {% if block.type == "collection1" %}
+          
+          <div class="colari">
+
+    <div class="collari_topovaca">
+    <h2 class="collection__title">{{ block.settings.titlovaca }}</h2>
+           {% if block.settings.textovaca != blank %}
+    <a class="button button_2" href="{{ block.settings.linkovaca }}">{{ block.settings.textovaca }} {{ block.settings.ikonovaca }}</a>
+             {% endif %}
+
+          <div class="filters-toolbar-wrapper">
+          <div class="collection-toolbars">
+          <div class="filters-toolbar">
+          <div class="filters-toolbar__item-wrapper">
+               <div class="filters-custom">
+<div class="filter filter-tags dropdown">
+  <span>{{ section.settings.dropdown }}</span>
+  <div class="dropdown-content">
+            <div class="iki">
+    <ul>
+      <li>
+        <a class="oni" href="#">Styles <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+<path d="M0.579956 10.59L5.16996 6L0.579956 1.41L1.99996 0L7.99996 6L1.99996 12L0.579956 10.59Z" fill="#0080FF"/>
+</svg></a>
+        <ul  class="sub-menu">
+            <div id="styles" class="inner">
+            {% for block in section.blocks %}
+              {% if block.type == "tag" %}
+          <li><a href="{{block.settings.style}}">{{ block.settings.tagname }}</a></li>
+                {% endif %}
+              {% endfor %}
+          
+            </div>
+        </ul>
+      </li>
+      <li><a class="oni" href="#">Games <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+<path d="M0.579956 10.59L5.16996 6L0.579956 1.41L1.99996 0L7.99996 6L1.99996 12L0.579956 10.59Z" fill="#0080FF"/>
+</svg></a>
+            <ul  class="sub-menu">
+            <div id="games" class="inner">
+          {% for block in section.blocks %}
+              {% if block.type == "tag2" %}
+          <li><a href="{{block.settings.style}}">{{ block.settings.tagname }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </div>
+        </ul>
+            </li>
+      <li>
+        <a class="oni" href="#">Colors <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+<path d="M0.579956 10.59L5.16996 6L0.579956 1.41L1.99996 0L7.99996 6L1.99996 12L0.579956 10.59Z" fill="#0080FF"/>
+</svg></a>
+        <ul  class="sub-menu">
+            <div id="colors" class="inner">
+          {% for block in section.blocks %}
+              {% if block.type == "tag3" %}
+          <li><a href="{{block.settings.style}}">{{ block.settings.tagname }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </div>
+        </ul>
+      </li>
+    </ul>
+</div>
+  </div>
+</div>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+   <script>
+
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("styles");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("games");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("colors");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+
+</script>
+
+          <div class="collari_inner">
+          <a href="{{ block.settings.collection1.url }}"><img src="{{ block.settings.collection1.image | img_url: "master" }}" alt="{{ block.settings.collection1.title }}"></a>
+          <a href="{{ block.settings.collection2.url }}"><img src="{{ block.settings.collection2.image | img_url: "master" }}" alt="{{ block.settings.collection2.title }}"></a>
+          <a href="{{ block.settings.collection3.url }}"><img src="{{ block.settings.collection3.image | img_url: "master" }}" alt="{{ block.settings.collection3.title }}"></a>
+          <a href="{{ block.settings.collection4.url }}"><img src="{{ block.settings.collection4.image | img_url: "master" }}" alt="{{ block.settings.collection4.title }}"></a>
+          <a href="{{ block.settings.collection5.url }}"><img src="{{ block.settings.collection5.image | img_url: "master" }}" alt="{{ block.settings.collection5.title }}"></a>
+          <a href="{{ block.settings.collection6.url }}"><img src="{{ block.settings.collection6.image | img_url: "master" }}" alt="{{ block.settings.collection6.title }}"></a>
+          <a href="{{ block.settings.collection7.url }}"><img src="{{ block.settings.collection7.image | img_url: "master" }}" alt="{{ block.settings.collection7.title }}"></a>
+          <a href="{{ block.settings.collection8.url }}"><img src="{{ block.settings.collection8.image | img_url: "master" }}" alt="{{ block.settings.collection8.title }}"></a>
+          </div>
+          
+          </div>
+
+          {% endif %}
+
+    
+          {% if block.type == "collection" %}
+            <div class="collection__block">
+              <div class="collection__block_top">
+                <h2 class="collection__title">{{block.settings.protitle }}</h2>
+            {% if block.settings.butitle != blank %}
+                <a href="{{ block.settings.butlink }}" class="button button_2">{{ block.settings.butitle }} {% render 'icon-arrow-right' %}</a>
+              {% endif %}
+              </div>
+                
+              <ul class="grid grid--uniform grid--view-items">
+                {% if block.settings.product_1 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_1%}
+                  </li>
+                {% endif %}
+                {% if block.settings.product_2 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_2%}
+                  </li>
+                {% endif %}
+                {% if block.settings.product_3 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_3%}
+                  </li>
+                {% endif %}
+                {% if block.settings.product_4 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_4%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_5 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_5%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_6 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_6%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_7 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_7%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_8 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_8%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_9 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_9%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_10 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_10%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_11 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_11%}
+                  </li>
+                {% endif %}
+            {% if block.settings.product_12 != blank %}
+                  <li class="">
+                    {% include 'product-card-grid', product: block.settings.product_12%}
+                  </li>
+                {% endif %}
+              </ul>
+              
+              <a href="{{block.settings.collection.url}}" class="button button_2 button--mob">View All {% render 'icon-arrow-right' %}</a>
+            </div>
+          {% endif %}
+
+{% if block.type == "collection1a" %}
+         <div class="colari asetovaca">
+
+    <div class="collari_topovaca">
+    <h2 class="collection__title">{{ block.settings.titlovacaa }}</h2>
+      {% if block.settings.textovacaa != blank %}
+    <a class="button button_2" href="{{ block.settings.linkovacaa }}">{{ block.settings.textovacaa }} {{ block.settings.ikonovacaa }}</a>
+        {% endif %}
+    </div>
+
+          <div class="collari_inner">
+  {% if block.settings.collection1a != blank %}
+          <a href="{{ block.settings.collection1a.url }}"><img src="{{ block.settings.ime1 | img_url: "master" }}" alt="{{ block.settings.collection1a.title }}"> <h3>{{ block.settings.collection1a.title }}</h3></a>
+    {% endif %}
+    {% if block.settings.collection2a != blank %}
+          <a href="{{ block.settings.collection2a.url }}"><img src="{{ block.settings.ime2 | img_url: "master" }}" alt="{{ block.settings.collection2a.title }}"><h3>{{ block.settings.collection2a.title }}</h3></a>
+      {% endif %}
+      {% if block.settings.collection3a != blank %}
+          <a href="{{ block.settings.collection3a.url }}"><img src="{{ block.settings.ime3 | img_url: "master" }}" alt="{{ block.settings.collection3a.title }}"><h3>{{ block.settings.collection3a.title }}</h3></a>
+        {% endif %}
+        {% if block.settings.collection4a != blank %}
+          <a href="{{ block.settings.collection4a.url }}"><img src="{{ block.settings.ime4 | img_url: "master" }}" alt="{{ block.settings.collection4a.title }}"><h3>{{ block.settings.collection4a.title }}</h3></a>
+          {% endif %}
+          {% if block.settings.collection5a != blank %}
+          <a href="{{ block.settings.collection5a.url }}"><img src="{{ block.settings.ime5 | img_url: "master" }}" alt="{{ block.settings.collection5a.title }}"><h3>{{ block.settings.collection5a.title }}</h3></a>
+            {% endif %}
+            {% if block.settings.collection6a != blank %}
+          <a href="{{ block.settings.collection6a.url }}"><img src="{{ block.settings.ime6 | img_url: "master" }}" alt="{{ block.settings.collection6a.title }}"><h3>{{ block.settings.collection6a.title }}</h3></a>
+              {% endif %}
+              {% if block.settings.collection7a != blank %}
+          <a href="{{ block.settings.collection7a.url }}"><img src="{{ block.settings.ime7 | img_url: "master" }}" alt="{{ block.settings.collection7a.title }}"><h3>{{ block.settings.collection7a.title }}</h3></a>
+                {% endif %}
+                {% if block.settings.collection8a != blank %}
+          <a href="{{ block.settings.collection8a.url }}"><img src="{{ block.settings.ime8 | img_url: "master" }}" alt="{{ block.settings.collection8a.title }}"><h3>{{ block.settings.collection8a.title }}</h3></a>
+                  {% endif %}
+  {% if block.settings.collection9a != blank %}
+          <a href="{{ block.settings.collection9a.url }}"><img src="{{ block.settings.ime9 | img_url: "master" }}" alt="{{ block.settings.collection9a.title }}"><h3>{{ block.settings.collection9a.title }}</h3></a>
+                  {% endif %}
+  {% if block.settings.collection10a != blank %}
+          <a href="{{ block.settings.collection10a.url }}"><img src="{{ block.settings.ime10 | img_url: "master" }}" alt="{{ block.settings.collection10a.title }}"><h3>{{ block.settings.collection10a.title }}</h3></a>
+                  {% endif %}
+  {% if block.settings.collection11a != blank %}
+          <a href="{{ block.settings.collection11a.url }}"><img src="{{ block.settings.ime11 | img_url: "master" }}" alt="{{ block.settings.collection11a.title }}"><h3>{{ block.settings.collection11a.title }}</h3></a>
+                  {% endif %}
+  {% if block.settings.collection12a != blank %}
+          <a href="{{ block.settings.collection12a.url }}"><img src="{{ block.settings.ime12 | img_url: "master" }}" alt="{{ block.settings.collection12a.title }}"><h3>{{ block.settings.collection12a.title }}</h3></a>
+                  {% endif %}
+          </div>
+          
+          </div>
+
+          {% endif %}
+
+
+
+
+        {% if block.type == "collection_load" %}
+  <div class="collection__block">
+    <div class="collection__block_top">
+      <h2 class="collection__title">{{ block.settings.protitlem }}</h2>
+    </div>
+
+  
+
+    
+
+    <ul class="grid grid--uniform grid--view-items">
+    {%- assign collection = collections[block.settings.collectionm]  -%}
+          {% assign sortedProducts = collection.products | sort: 'created_at' | reverse %}
+
+  {% for product in sortedProducts limit: 8 %}
+      
+        
+        <li class="">
+          {% include 'product-card-grid', product: product %}
+        </li>
+    
+      {% endfor %}
+        
+    </ul>
+
+    {% if block.settings.butitlem != blank %}
+      <a href="{{ block.settings.butlink }}" class="button button_2 loka">{{ block.settings.butitlem }}</a>
+    {% endif %}
+    <a href="{{ collection.url }}" class="button button_2 button--mob">View All {% render 'icon-arrow-right' %}</a>
+  </div>
+{% endif %}
+
+        
+
+        
+        {% endfor %}
+
+
+
+
+
+
+       
+
+
+
+        
+      </div>
+    </div>
+        
+  </div>
+
+  <div class="collection__bottom_bar filters-custom filters-toolbar-wrapper">
+    <div class="collection-toolbars">
+      
+      <div class="filter filter-categories">
+        <span>Categories</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% assign faqExist = false %}
+{% for block in section.blocks %}
+  {% if block.type == 'faq_item' %}
+    {% assign faqExist = true %}
+  {% endif %}
+{% endfor %}
+
+{% if faqExist %}
+  <div class="collection__infoblock collection__infoblock--1 collection__infoblock--faq">
+    <div class="page-width">
+      <div class="infoblock__main_title desktop--hide">Frequently Asked Questions</div>
+      <div class="infoblock__item">
+        <div class="img_wr">
+          <img src="https://cdn.shopify.com/s/files/1/0559/4788/6783/files/Group_76.svg?v=1664464927" alt="" loading="lazy">
+        </div>
+
+        <div class="infoblock__content">
+          <div class="infoblock__main_title touch--hide">Frequently Asked Questions</div>
+          <div class="faq">
+            {% for block in section.blocks %}
+              {% if block.type == 'faq_item' %}
+                <div class="faq__accordion accordion"  itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq__title_container">
+                    <div class=" faq__accordion_title" itemprop="name">
+                      {{ block.settings.title }}
+                    </div>
+                    
+                    {% render 'icon-arrow' %}
+                  </div>
+                  <div class="faq__accordion_content rte" temscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                      {{ block.settings.text }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              
+            {% endfor %}              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+<script>
+  window.onload = () => {
+    document.head.insertAdjacentHTML("beforeend", `<style>.collections-list .search-toolbar,.collections-list .collection__size,.collection__main,.collections-list .collection__icon .img_wr,.collections-list,toggle_list,.toggle_list svg,.toggle_list path  {transition: 0.3s ease-in-out;}</style>`)
+  }
+</script>
+
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+
+
+
+ <script>
+      var swiper = new Swiper(".collection__thumbs", {
+        spaceBetween: 8,
+        slidesPerView: 5,
+        direction: "vertical",
+      });
+      var swiper2 = new Swiper(".collection__slider", {
+        spaceBetween: 4,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        slidesPerView: "auto",
+        thumbs: {
+          swiper: swiper,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      });
+    </script>
+
+{% schema %}
+{
+  "name": "Collections list",
+  "settings": [
+    {
+      "type": "text",
+      "id": "dropdown",
+      "label": "Filters Name"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Make Your Stream Look Cool"
+      }
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": {
+        "en": "Description"
+      },
+      "default": {
+        "en": "<p>With professional overlays, alerts and transitions for Twitch, Youtube and Facebook Gaming</p>"
+      }
+    },
+    {
+      "type": "collection",
+      "id": "banner_collection",
+      "label": "Banner collection"
+    },
+    {
+      "type": "collection",
+      "label": "Featured Collection Load more",
+      "id": "featured_collection"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_list",
+      "label": "Collection menu"
+    }
+  ], 
+  "blocks": [
+    {
+      "type": "collection1",
+      "name": "Collection1",
+      "settings": [
+        {
+      "type": "text",
+      "id": "titlovaca",
+      "label": "Title"
+    },
+        {
+      "type": "url",
+      "id": "linkovaca",
+      "label": "URL"
+    },
+        {
+      "type": "text",
+      "id": "textovaca",
+      "label": "Button Text"
+    },
+        {
+      "type": "html",
+      "id": "ikonovaca",
+      "label": "Icon SVG Code"
+    },
+       {
+      "type": "collection",
+      "id": "collection1",
+      "label": "Collection 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection2",
+      "label": "Collection 2"
+    },
+    {
+      "type": "collection",
+      "id": "collection3",
+      "label": "Collection 3"
+    },
+    {
+      "type": "collection",
+      "id": "collection4",
+      "label": "Collection 4"
+    },
+    {
+      "type": "collection",
+      "id": "collection5",
+      "label": "Collection 5"
+    },
+    {
+      "type": "collection",
+      "id": "collection6",
+      "label": "Collection 6"
+    },
+    {
+      "type": "collection",
+      "id": "collection7",
+      "label": "Collection 7"
+    },
+    {
+      "type": "collection",
+      "id": "collection8",
+      "label": "Collection 8"
+    },
+        {
+      "type": "collection",
+      "id": "collection9",
+      "label": "Collection 9"
+    },
+        {
+      "type": "collection",
+      "id": "collection10",
+      "label": "Collection 10"
+    },
+        {
+      "type": "collection",
+      "id": "collection11",
+      "label": "Collection 11"
+    },
+        {
+      "type": "collection",
+      "id": "collection12",
+      "label": "Collection 12"
+    }
+      ]
+    },
+
+    {
+      "type": "collection1a",
+      "name": "Collection1a",
+      "settings": [
+        {
+      "type": "text",
+      "id": "titlovacaa",
+      "label": "Title"
+    },
+        {
+      "type": "url",
+      "id": "linkovacaa",
+      "label": "URL"
+    },
+        {
+      "type": "text",
+      "id": "textovacaa",
+      "label": "Button Text"
+    },
+        {
+      "type": "html",
+      "id": "ikonovacaa",
+      "label": "Icon SVG Code"
+    },
+       {
+      "type": "collection",
+      "id": "collection1a",
+      "label": "Collection 1"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime1",
+      "label": "Image 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection2a",
+      "label": "Collection 2"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime2",
+      "label": "Image 2"
+    },
+    {
+      "type": "collection",
+      "id": "collection3a",
+      "label": "Collection 3"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime3",
+      "label": "Image 3"
+    },
+    {
+      "type": "collection",
+      "id": "collection4a",
+      "label": "Collection 4"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime4",
+      "label": "Image 4"
+    },
+    {
+      "type": "collection",
+      "id": "collection5a",
+      "label": "Collection 5"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime5",
+      "label": "Image 5"
+    },
+    {
+      "type": "collection",
+      "id": "collection6a",
+      "label": "Collection 6"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime6",
+      "label": "Image 6"
+    },
+    {
+      "type": "collection",
+      "id": "collection7a",
+      "label": "Collection 7"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime7",
+      "label": "Image 7"
+    },
+    {
+      "type": "collection",
+      "id": "collection8a",
+      "label": "Collection 8"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime8",
+      "label": "Image 8"
+    },
+        {
+      "type": "collection",
+      "id": "collection9a",
+      "label": "Collection 9"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime9",
+      "label": "Image 9"
+    },
+        {
+      "type": "collection",
+      "id": "collection10a",
+      "label": "Collection 10"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime10",
+      "label": "Image 10"
+    },
+        {
+      "type": "collection",
+      "id": "collection11a",
+      "label": "Collection 11"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime11",
+      "label": "Image 11"
+    },
+        {
+      "type": "collection",
+      "id": "collection12a",
+      "label": "Collection 12"
+    },
+        {
+      "type": "image_picker",
+      "id": "ime12",
+      "label": "Image 12"
+    }
+      ]
+    },
+    
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+         "type": "collection",
+         "id": "collection",
+         "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "protitle",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "butitle",
+          "label": "Button"
+        },
+        {
+          "type": "url",
+          "id": "butlink",
+          "label": "Button Link"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product 3"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product 4"
+        },
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Product 5"
+        },
+        {
+          "type": "product",
+          "id": "product_6",
+          "label": "Product 6"
+        },
+        {
+          "type": "product",
+          "id": "product_7",
+          "label": "Product 7"
+        },
+        {
+          "type": "product",
+          "id": "product_8",
+          "label": "Product 8"
+        },
+        {
+          "type": "product",
+          "id": "product_9",
+          "label": "Product 9"
+        },
+        {
+          "type": "product",
+          "id": "product_10",
+          "label": "Product 10"
+        },
+        {
+          "type": "product",
+          "id": "product_11",
+          "label": "Product 11"
+        },
+        {
+          "type": "product",
+          "id": "product_12",
+          "label": "Product 12"
+        }
+      ]
+    },
+    {
+      "type": "collection_load",
+      "name": "Collection Load More",
+      "settings": [
+        {
+         "type": "collection",
+         "id": "collectionm",
+         "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "protitlem",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "butitlem",
+          "label": "Button"
+        },
+        {
+          "type": "url",
+          "id": "butlink",
+          "label": "Button Link"
+        }
+      ]
+    },
+    {
+      "type": "tag",
+      "name": "style",
+      "settings": [
+        {
+         "type": "url",
+         "id": "style",
+         "label": "Tag Link"
+        },
+        {
+         "type": "text",
+         "id": "tagname",
+         "label": "Tag Name"
+        }
+      ]
+    },
+    {
+      "type": "tag2",
+      "name": "games",
+      "settings": [
+        {
+         "type": "url",
+         "id": "style",
+         "label": "Tag Link"
+        },
+        {
+         "type": "text",
+         "id": "tagname",
+         "label": "Tag Name"
+        }
+      ]
+    },
+    {
+      "type": "tag3",
+      "name": "color",
+      "settings": [
+        {
+         "type": "url",
+         "id": "style",
+         "label": "Link"
+        },
+        {
+         "type": "text",
+         "id": "tagname",
+         "label": "Tag Name"
+        }
+      ]
+    },
+    {
+      "type": "faq_item",
+      "name": "Faq Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "banner_item",
+      "name": "Banner item",
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "label_text",
+          "label": "Label text"
+        },
+        {
+          "type": "color",
+          "id": "label_background",
+          "label": "Label background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "label_text_color",
+          "label": "Label text color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

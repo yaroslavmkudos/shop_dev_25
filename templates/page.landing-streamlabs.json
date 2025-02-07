@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-landings",
+      "settings": {}
+    },
+    "bd03ca00-f802-4e1d-adc2-d6b48be81ec5": {
+      "type": "landing-banner",
+      "settings": {
+        "image": "shopify://shop_images/streamlabs.svg",
+        "title": "Streamlabs Overlays",
+        "text": "Equip your stream with the most stylish overlays for Streamlabs Desktop! Each package from our library is preconfigured to work with all streaming platforms and includes a quick install file to get you up and running in a matter of clicks.",
+        "link_text": "Explore Overlays"
+      }
+    },
+    "8e8b932f-702e-4219-bbae-732327f6582b": {
+      "type": "landing-products",
+      "blocks": {
+        "10ea1a96-08a1-4180-8ca7-b6337e5199e8": {
+          "type": "product",
+          "settings": {
+            "product": "japan-spirit"
+          }
+        },
+        "3c9e8db4-35ba-4473-852a-1ee71777f8fd": {
+          "type": "product",
+          "settings": {
+            "product": "realm"
+          }
+        },
+        "ec86c315-467e-458b-9969-7a7e8d937b1e": {
+          "type": "product",
+          "settings": {
+            "product": "cute-waifu"
+          }
+        },
+        "462bcb30-ea0b-4916-8b82-66eaa0240cb6": {
+          "type": "product",
+          "settings": {
+            "product": "autumn-landscape"
+          }
+        },
+        "188d864d-2e6c-4602-b2b8-a7d277dff0ec": {
+          "type": "product",
+          "settings": {
+            "product": "minecraft"
+          }
+        },
+        "6d03b0f0-bce3-45d7-8d3a-dc4f335c547e": {
+          "type": "product",
+          "settings": {
+            "product": "data"
+          }
+        },
+        "f8f29507-42d2-44c4-9008-01c3781ac464": {
+          "type": "product",
+          "settings": {
+            "product": "metal"
+          }
+        },
+        "7fa14421-48e9-4707-8c7c-6f24c2f1d7fa": {
+          "type": "product",
+          "settings": {
+            "product": "interface"
+          }
+        },
+        "df2f559e-6d53-4f19-92c5-931e06cc4ec8": {
+          "type": "product",
+          "settings": {
+            "product": "horror-gaming"
+          }
+        }
+      },
+      "block_order": [
+        "10ea1a96-08a1-4180-8ca7-b6337e5199e8",
+        "3c9e8db4-35ba-4473-852a-1ee71777f8fd",
+        "ec86c315-467e-458b-9969-7a7e8d937b1e",
+        "462bcb30-ea0b-4916-8b82-66eaa0240cb6",
+        "188d864d-2e6c-4602-b2b8-a7d277dff0ec",
+        "6d03b0f0-bce3-45d7-8d3a-dc4f335c547e",
+        "f8f29507-42d2-44c4-9008-01c3781ac464",
+        "7fa14421-48e9-4707-8c7c-6f24c2f1d7fa",
+        "df2f559e-6d53-4f19-92c5-931e06cc4ec8"
+      ],
+      "settings": {
+        "link": "shopify://collections/full-packs",
+        "link_text": "Load More"
+      }
+    },
+    "ad49b08d-f9f7-4fa7-b555-e6662362450c": {
+      "type": "landing-what-inside",
+      "blocks": {
+        "c413a1e2-3ca0-4a00-bca8-6b2e5ed79c62": {
+          "type": "column",
+          "settings": {
+            "column_title": "Overlays",
+            "column_text": "<ul> \n<li>Webcam Overlays\n</li>\n<li>Chatbox Overlays\n</li>\n<li>Stream Headers\n</li>\n<li>Stream Labels\n</li>\n<li>Stream Backgrounds</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "f6144d7f-74cf-48cd-b607-48c11bbab312": {
+          "type": "column",
+          "settings": {
+            "column_title": "Stream Screens",
+            "column_text": "<ul>\n<li>Stream Starting Soon\n</li>\n<li>Be Right Back\n</li>\n<li>Intermission\n</li>\n<li>Stream Ending Soon\n</li>\n<li>Offline Banner</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "a92fb5ee-106a-4355-bca5-bae76927af0c": {
+          "type": "column",
+          "settings": {
+            "column_title": "Alerts",
+            "column_text": "<ul>\n<li>Donation Alerts\n</li>\n<li>Follower Alerts\n</li>\n<li>Subscriber Alerts\n</li>\n<li>Cheer Alerts\n</li>\n<li>+7 More Alert Types</li>\n</ul>",
+            "h2_title": false
+          }
+        },
+        "f247383c-c14c-4bf2-a086-219f76274b50": {
+          "type": "column",
+          "settings": {
+            "column_title": "Bonus Content",
+            "column_text": "<ul>\n<li>Stinger Transitions\n</li>\n<li>Customizable Icons\n</li>\n<li>Customizable Twitch Panels\n</li>\n<li>Customizable Profile Graphics\n</li>\n<li>Sound FX</li>\n</ul>",
+            "h2_title": false
+          }
+        }
+      },
+      "block_order": [
+        "c413a1e2-3ca0-4a00-bca8-6b2e5ed79c62",
+        "f6144d7f-74cf-48cd-b607-48c11bbab312",
+        "a92fb5ee-106a-4355-bca5-bae76927af0c",
+        "f247383c-c14c-4bf2-a086-219f76274b50"
+      ],
+      "settings": {
+        "title": "What You’ll Get",
+        "subtitle": ""
+      }
+    },
+    "daa08f63-5fe4-46ce-af26-45dba211827b": {
+      "type": "landing-faq",
+      "blocks": {
+        "a555f3f2-7c23-4cba-a74f-e81197f08e89": {
+          "type": "column",
+          "settings": {
+            "question": "How to add overlays to Streamlabs?",
+            "answer": "<div>Streamlabs supports two types of overlays: premade scene packages and separate overlays. To import a scene package go to Settings &gt; Scene Collections &gt; Import Overlay File. To import a separate overlay press a “+” button near the Sources tab and choose “Media File”</div>"
+          }
+        },
+        "bbf107d7-f670-473c-b297-5cbf388913f8": {
+          "type": "column",
+          "settings": {
+            "question": "Can I use Streamlabs overlays in OBS Studio?",
+            "answer": "<div>Yes, open OBS Studio and go to Scene Collection &gt; Import. It should show all of the overlays installed on your computer. In case you’re using one of the overlays from our store you can import the overlays directly into OBS Studio with a separate quick install file.</div>"
+          }
+        },
+        "cc617e7b-965e-46b6-ab4c-81347e0928eb": {
+          "type": "column",
+          "settings": {
+            "question": "Are there any free Streamlabs overlays?",
+            "answer": "<div>Definitely! Streamlabs Theme Gallery has tons of free overlays and you can check the Freebies section of our store to get free Streamlabs overlays for your stream.</div>"
+          }
+        }
+      },
+      "block_order": [
+        "a555f3f2-7c23-4cba-a74f-e81197f08e89",
+        "bbf107d7-f670-473c-b297-5cbf388913f8",
+        "cc617e7b-965e-46b6-ab4c-81347e0928eb"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bd03ca00-f802-4e1d-adc2-d6b48be81ec5",
+    "8e8b932f-702e-4219-bbae-732327f6582b",
+    "ad49b08d-f9f7-4fa7-b555-e6662362450c",
+    "daa08f63-5fe4-46ce-af26-45dba211827b"
+  ]
+}

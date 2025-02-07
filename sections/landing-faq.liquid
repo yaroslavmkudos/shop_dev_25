@@ -1,0 +1,64 @@
+<div id='faq' class="landing__faq page-width">
+    <div class="left">
+        {% if section.settings.title != blank %}
+            <h2 class="landing__faq_title lh2">{{section.settings.title}}</h2>            
+        {% endif %}
+    </div>
+    <div class="right">
+        <div class="faq">
+            {% for block in section.blocks %}
+                <div class="faq__accordion accordion" {{ block.shopify_attributes }} itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq__title_container">
+                        <div class=" faq__accordion_title" itemprop="name">
+                        {{block.settings.question}}
+                        </div>
+                        
+                        {% render 'icon-arrow' %}
+                    </div>
+                    <div class="faq__accordion_content rte" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                        {{block.settings.answer}}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Landing faq",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "column",
+                "name": "Column",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "question",
+                        "label": "Question"
+                    },
+                    {
+                        "type": "html",
+                        "id": "answer",
+                        "label": "Answer",
+                        "default": "<div></div>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing faq"
+            }
+        ]
+    }
+{% endschema %}

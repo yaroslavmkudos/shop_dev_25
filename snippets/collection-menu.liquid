@@ -1,0 +1,283 @@
+<style>
+  .collections-list {
+  position: sticky;
+  top: 50px;
+  flex-shrink: 0;
+  width: 376px;
+  padding-right: 72px;
+  margin-right: 72px;
+}
+
+{% comment %} .collections-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background: url({{'border_dashed.svg' | asset_url}});
+} {% endcomment %}
+
+
+
+.collections-list .collection-list_text {
+  white-space: nowrap;
+}
+
+
+
+{% comment %} .collections-list .collection__icon .img_wr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  margin-left: 8px;
+} {% endcomment %}
+
+
+
+
+
+{% comment %} .collection__main {
+  flex-grow: 1;
+
+} {% endcomment %}
+
+{% comment %} .collection__main.expand {
+  padding-left: 64px;
+  border-left: 0;
+} {% endcomment %}
+
+{% comment %} .template-collection .collections-list ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: #F1F1F1;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+    .full-width-link {
+    z-index: 1;
+}
+
+    .filters-custom {
+    position: relative;
+    z-index: 2;
+} {% endcomment %}
+
+
+
+@media (max-width: 1023px) {
+  {% comment %} .toggle_list{display:none} {% endcomment %}
+
+  .collection__main,
+  .collection__main.expand {
+    padding-left: 0;
+    border: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  {% comment %} .collections-list.collapse {
+    width: 48px;
+    padding-right: 0;
+  }
+
+  .collections-list.collapse::before {
+    width: 0;
+  }
+  .collections-list.collapse .search-toolbar,
+  .collections-list.collapse .collection-list_text {
+    width: 0;
+    opacity: 0;
+  }
+  .collections-list.collapse .collection__icon .img_wr {
+    background: #F1F1F1;
+    margin-left: 0;
+  }
+
+  .collections-list.collapse .collection__size {
+    opacity: 0;
+  }
+
+  .template-collection .collections-list.collapse li:hover .collection__icon .img_wr {
+    background: #0080FF;
+  }
+
+  .template-collection .collections-list.collapse li.selected .collection__icon .img_wr {
+    background: #0080FF;
+  } {% endcomment %}
+}
+</style>
+
+<div class="collections-list">
+  <div class="collections-list_toolbars">
+    <div class="search-toolbar">
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+        <form
+          action="{{ routes.search_url }}"
+          method="get"
+          role="search"
+          class="search search-modal__form search-form search-bar__form"
+        >
+          <input type="hidden" name="type" value="product">
+          <div class="field">
+            <input
+              class="search__input field__input search-form__input search-bar__input"
+              id="Search-In-Modal-1"
+              type="search"
+              name="q"
+              value=""
+              placeholder="Search by name or #tag"
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results-list"
+              aria-controls="predictive-search-results-list"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            >
+            <button
+              class="search-bar__submit search-form__submit"
+              type="submit"
+              data-search-form-submit
+            >
+              {% include 'icon-search' %}
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </div>
+
+          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+            <div class="predictive-search__loading-state">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="spinner"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        </form>
+      </predictive-search>
+    </div>
+
+    <div class="toggle_list">
+      {% render 'icon-expand-left' %}
+    </div>
+  </div>
+
+  <!-- Scrollable Container -->
+  <div class="collections-menu-container">
+    <ul id="collections-menu">
+      <li>
+        <a href="/collections/" class="collection__link">
+          <span class="collection__icon">
+            <div class="img_wr">
+              <img src="{{ 'inactive-store.svg' | asset_url }}" alt="" loading="lazy" class="inactive_icon">
+              <img src="{{ 'active-store.svg' | asset_url }}" alt="" loading="lazy" class="active_icon">
+            </div>
+            <div class="collection-list_text">All Products</div>
+          </span>
+          <span class="collection__size">{{ collections.all.products_count }}</span>
+        </a>
+      </li>
+
+      {% for link in linklists['collections-menu'].links %}
+        {% assign size = 0 %}
+        {% for collectionItem in collections %}
+          {% if collectionItem.url == link.url %}
+            {% assign size = collectionItem.products_count %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign icon = '' %}
+        {% assign activeIcon = '' %}
+
+        {% case link.title %}
+          {% when 'All Products' %}
+            {% assign icon = 'inactive-store.svg' %}
+            {% assign activeIcon = 'active-store.svg' %}
+          {% when 'Full Packs' %}
+            {% assign icon = 'inactive-fpacks.svg' %}
+            {% assign activeIcon = 'active-fpacks.svg' %}
+          {% when 'VTuber Models' %}
+            {% assign icon = 'vtubers-active.svg' %}
+            {% assign activeIcon = 'vtubers_inactive.svg' %}
+          {% when 'Overlays' %}
+            {% assign icon = 'inactive-overlays.svg' %}
+            {% assign activeIcon = 'active-overlays.svg' %}
+          {% when 'Alerts' %}
+            {% assign icon = 'inactive-alerts.svg' %}
+            {% assign activeIcon = 'active-alerts.svg' %}
+          {% when 'Transitions' %}
+            {% assign icon = 'inactive-transitions.svg' %}
+            {% assign activeIcon = 'active-transitions.svg' %}
+          {% when 'Emotes' %}
+            {% assign icon = 'inactive-emotes.svg' %}
+            {% assign activeIcon = 'active-emotes.svg' %}
+          {% when 'Badges' %}
+            {% assign icon = 'inactive-badges.svg' %}
+            {% assign activeIcon = 'active-badges.svg' %}
+          {% when 'Widgets' %}
+            {% assign icon = 'inactive-widget.svg' %}
+            {% assign activeIcon = 'active-widget.svg' %}
+          {% when 'Freebies' %}
+            {% assign icon = 'inactive-freebies.svg' %}
+            {% assign activeIcon = 'active-freebies.svg' %}
+        {% endcase %}
+
+        <li
+          {% if link.url == collection.url %}
+            class="selected"
+          {% endif %}
+        >
+          <a
+            href="{{ link.url }}"
+            class="collection__link{% if link.title == 'Freebies' %} gift_link{% endif %}"
+          >
+            <span class="collection__icon">
+              <div class="img_wr">
+                <img src="{{ icon | asset_url }}" alt="" loading="lazy" class="inactive_icon">
+                <img src="{{ activeIcon | asset_url }}" alt="" loading="lazy" class="active_icon">
+              </div>
+              <div class="collection-list_text">
+                {{ link.title }}
+              </div>
+            </span>
+            <span class="collection__size">{{ size }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+  window.onload = () => {
+    document.head.insertAdjacentHTML(
+      'beforeend',
+      `<style>.collections-list .search-toolbar,.collections-list .collection__size,.collection__main,.collections-list .collection__icon .img_wr,.collections-list,toggle_list,.toggle_list svg,.toggle_list path  {transition: 0.3s ease-in-out;}</style>`
+    );
+  };
+</script>

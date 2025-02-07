@@ -1,0 +1,202 @@
+<div class="creeping_line creeping_line--banner">
+
+    <div class="creeping_line__row creeping_line__row--1">
+        <span class="creeping_line__item">Zdravo!</span>
+        <span class="creeping_line__item">Hello!</span>
+        <span class="creeping_line__item">Hola!</span>
+        <span class="creeping_line__item">Привіт!</span>
+        <span class="creeping_line__item">Buongiorno!</span>
+        <span class="creeping_line__item">Tere!</span>
+        <span class="creeping_line__item">Szia!</span>
+        <span class="creeping_line__item">Zdravo!</span>
+        <span class="creeping_line__item">Hello!</span>
+        <span class="creeping_line__item">Hola!</span>
+        <span class="creeping_line__item">Привіт!</span>
+        <span class="creeping_line__item">Buongiorno!</span>
+        <span class="creeping_line__item">Tere!</span>
+        <span class="creeping_line__item">Szia!</span>
+    </div>
+
+    <div class="creeping_line__row creeping_line__row--2">
+        <span class="creeping_line__item">Bonjour!</span>
+        <span class="creeping_line__item">Olá!</span>
+        <span class="creeping_line__item">Namaste!</span>
+        <span class="creeping_line__item">Ciao!</span>
+        <span class="creeping_line__item">Hallo!</span>
+        <span class="creeping_line__item">Cześć!</span>
+        <span class="creeping_line__item">Kon'nichiwa!</span>
+        <span class="creeping_line__item">Nǐ hǎo!</span>
+        <span class="creeping_line__item">Bonjour!</span>
+        <span class="creeping_line__item">Olá!</span>
+        <span class="creeping_line__item">Namaste!</span>
+        <span class="creeping_line__item">Ciao!</span>
+        <span class="creeping_line__item">Hallo!</span>
+        <span class="creeping_line__item">Cześć!</span>
+        <span class="creeping_line__item">Kon'nichiwa!</span>
+        <span class="creeping_line__item">Nǐ hǎo!</span>
+    </div>
+
+    <div class="creeping_line__row creeping_line__row--3">
+        <span class="creeping_line__item">Hallå!</span>
+        <span class="creeping_line__item">Ahoj!</span>
+        <span class="creeping_line__item">Merhaba!</span>
+        <span class="creeping_line__item">Gamarjoba!</span>
+        <span class="creeping_line__item">Shalom!</span>
+        <span class="creeping_line__item">Buongiorno</span>
+        <span class="creeping_line__item">Xin Chào!</span>
+        <span class="creeping_line__item">Aloha!</span>
+        <span class="creeping_line__item">Hallå!</span>
+        <span class="creeping_line__item">Ahoj!</span>
+        <span class="creeping_line__item">Merhaba!</span>
+        <span class="creeping_line__item">Gamarjoba!</span>
+        <span class="creeping_line__item">Shalom!</span>
+        <span class="creeping_line__item">Buongiorno</span>
+        <span class="creeping_line__item">Xin Chào!</span>
+        <span class="creeping_line__item">Aloha!</span>
+    </div>
+
+</div>
+
+<div class="statistics">
+    <div class="page-width">
+        <div class="statistics__content">
+
+            <div class="statistics__item">
+                <div class="statistics__value">5+</div>
+                <div class="statistics__name">Years in Business</div>
+            </div>
+
+            <div class="statistics__item">
+                <div class="statistics__value">1M+</div>
+                <div class="statistics__name">Happy streamers</div>
+            </div>
+
+            <div class="statistics__item">
+                <div class="statistics__value">500+</div>
+                <div class="statistics__name">Overlays Designed</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style>
+  .statistics__content {
+    text-align: center;
+  }
+  .statistics__value {
+    font-size: 64px;
+  }
+</style>
+
+{% section 'rich-text-2' %}
+{% section 'text-two-columns' %}
+
+<div class="creeping_line creeping_line--story">
+
+    <div class="creeping_line__row creeping_line__row--story">
+        {% for i in (1..16) %}
+            {% if i == 1 %}
+                <h2 class="creeping_line__item">Our Story</h2> 
+            {% else %}
+                <span class="creeping_line__item">Our Story</span> 
+            {% endif %}
+                       
+        {% endfor %}
+    </div>
+</div>
+
+{% section 'rich-text-3' %}
+{% section 'rich-text-4' %}
+{% section 'about-us-reviews' %}
+
+<div class="creeping_line padding_none">
+
+    <div class="creeping_line__row creeping_line__row--team">
+        {% for i in (1..12) %}
+            {% if i == 1 %}
+                <h2 class="creeping_line__item">Meet The Team</h2> 
+            {% else %}
+                <span class="creeping_line__item">Meet The Team</span>  
+            {% endif %}
+                        
+        {% endfor %}
+    </div>
+</div>
+
+{% section 'the-team' %}
+{% section 'text-in-container' %}
+{% section 'text-in-container-2' %}
+
+<script>
+    const Banner = document.querySelector('.creeping_line--banner')
+    const BannerFirstRow = Banner.querySelector('.creeping_line__row--1')
+    const BannerSecondRow = Banner.querySelector('.creeping_line__row--2')
+    const BannerThirdRow = Banner.querySelector('.creeping_line__row--3')
+    const Story = document.querySelector('.creeping_line__row--story')
+    const Team = document.querySelector('.creeping_line__row--team')
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= -90 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+    
+    setTimeout(() => {
+        window.onscroll = () => {
+
+            if (isInViewport(Story)) {
+                let scrollValue = (Story.offsetTop - window.scrollY + 90) / 6
+                Story.style.left = `-${scrollValue}px`
+            }
+
+            if (isInViewport(Team)) {
+                let scrollValue = (Team.offsetTop - window.scrollY + 90) / 6
+                Team.style.left = `-${scrollValue}px`
+            }
+
+            let scrollValue = (Banner.offsetTop - window.scrollY) / 6
+            let scrollValue2 = (window.scrollY - Banner.offsetTop) / 6
+            BannerFirstRow.style.left = `${scrollValue}px`
+            BannerSecondRow.style.left = `${scrollValue2}px`
+            BannerThirdRow.style.left = `${scrollValue}px`
+         
+         }
+    }, 3000);
+    
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OnlineStore",
+  "name": "kudos.tv",
+  "url": "https://kudos.tv",
+  "logo": "https://cdn.shopify.com/s/files/1/0559/4788/6783/files/kudos_profile_pic.png?v=1628601407",
+  "description": "kudos.tv is a design marketplace offering free and premium stream overlays, widgets, VTuber models, and digital assets for streamers, gamers, and content creators on Twitch and YouTube.",
+  "email": "hello@kudos.tv",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sepapaja 6",
+    "addressLocality": "Tallinn",
+    "postalCode": "15551",
+    "addressCountry": "EE"
+  },
+  "sameAs": [
+    "https://x.com/kudos_tv",
+    "https://www.instagram.com/kudoshq",
+    "https://www.tiktok.com/@kudos.tv"
+  ],
+  "vatID": "EE102393628",
+  "foundingDate": "2021-10-01",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": 6
+  },
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+    "merchantReturnLink": "https://kudos.tv/policies/refund-policy"
+  }
+}
+</script>

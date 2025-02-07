@@ -1,0 +1,45 @@
+<div class="text_in_container {% if section.settings.fullwidth %} text_in_container--fullwidth{% endif %} {% if section.settings.no_padding %} padding_none{% endif %}">
+    <div class="text_in_container__content">
+        <div class="page-width">
+            {% if section.settings.title != blank %}
+                <h3 class="text_in_container__title">{{ section.settings.title | escape }}</h3>
+            {% endif %}
+
+            {% if section.settings.text != blank %}
+                <div class="text_in_container__text">{{ section.settings.text }}</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Text in container",
+    "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+       },      
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Text</p>"
+      },
+     {
+        "type": "checkbox",
+        "id": "fullwidth",
+        "label": "Fullwidth container",
+        "default": false
+     },
+     {
+        "type": "checkbox",
+        "id": "no_padding",
+        "label": "No padding",
+        "default": false
+     }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,469 @@
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .parent {
+  width: 100%;
+  max-width: 1460px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+        position: relative;
+}
+
+
+  
+  .child:hover {
+    opacity: 100%;
+}
+
+  .child.active {
+    opacity: 100%;
+}
+
+  .right_inerusa {
+    height: 100%;
+}
+
+  .sliderusa_innerusa {
+    display: flex;
+    flex-direction: row;
+    height: 360px;
+}
+
+.sliderusa_left {
+    width: 50%;
+    color: #fff;
+    text-align: left;
+}
+
+.sliderusa_right {
+    width: 50%;
+    border-radius: 24px;
+    transform: rotate(0.000001deg);
+      overflow: hidden;
+  border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+ .slick-current:hover .right_inerusa-over {
+    transform: scale(1.1);
+}
+
+
+  .sliderusa_innerusa p {
+    font-family: Gilroy-Regular;
+    white-space: normal;
+    text-align: left;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+  .sliderusa_left h3 {
+    font-family: Gilroy-ExtraBold,sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+  .right_inerusa-over {
+    height: 100%;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+
+
+.sliderusa_right a {
+    position: absolute;
+    top: 21px;
+    right: 16px;
+    z-index: 2;
+}
+
+.sliderusa_right span {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+/* identical to box height, or 150% */
+
+
+/* Gray 6 */
+    color: #F2F2F2;
+}
+
+
+  .witara {
+    overflow: hidden;
+}
+
+  .child:hover:before {
+    border: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+  .child:before {
+    display: block;
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border-radius: 24px;
+    z-index: 999;
+}
+
+  .ineruscina {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 1px);
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+  h1.titlovaca_sl {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 64px;
+    font-family: Gilroy-ExtraBold,sans-serif;
+}
+
+  .sl_text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: Gilroy-Regular;
+}
+  .mobb {
+    display: none;
+}
+  .deskk {
+    display: block;
+}
+
+  .active .nekad {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+
+.child {
+    position: relative;
+  margin-left: 4px;
+    margin-right: 4px;
+  border-radius: 24px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.5s ease !important; 
+}
+
+
+  .child.slick-slide.slick-current.slick-active.slick-center {
+    opacity: 1;
+}
+
+.slick-slide {
+  transition: transform 0.5s ease-out;
+}
+
+  .slick-list.draggable {
+    max-width: calc(1360px + 5%);
+    margin: 0 auto;
+    overflow: visible;
+}
+
+  a.nekad {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 999;
+}
+
+
+.slick-current:hover .image-container {
+  transform: scale(1.1);
+}
+
+.slick-current:hover .image-container {
+  transform: scale(1.1);
+}
+
+
+
+  button.slick-next.slick-arrow {
+    right: 49px;
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.slick-next:before, .slick-prev:before {
+    background-color: #fff;
+    opacity: 1;
+    color: #333;
+    content: ' ';
+    background-image: url(https://cdn.shopify.com/s/files/1/0559/4788/6783/files/hele.svg?v=1685554289);
+    width: 8px;
+    display: block;
+    height: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+  button.slick-prev.slick-arrow {
+    left: 49px;
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    border-radius: 100px;
+    z-index: 2;
+}
+
+button.slick-prev.slick-arrow:before {
+    transform: rotate(180deg);
+}
+
+  @media only screen and (max-width: 1457px) {
+    button.slick-prev.slick-arrow {
+    left: 35px;
+}
+    button.slick-next.slick-arrow {
+    right: 35px;
+}
+  }
+
+  @media only screen and (max-width: 920px) {
+    .deskk {
+    display: none;
+}
+    .mobb {
+    display: block;
+}
+    .parent {
+    overflow-x: hidden;
+}
+    .ineruscina {
+    padding-right: 0px;
+      padding-left: 0px;
+}
+    .ineruscina h3:after {
+    content: ' ';
+    background-image: url(https://cdn.shopify.com/s/files/1/0559/4788/6783/files/boka.png?v=1684232331);
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 28px;
+    top: 33px;
+}
+  .sliderusa_innerusa {
+    height: 276px;
+    flex-direction: column-reverse;
+}
+    .child {
+    width: 100%;
+}
+
+.sliderusa_left {
+    width: 100%;
+      padding: 0;
+}
+
+.sliderusa_right {
+    width: 100%;
+}
+
+.right_inerusa-over {
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  transition: transform 0.3s ease; 
+}
+
+@media only screen and (max-width: 920px) {
+  .right_inerusa-over {
+    height: 380px !important;
+    background-size: contain;
+  }
+}
+    .sliderusa_left p {
+    display: none;
+}
+
+.sliderusa_left h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 36px;
+    padding: 24px;
+}
+
+    .right_inerusa {
+}
+    .sliderusa_right {
+    border-top-left-radius: 24px;
+}
+}
+
+  @media screen and (min-device-width: 600px) and (max-device-width: 920px) { 
+    .sliderusa_innerusa {
+    height: 473px;
+}
+}
+button.slick-next.slick-arrow:hover {
+  border: 2px solid #f1f1f1;
+}
+button.slick-next.slick-arrow:hover:before {
+  color: #0080ff !important;
+}
+button.slick-prev.slick-arrow:hover {
+  border: 2px solid #f1f1f1;
+}
+button.slick-prev.slick-arrow:hover:before {
+  color: #0080ff !important;
+}
+</style>
+
+<div class="collection__main_top">
+          <h1 class="titlovaca_sl">Stream Graphics Store</h1>
+          <div class="sl_text">Everything you need to refresh your stream! Get professional stream designs and stand out from the crowd!</div>
+        </div>
+
+<div class="witara">
+<div class="parent">
+  {% for block in section.blocks %}
+      {% assign hex = block.settings.color | remove: "#" %}
+      {% assign r = hex | slice: 0, 2 | prepend: '0x' | modulo: 256 %}
+      {% assign g = hex | slice: 2, 2 | prepend: '0x' | modulo: 256 %}
+      {% assign b = hex | slice: 4, 2 | prepend: '0x' | modulo: 256 %}
+  <div class="child"  onclick="handleClick()" style="background:{{ block.settings.color }};">
+    <a class="nekad" href="{{ block.settings.link }}"></a>
+    <div class="sliderusa_innerusa">
+    <div class="sliderusa_left">
+      <div class="ineruscina">
+      <h3>{{ block.settings.title }}</h3>
+      <p>{{ block.settings.text }}</p>
+      </div>
+    </div>
+    <div class="sliderusa_right">
+      <a href="{{ block.settings.link }}"><span class="customusa">{{ block.settings.linktext }}</span></a>
+      <div class="right_inerusa-over" style="background-image: url('{{ block.settings.image | img_url: "master" }}')">
+        <div class="right_inerusa deskk" style="background: linear-gradient(90deg, {{ block.settings.color }} 10%, rgba({{ r }}, {{ g }}, {{ b }}, 0) 100%);">
+        </div>
+        <div class="right_inerusa mobb" style="background:linear-gradient(0deg, {{ block.settings.color }} 0%, rgba(165, 165, 165, 0) 100%);">
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+   
+    {% endfor %}
+  
+</div>
+</div>
+
+<script>
+$('.parent').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  arrows: true,
+  slidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  speed: 1000,
+  cssEase: 'ease-in-out',
+  responsive: [
+    {
+      breakpoint: 920,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+$(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('.right_inerusa-over').css('background-position', 'center ' + ((scrolledY / 20)) + 'px'); 
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "Slider New",
+  "settings": [
+  ], 
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "slide",
+      "settings": [
+        {
+      "type": "color",
+      "id": "color",
+      "label": "Color"
+    },
+        {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+        {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    },
+        {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+        {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+       {
+      "type": "text",
+      "id": "linktext",
+      "label": "Link Text"
+    }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,46 @@
+<style>
+    #shopify-section-{{section.id}} {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+</style>
+
+<div class="landing__navigation page-width">
+    <div class="left">
+        <div class="navigation">
+            {% for block in section.blocks %}
+                <a href="#{{block.settings.text | downcase}}" class="navigation__item">{{block.settings.text}}</a>
+            {% endfor %}        
+        </div>
+    </div>
+    <div class="right">
+        <a href="#faq" class="navigation__item">FAQ</a>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Landing navigation",
+        "settings": [
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "Item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name":"Landing navigation"
+            }
+        ]
+    }
+{% endschema %}
